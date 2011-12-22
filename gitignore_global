@@ -1,0 +1,15 @@
+*.vim
+*.un~
+*.swp
+*.sql
+*.less
+*.log
+database.php
+wp-config.php
+*.tar.gz
+.DS_Store*
+Thumbs.db
+
+
+
+
