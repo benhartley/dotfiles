@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/private/var/www/less'
+let g:netrw_dirhist_2='/private/var/www/less/frame'
+let g:netrw_dirhist_3='/usr/include/readline'
+let g:netrw_dirhist_4='/private/var/www/iu/example/client/templates'
