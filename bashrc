@@ -13,3 +13,6 @@ alias grm='git rm $(git ls-files --deleted)'
 
 # set tab name in iTerm
 function tabname() { echo -ne "\033]0;${@}\007";}
+
+# set node path
+export NODE_PATH="/usr/local/lib/node_modules"

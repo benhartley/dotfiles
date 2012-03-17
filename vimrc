@@ -12,7 +12,10 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
 " status line
- set statusline+=%{SyntasticStatuslineFlag()} " syntastic errors
+set statusline+=%{SyntasticStatuslineFlag()} " syntastic errors
+
+" no code folding
+set nofoldenable
 
 " syntastic
 " this doesn't work...
@@ -47,16 +50,22 @@ au BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" filetype indentation !! coffeescript plugin requires this!
+filetype plugin indent on
+
 " colors 
 syntax enable
 colorscheme molokai
 
 " close tags
-autocmd FileType html,php let b:closetag_html_style=1
-autocmd FileType html,xhtml,xml,php source ~/.vim/bundle/closetag/plugin/closetag.vim
+" autocmd FileType html,php let b:closetag_html_style=1
+" autocmd FileType html,xhtml,xml,php source ~/.vim/bundle/closetag/plugin/closetag.vim
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
+
+" auto-compile coffeescript files
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
 " auto-indent
 " set cindent
