@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/private/var/www/iu/jw/queue_plat/clients/desktop/js/collections'
 let g:netrw_dirhist_2='/private/var/www/iu/jw/queue_plat/clients/desktop/js'
 let g:netrw_dirhist_3='/Users/btfh/Desktop'
 let g:netrw_dirhist_4='/Users/btfh/Desktop/.git'
 let g:netrw_dirhist_5='/Users/btfh/Desktop'
+let g:netrw_dirhist_6='/private/var/www/schol/client/js/lib'

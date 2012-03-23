@@ -17,6 +17,10 @@ set statusline+=%{SyntasticStatuslineFlag()} " syntastic errors
 " no code folding
 set nofoldenable
 
+" wildmenu tab completion for filenames
+set wildmode=longest,list,full
+set wildmenu
+
 " syntastic
 " this doesn't work...
 let g:syntastic_enable_signs = 0
@@ -63,9 +67,6 @@ colorscheme molokai
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
-
-" auto-compile coffeescript files
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
 " auto-indent
 " set cindent
