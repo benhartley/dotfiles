@@ -16,3 +16,5 @@ function tabname() { echo -ne "\033]0;${@}\007";}
 
 # set node path
 export NODE_PATH="/usr/local/lib/node_modules"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

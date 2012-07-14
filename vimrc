@@ -17,12 +17,7 @@ set statusline+=%{SyntasticStatuslineFlag()} " syntastic errors
 " no code folding
 set nofoldenable
 
-" wildmenu tab completion for filenames
-set wildmode=longest,list,full
-set wildmenu
-
 " syntastic
-" this doesn't work...
 let g:syntastic_enable_signs = 0
 let g:syntastic_auto_jump = 1
 let g:syntastic_auto_loc_list = 1
@@ -66,7 +61,9 @@ colorscheme molokai
 " autocmd FileType html,xhtml,xml,php source ~/.vim/bundle/closetag/plugin/closetag.vim
 
 " supertab
-let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "<c-x><c-p>"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-p>"
 
 " auto-indent
 " set cindent
@@ -76,3 +73,22 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set cinkeys=0{,0},:,0#,!^F
+
+" key mapping for build
+function! Message()
+	call inputsave()
+	let message = input('Git commit message: ')
+	call inputrestore()
+	return message
+endfunction
+map §§ <ESC>:w<CR>:! cake -m '<C-R>=Message()<CR>' build<CR>
+
+" disable arrows for navigation
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
