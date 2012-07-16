@@ -92,3 +92,12 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+
+" key mapping for google search
+function! Google()
+	call inputsave()
+	let searchterm = input('Google: ')
+	call inputrestore()
+	return searchterm
+endfunction
+map © <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'http://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
