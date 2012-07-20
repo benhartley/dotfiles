@@ -12,7 +12,10 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
 " status line
+set statusline=%t\ %M\ %=\ line:\ %l/%L
 set statusline+=%{SyntasticStatuslineFlag()} " syntastic errors
+au InsertEnter * hi StatusLine term=reverse ctermbg=15 gui=undercurl guisp=White
+au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 
 " no code folding
 set nofoldenable
@@ -44,6 +47,7 @@ set ruler
 " syntax stuff
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
+au BufNewFile,BufRead *.md set ft=markdown
 
 " pathogen
 call pathogen#runtime_append_all_bundles()
@@ -100,4 +104,10 @@ function! Google()
 	call inputrestore()
 	return searchterm
 endfunction
-map © <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'http://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
+map © <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'https://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
+
+" key mapping for switching windows
+noremap ˙ :wincmd h<CR>
+noremap ∆ :wincmd j<CR>
+noremap ˚ :wincmd k<CR>
+noremap ¬ :wincmd l<CR>
