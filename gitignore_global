@@ -1,8 +1,6 @@
 *.vim
 *.un~
 *.swp
-*.sql
-*.less
 *.log
 wp-config.php
 *.tar.gz
