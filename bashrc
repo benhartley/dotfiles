@@ -18,6 +18,9 @@ function tabname() { echo -ne "\033]0;${@}\007"; }
 # convert timestamp to human readable
 function timestamp() { perl -e "print scalar(localtime(${@})), \"\n\""; }
 
+# recursive grep in current dir
+function gr() { grep -nr "${@}" *; }
+
 # set node path
 export NODE_PATH="/usr/local/lib/node_modules"
 
