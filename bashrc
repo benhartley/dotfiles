@@ -28,3 +28,6 @@ export NODE_PATH="/usr/local/lib/node_modules"
 export AWS_CREDENTIAL_FILE="~/.aws/cred.key"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Autojump
+[[ -s ~/.autojump/etc/profile.d/autojump.bash ]] && source ~/.autojump/etc/profile.d/autojump.bash
