@@ -6,7 +6,4 @@ wp-config.php
 *.tar.gz
 .DS_Store*
 Thumbs.db
-
-
-
-
+TAGS

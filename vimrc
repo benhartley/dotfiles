@@ -112,10 +112,12 @@ noremap ∆ :wincmd j<CR>
 noremap ˚ :wincmd k<CR>
 noremap ¬ :wincmd l<CR>
 
+" coffeetags
+noremap ,, :TagbarToggle<CR>
 if executable('coffeetags')
   let g:tagbar_type_coffee = {
         \ 'ctagsbin' : 'coffeetags',
-        \ 'ctagsargs' : '',
+        \ 'ctagsargs' : '--include-vars',
         \ 'kinds' : [
         \ 'f:functions',
         \ 'o:object',
