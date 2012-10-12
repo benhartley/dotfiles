@@ -29,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git,autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -65,7 +65,13 @@ export NODE_PATH="/usr/local/lib/node_modules"
 # set AWS credentials path
 export AWS_CREDENTIAL_FILE="~/.aws/cred.key"
 
+# force local vim
+alias vim='/opt/local/bin/vim'
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# autojump
+[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
 
 # from .bash_profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
