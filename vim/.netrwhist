@@ -1,4 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/private/var/www/iu/asos/asos_sale'
-let g:netrw_dirhist_2='/private/var/www/iu/asos/asos_sale/www'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/private/var/www/iu/dressipi/src/client/coffee/models'

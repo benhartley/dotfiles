@@ -76,3 +76,13 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # from .bash_profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+# tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# set vim as editor
+export EDITOR='/opt/local/bin/vim'
+
+# Backward search in the shell history with <C-r>
+bindkey ^r  history-incremental-search-backward
+setopt hist_ignore_all_dups
