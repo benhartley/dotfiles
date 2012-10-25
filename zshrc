@@ -79,10 +79,14 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+function ms() { mux s ${@}; }
 
 # set vim as editor
 export EDITOR='/opt/local/bin/vim'
 
 # Backward search in the shell history with <C-r>
-bindkey ^r  history-incremental-search-backward
+bindkey '^r' history-incremental-search-backward
 setopt hist_ignore_all_dups
+
+# autocd
+setopt autocd
