@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/private/var/www/iu/dressipi/src/client/coffee/models'
-let g:netrw_dirhist_2='/Users/btfh/.dotfiles/vim/colors'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/private/var/www/proto/racer'
+let g:netrw_dirhist_2='/private/var/www'
+let g:netrw_dirhist_3='/private/var/www/iu'
+let g:netrw_dirhist_4='/private/var/www/iu/demos'
+let g:netrw_dirhist_5='/private/var/www/iu/demos/arrow'
+let g:netrw_dirhist_6='/private/var/www/proto/racer'
+let g:netrw_dirhist_7='/private/var/www/huwshaz/src/coffee/client'
+let g:netrw_dirhist_8='/private/var/www/huwshaz/src/coffee'
