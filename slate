@@ -3,6 +3,11 @@ config defaultToCurrentScreen true
 config windowHintsShowIcons true
 config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
+config windowHintsFontColor 0;0;0;1.0
+config windowHintsFontName 'Lucida Grande'
+config windowHintsFontSize 80
+config windowHintsWidth 50
+config windowHintsHeight 50
 
 alias hotkey ctrl;cmd
 
@@ -30,6 +35,7 @@ bind m:${hotkey} focus 'Mail'
 bind c:${hotkey} focus 'gCal'
 bind f:${hotkey} focus 'Finder'
 bind r:${hotkey} focus 'RTM'
+bind t:${hotkey} focus 'iTunes'
 
 # Focus direction
 bind left:${hotkey} focus left
