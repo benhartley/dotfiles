@@ -90,3 +90,6 @@ setopt hist_ignore_all_dups
 
 # autocd
 setopt autocd
+
+# zmv
+autoload zmv
