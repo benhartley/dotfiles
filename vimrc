@@ -48,6 +48,7 @@ set ruler
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
 au BufNewFile,BufRead *.md set ft=markdown
+au BufNewFile,BufRead *.ledger set ft=ledger
 
 " pathogen
 call pathogen#runtime_append_all_bundles()
@@ -113,4 +114,4 @@ noremap ˚ :wincmd k<CR>
 noremap ¬ :wincmd l<CR>
 
 " set dir for vim-notes
-let g:notes_directory = '~/.notes'
+let g:notes_directory = '~/Documents/Notes'
