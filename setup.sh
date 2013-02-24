@@ -16,7 +16,5 @@ rm .zshrc; ln -s .dotfiles/zshrc .zshrc
 rm .vimrc; ln -s .dotfiles/vimrc .vimrc
 rm -drf .vim; ln -s .dotfiles/vim .vim
 rm .tmux.conf; ln -s .dotfiles/tmux.conf .tmux.conf
-
-# copy zsh theme to oh-my-zsh
-cp .dotfiles/btfh.zsh-theme ~/.oh-my-zsh/themes/
+ln -s .dotfiles/btfh.zsh-theme ~/.oh-my-zsh/themes/btfh.zsh-theme
 
