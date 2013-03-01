@@ -35,7 +35,7 @@ plugins=(git, autojump, cake)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/btfh/.rvm/gems/ruby-1.9.2-p318/bin:/Users/btfh/.rvm/gems/ruby-1.9.2-p318@global/bin:/Users/btfh/.rvm/rubies/ruby-1.9.2-p318/bin:/Users/btfh/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/opt/local/bin:/Users/btfh/.rvm/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin:~/.aws/api/bin/:~/.src/depot_tools/
+export PATH=/Users/btfh/.rvm/gems/ruby-1.9.2-p318/bin:/Users/btfh/.rvm/gems/ruby-1.9.2-p318@global/bin:/Users/btfh/.rvm/rubies/ruby-1.9.2-p318/bin:/Users/btfh/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/opt/local/bin:/Users/btfh/.rvm/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin:~/.aws/api/bin/:~/.src/depot_tools/:~/bin
 
 # use vim keybindings
 set -o vi
