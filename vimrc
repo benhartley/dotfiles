@@ -114,4 +114,4 @@ noremap ˚ :wincmd k<CR>
 noremap ¬ :wincmd l<CR>
 
 " set dir for vim-notes
-let g:notes_directory = '~/Documents/Notes'
+let g:notes_directory = '~/.notes'
