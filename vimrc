@@ -115,3 +115,6 @@ noremap ¬ :wincmd l<CR>
 
 " set dir for vim-notes
 let g:notes_directory = '~/.notes'
+
+" reselect pasted text
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
