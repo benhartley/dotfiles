@@ -120,3 +120,6 @@ let g:notes_directory = '~/.notes'
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
+
+" reselect pasted text
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
