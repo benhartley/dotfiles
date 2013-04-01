@@ -114,4 +114,9 @@ noremap ˚ :wincmd k<CR>
 noremap ¬ :wincmd l<CR>
 
 " set dir for vim-notes
-let g:notes_directory = '~/Documents/Notes'
+let g:notes_directory = '~/.notes'
+
+" tslime default hotkeys
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
