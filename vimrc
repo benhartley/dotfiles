@@ -79,14 +79,8 @@ set tabstop=4
 set shiftwidth=4
 set cinkeys=0{,0},:,0#,!^F
 
-" key mapping for build
-function! Message()
-	call inputsave()
-	let message = input('Git commit message: ')
-	call inputrestore()
-	return message
-endfunction
-map §§ <ESC>:w<CR>:! cake -m '<C-R>=Message()<CR>' build<CR>
+" key mapping for build and deploy
+map §§ <ESC>:w<CR>:!cake build; cake deploy<CR>
 
 " disable arrows for navigation
 inoremap  <Up>     <NOP>
@@ -105,16 +99,44 @@ function! Google()
 	call inputrestore()
 	return searchterm
 endfunction
-map © <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'https://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
+map ©© <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'https://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
 
-" key mapping for switching windows
+" key mapping for switching panes
 noremap ˙ :wincmd h<CR>
 noremap ∆ :wincmd j<CR>
 noremap ˚ :wincmd k<CR>
 noremap ¬ :wincmd l<CR>
 
+" open new panes in the right places...
+set splitbelow
+set splitright
+
 " set dir for vim-notes
 let g:notes_directory = '~/.notes'
 
+" key binding for removing search highlight
+nnoremap <esc> :noh<return><esc>
+
 " reselect pasted text
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+
+" syntax highlight for spelling mistake
+hi clear SpellBad
+hi SpellBad cterm=underline ctermfg=red
+
+" coffeetags
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '--include-vars',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+endif

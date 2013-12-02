@@ -22,7 +22,7 @@ ZSH_THEME="btfh"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
@@ -30,7 +30,7 @@ ZSH_THEME="btfh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git, autojump, cake)
+plugins=(git autojump cake)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,10 +64,17 @@ function gr() { grep -nr "${@}" *; }
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # set AWS credentials path
-export AWS_CREDENTIAL_FILE="~/.aws/cred.key"
+export AWS_CREDENTIAL_FILE="/Users/btfh/.aws/cred.key"
 
 # force local vim
-alias vim='/opt/local/bin/vim'
+#alias vim='/opt/local/bin/vim'
+alias vim='/usr/local/bin/vim'
+
+# force python 2.7.5 (homebrew)
+alias python='/usr/local/bin/python'
+
+# rumember
+alias rtm='~/.rvm/gems/ruby-1.9.3-p327/gems/rumember-1.0.1/bin/ru'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
@@ -81,6 +88,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 function ms() { mux s ${@}; }
+
+# tmux
+function ta() { tmux attach-session -t ${@}; }
 
 # set vim as editor
 export EDITOR='/opt/local/bin/vim'
@@ -104,3 +114,9 @@ LC_MONETARY="en_GB.UTF-8"
 LC_NUMERIC="en_GB.UTF-8"
 LC_TIME="en_GB.UTF-8"
 LC_ALL=
+
+# quicklook
+function ql() { qlmanage -p ${@}; }
+
+# timetrap today
+alias today='t d -v -s today all'

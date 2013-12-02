@@ -1,5 +1,5 @@
 # add new user
-sudo useradd -m -s /bin/zsh ben
+sudo useradd -m -G admin -s /bin/zsh ben
 sudo visudo
 
 # install stuff
