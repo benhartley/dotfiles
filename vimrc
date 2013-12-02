@@ -61,9 +61,10 @@ filetype plugin indent on
 syntax enable
 colorscheme molokai
 
-" close tags
+" FileType autocmds
 " autocmd FileType html,php let b:closetag_html_style=1
 " autocmd FileType html,xhtml,xml,php source ~/.vim/bundle/closetag/plugin/closetag.vim
+autocmd FileType mail set spell
 
 " supertab
 " let g:SuperTabDefaultCompletionType = "context"
@@ -140,3 +141,9 @@ if executable('coffeetags')
         \ }
         \ }
 endif
+
+" make searchs very magic by default
+nnoremap / /\v
+
+" set comma to leader
+let mapleader = ','

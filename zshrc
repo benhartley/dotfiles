@@ -30,15 +30,18 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git autojump cake)
+plugins=(git autojump cake vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/btfh/.rvm/gems/ruby-1.9.2-p318/bin:/Users/btfh/.rvm/gems/ruby-1.9.2-p318@global/bin:/Users/btfh/.rvm/rubies/ruby-1.9.2-p318/bin:/Users/btfh/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/opt/local/bin:/Users/btfh/.rvm/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin:~/.aws/api/bin/:~/.src/depot_tools/:~/bin
+export PATH=/Users/btfh/.rvm/gems/ruby-1.9.2-p318/bin:/Users/btfh/.rvm/gems/ruby-1.9.2-p318@global/bin:/Users/btfh/.rvm/rubies/ruby-1.9.2-p318/bin:/Users/btfh/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/opt/local/bin:/Users/btfh/.rvm/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin:~/.aws/api/bin/:~/.src/depot_tools/:~/bin:~/.cabal/bin
 
 # use vim keybindings
 set -o vi
+
+# speed up mode transition
+KEYTIMEOUT=1
 
 # git stuff
 alias gc='git commit -m'
@@ -51,14 +54,8 @@ alias ghub='git push github master'
 alias gpull='git pull github master'
 alias grm='git rm $(git ls-files --deleted)'
 
-# set tab name in iTerm
-function tabname() { echo -ne "\033]0;${@}\007"; }
-
 # convert timestamp to human readable
 function timestamp() { perl -e "print scalar(localtime(${@})), \"\n\""; }
-
-# recursive grep in current dir
-function gr() { grep -nr "${@}" *; }
 
 # set node path
 export NODE_PATH="/usr/local/lib/node_modules"
@@ -85,9 +82,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-# tmuxinator
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-function ms() { mux s ${@}; }
+# tmux
+function ta() { tmux attach-session -t ${@}; }
 
 # tmux
 function ta() { tmux attach-session -t ${@}; }
@@ -118,5 +114,25 @@ LC_ALL=
 # quicklook
 function ql() { qlmanage -p ${@}; }
 
-# timetrap today
-alias today='t d -v -s today all'
+# Add arbitrary metadata to a file
+# - example usage:
+# 	- ls pattern | mdtag 'key:value'
+function mdtag2() {
+	# Split key:value pairs on comma
+	pairs=(${(s/,/)1})
+	file=$2
+	# Loop through files (from stdin)
+	while read file
+	do
+		# Loop through k:v pairs
+		for pair in "${pairs[@]}"
+		do
+			# Split into key and value
+			local key=$(echo $pair | tr ':' '\n' | sed -n 1p)
+			local value=$(echo $pair | tr ':' '\n' | sed -n 2p)
+			# Write metadata to file
+			xattr -w com.apple.metadata:$key $value $file
+		done
+	done
+}
+>>>>>>> 40775ecf4908b08f1c32a3f58bed0380e5f37aae
