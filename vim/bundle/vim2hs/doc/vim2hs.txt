@@ -1,0 +1,158 @@
+*vim2hs.txt*    Vim to Haskell                                         *vim2hs*
+
+
+=============================================================================
+COMMANDS                                                    *vim2hs-commands*
+
+                                                                    *:HPaste*
+:{range}HPaste          Paste the contents of the buffer or range
+                        to hpaste.org.  Requires a Vim compiled with a
+                        |Python| interface.
+
+                        See also |g:hpaste_author|.
+
+                                                                     *:HLint*
+:HLint {args}           Run HLint on the buffer.  Requires hlint (available
+                        from Hackage) to be installed and in $PATH.  This
+                        actually sets the |:compiler| to "hlint" temporarily,
+                        and then restores the |current_compiler|.
+
+                        Only available to Haskell buffers.
+
+                        See also |compiler-hlint| and |g:hlint_args|.
+
+                                                                 *:PointFree*
+:PointFree              Suggest a pointfree version of the selected code.
+                        Requires pointfree (available from Hackage) to be
+                        installed and in $PATH.  Accepts a range to make it
+                        easier to run from |Visual| mode, but the range is
+                        actually ignored.
+
+:PointFree!             Like ":PointFree" but replaces the selection with the
+                        suggested pointfree version.
+
+                        Useful as a mapping, for example: >
+
+                          autocmd FileType haskell
+                            \ vnoremap <buffer> <silent> <Leader>pf
+                            \ :PointFree!<CR>
+<
+
+=============================================================================
+COMPILERS                                                  *vim2hs-compilers*
+
+All compilers shipped with vim2hs use |:CompilerSet| and as such can be
+enabled globally using ":compiler!".  Optionally you can use an |autocommand|
+or |ftplugin| to enable a compiler only for Haskell buffers, for example:
+>
+  autocmd FileType haskell compiler cabal
+<
+                                             *quickfix-hlint*  *compiler-hlint*
+:compiler hlint         Configure |:make| for using HLint.  Requires hlint
+                        (available from Hackage) to be installed and in $PATH.
+
+                        See also |g:hlint_args|.
+
+                                             *quickfix-cabal*  *compiler-cabal*
+:compiler cabal         Configure |:make| for type-checking using Cabal.
+                        Requires cabal (available as cabal-install from
+                        Hackage) to be installed and in $PATH.  Runs "cabal
+                        build" which also works with cabal-dev, but you have
+                        to install dependencies and run configure first, for
+                        example by running "cabal-dev install".
+
+                        The option "-fno-code" is passed to GHC which means
+                        the compilation phase is skipped and the code is only
+                        type checked.  This can be much faster, but also means
+                        you can't use this to build your project from Vim.
+                        Instead, it is recommended that you run "cabal
+                        install" or similar from a terminal manually to
+                        properly build and install a project that you already
+                        know should type check.  If you prefer, you can always
+                        override |'makeprg'| yourself.
+
+                        Warnings and errors from GHC will both parse as
+                        unspecified type due to limitations of Vim's
+                        |errorformat| patterns and the complexity of GHC's
+                        output.  This might be resolved in the future by
+                        filtering Cabal's output through a script.
+
+                                            *quickfix-jmacro* *compiler-jmacro*
+:compiler jmacro        Configure |:make| for JMacro.  Requires jmacro
+                        (available as jmacro from Hackage) to be installed and
+                        in $PATH.
+
+                        Runs the jmacro executable on the file which will show
+                        the generated JavaScript on success and parse errors
+                        into |quickfix| on failure.
+
+                        This is not useful for QuasiQuoted JMacro code.
+
+
+=============================================================================
+TABULAR                                                      *vim2hs-tabular*
+
+Requires the Tabular plugin for Vim.  Useful in mappings, for example:
+>
+  autocmd FileType cabal
+    \ nnoremap <buffer> <silent> <Leader>t: :Tabularize colon<CR>
+<
+See also |g:haskell_tabular|.
+
+
+:Tabularize colon       Align by a single colon, useful for Cabal
+                        descriptions.
+
+:Tabularize haskell_bindings
+                        Align a set of bindings by "=".
+
+:Tabularize haskell_comments
+                        Align line-comments at the end of lines.
+
+:Tabularize haskell_do_arrows
+                        Align a set of monadic binds by "<-".
+
+:Tabularize haskell_imports
+                        Align imports by import list and "as".
+
+:Tabularize haskell_pattern_arrows
+                        Align a set of pattern matches by "->".
+
+:Tabularize haskell_types
+                        Align type signatures by "::" in a record.
+
+
+
+=============================================================================
+OPTIONS                                                      *vim2hs-options*
+
+                                                            *g:hpaste_author*
+Author name to use when pasting to hpaste.org, instead of prompting for it
+every time: >
+  let g:hpaste_author = 'Your Name'
+<
+                                                               *g:hlint_args*
+Arguments that are always passed to HLint.  The default adds support for HSP: >
+  let g:hlint_args = '--language=XmlSyntax'
+<
+                                                          *g:haskell_tabular*
+Whether to add named patterns to Tabular useful for Haskell development.  This
+is enabled by default if Tabular is installed: >
+  let g:haskell_tabular = 1
+<
+                                                         *g:haskell_autotags*
+Generate a tags file when Vim is started in a directory containing a "*.cabal"
+file, and update it when saving "*.hs" files.
+
+See also |g:haskell_tags_generator|.
+
+Disabled by default: >
+  let g:haskell_autotags = 0
+<
+                                                   *g:haskell_tags_generator*
+The program to use for |g:haskell_autotags|.  Valid values are "fast-tags" and
+"hasktags" and requires the respective packages from Hackage.  Default: >
+  let g:haskell_tags_generator = 'fast-tags'
+<
+
+ vim:tw=78:et:ft=help:norl:

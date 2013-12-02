@@ -1,13 +1,13 @@
 # much of below taken from http://thume.ca/howto/2012/11/19/using-slate/
-config defaultToCurrentScreen true
+config defaultToCurrentScreen false
 config windowHintsShowIcons true
 config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
 config windowHintsFontColor 0;0;0;1.0
 config windowHintsFontName 'Lucida Grande'
-config windowHintsFontSize 80
-config windowHintsWidth 50
-config windowHintsHeight 50
+config windowHintsFontSize 100
+config windowHintsWidth 70
+config windowHintsHeight 70
 
 alias hotkey ctrl;cmd
 
@@ -30,6 +30,7 @@ bind j:${hotkey} ${bottomhalf}
 
 # App specific
 bind b:${hotkey} focus 'Google Chrome'
+bind o:${hotkey} focus 'Chromium'
 bind i:${hotkey} focus 'iTerm'
 bind m:${hotkey} focus 'Mail'
 bind c:${hotkey} focus 'gCal'
