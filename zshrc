@@ -85,6 +85,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # tmux
 function ta() { tmux attach-session -t ${@}; }
 
+# tmux
+function ta() { tmux attach-session -t ${@}; }
+
 # set vim as editor
 export EDITOR='/opt/local/bin/vim'
 
@@ -132,3 +135,6 @@ function mdtag2() {
 		done
 	done
 }
+
+
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
