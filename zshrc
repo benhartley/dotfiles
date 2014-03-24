@@ -30,12 +30,12 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git autojump cake vi-mode)
+plugins=(git autojump)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/btfh/.rvm/gems/ruby-1.9.2-p318/bin:/Users/btfh/.rvm/gems/ruby-1.9.2-p318@global/bin:/Users/btfh/.rvm/rubies/ruby-1.9.2-p318/bin:/Users/btfh/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/opt/local/bin:/Users/btfh/.rvm/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin:~/.aws/api/bin/:~/.src/depot_tools/:~/bin:~/.cabal/bin
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/opt/local/bin:/Users/btfh/.rvm/bin:/opt/local/bin:/usr/local/mysql/bin:~/.aws/api/bin/:~/.src/depot_tools/:~/bin:~/.cabal/bin:~/.bin
 
 # use vim keybindings
 set -o vi
@@ -66,12 +66,15 @@ export AWS_CREDENTIAL_FILE="/Users/btfh/.aws/cred.key"
 # force local vim
 #alias vim='/opt/local/bin/vim'
 alias vim='/usr/local/bin/vim'
+alias git='/usr/local/bin/git'
+
+alias gulp='gulp --require coffee-script/register'
 
 # force python 2.7.5 (homebrew)
 alias python='/usr/local/bin/python'
 
 # rumember
-alias rtm='~/.rvm/gems/ruby-1.9.3-p327/gems/rumember-1.0.1/bin/ru'
+alias rtm='/Library/Ruby/Gems/2.0.0/gems/rumember-1.0.1/bin/ru'
 
 alias gulp='gulp --require coffee-script/register'
 
@@ -91,7 +94,7 @@ function ta() { tmux attach-session -t ${@}; }
 function ta() { tmux attach-session -t ${@}; }
 
 # set vim as editor
-export EDITOR='/opt/local/bin/vim'
+export EDITOR='/usr/local/bin/vim'
 
 # Backward search in the shell history with <C-r>
 bindkey '^r' history-incremental-search-backward
