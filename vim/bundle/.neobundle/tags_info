@@ -1,0 +1,13 @@
+delimitMate
+neobundle.vim
+supertab
+syntastic
+vim-coffee-script
+vim-gitgutter
+vim-jade
+vim-ledger
+vim-markdown
+vim-stylus
+vim-surround
+vim-unimpaired
+vimproc

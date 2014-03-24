@@ -17,8 +17,8 @@ set statusline+=%{SyntasticStatuslineFlag()} " syntastic errors
 au InsertEnter * hi StatusLine term=reverse ctermbg=15 gui=undercurl guisp=White
 au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 
-" no code folding
-set nofoldenable
+" specific setting on a per file basis
+set modelines=1
 
 " syntastic
 let g:syntastic_enable_signs = 0
@@ -51,12 +51,7 @@ au BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
 au BufNewFile,BufRead *.md set ft=markdown
 au BufNewFile,BufRead *.ledger set ft=ledger
 
-" pathogen
-execute pathogen#infect()
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
-" filetype indentation !! coffeescript plugin requires this!
+" filetype indentation
 filetype plugin indent on
 
 " colors 
@@ -64,8 +59,6 @@ syntax enable
 colorscheme molokai
 
 " FileType autocmds
-" autocmd FileType html,php let b:closetag_html_style=1
-" autocmd FileType html,xhtml,xml,php source ~/.vim/bundle/closetag/plugin/closetag.vim
 autocmd FileType mail set spell
 
 " supertab
@@ -91,6 +84,8 @@ set cinkeys=0{,0},:,0#,!^F
 " key mapping for build and deploy
 map §§ <ESC>:w<CR>:!cake build; cake deploy<CR>
 
+" Disable keys {{{
+
 " disable arrows for navigation
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -100,15 +95,7 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
-
-" key mapping for google search
-function! Google()
-	call inputsave()
-	let searchterm = input('Google: ')
-	call inputrestore()
-	return searchterm
-endfunction
-map ©© <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'https://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
+" }}}
 
 " key mapping for switching panes
 noremap ˙ :wincmd h<CR>
@@ -124,9 +111,6 @@ noremap Ô :tabprevious<CR>
 set splitbelow
 set splitright
 
-" set dir for vim-notes
-let g:notes_directory = '~/.notes'
-
 " key binding for removing search highlight
 nnoremap <esc> :noh<return><esc>
 
@@ -137,30 +121,13 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red
 
-" coffeetags
-if executable('coffeetags')
-  let g:tagbar_type_coffee = {
-        \ 'ctagsbin' : 'coffeetags',
-        \ 'ctagsargs' : '--include-vars',
-        \ 'kinds' : [
-        \ 'f:functions',
-        \ 'o:object',
-        \ ],
-        \ 'sro' : ".",
-        \ 'kind2scope' : {
-        \ 'f' : 'object',
-        \ 'o' : 'object',
-        \ }
-        \ }
-endif
-
 " make searchs very magic by default
 nnoremap / /\v
 
+" Leader shortcuts {{{
+
 " set comma to leader
 let mapleader = ' '
-
-" leader shortcuts
 
 " save
 nnoremap <Leader>w :w<CR>
@@ -187,3 +154,46 @@ noremap <Leader>6 6gt
 " splits
 noremap <Leader>v :vs 
 noremap <Leader>s :sp 
+
+"}}}
+
+" NeoBundle {{{
+" https://github.com/Shougo/neobundle.vim
+
+" required steps
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" neobundle manages itself
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" vimproc allows plugins to be installed asynchronously
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
+
+" add bundles here
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'ervandew/supertab'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'ledger/vim-ledger'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'wavded/vim-stylus'
+
+" check for uninstalled bundles on startup
+NeoBundleCheck
+
+
+" }}}
+
+" vim:foldmethod=marker:foldlevel=0:ft=vim

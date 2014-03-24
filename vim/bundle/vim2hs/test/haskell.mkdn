@@ -1,6 +1,0 @@
-GitHub Markdown
-===============
-
-```haskell
-main = putStrLn "hello"
-```
