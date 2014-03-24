@@ -17,8 +17,8 @@ set statusline+=%{SyntasticStatuslineFlag()} " syntastic errors
 au InsertEnter * hi StatusLine term=reverse ctermbg=15 gui=undercurl guisp=White
 au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 
-" no code folding
-set nofoldenable
+" specific setting on a per file basis
+set modelines=1
 
 " syntastic
 let g:syntastic_enable_signs = 0
@@ -91,6 +91,8 @@ set cinkeys=0{,0},:,0#,!^F
 " key mapping for build and deploy
 map §§ <ESC>:w<CR>:!cake build; cake deploy<CR>
 
+" Disable keys {{{
+
 " disable arrows for navigation
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -100,15 +102,7 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
-
-" key mapping for google search
-function! Google()
-	call inputsave()
-	let searchterm = input('Google: ')
-	call inputrestore()
-	return searchterm
-endfunction
-map ©© <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'https://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
+" }}}
 
 " key mapping for switching panes
 noremap ˙ :wincmd h<CR>
@@ -153,10 +147,10 @@ endif
 " make searchs very magic by default
 nnoremap / /\v
 
+" Leader shortcuts {{{
+
 " set comma to leader
 let mapleader = ' '
-
-" leader shortcuts
 
 " save
 nnoremap <Leader>w :w<CR>
@@ -183,3 +177,7 @@ noremap <Leader>6 6gt
 " splits
 noremap <Leader>v :vs 
 noremap <Leader>s :sp 
+
+"}}}
+
+" vim:foldmethod=marker:foldlevel=0
