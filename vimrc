@@ -26,6 +26,7 @@ let g:syntastic_auto_jump = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_disabled_filetypes = ['html']
 let g:syntastic_stl_format = '[%E{Error 1/%e: line %fe}%B{, }%W{Warning 1/%w: line %fw}]'
+let g:syntastic_check_on_open=1
 
 " generic
 set encoding=utf-8
@@ -72,6 +73,12 @@ autocmd FileType mail set spell
 let g:SuperTabDefaultCompletionType = "<c-x><c-p>"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-p>"
 
+" wildmenu - tab to get autocomplete menu in Ex mode
+set wildmenu
+
+" don't redraw so often, feels quicker
+set lazyredraw
+
 " auto-indent
 " set cindent
 " set smartindent
@@ -108,6 +115,10 @@ noremap ˙ :wincmd h<CR>
 noremap ∆ :wincmd j<CR>
 noremap ˚ :wincmd k<CR>
 noremap ¬ :wincmd l<CR>
+
+" key mapping for switching tabs
+noremap  :tabnext<CR>
+noremap Ô :tabprevious<CR>
 
 " open new panes in the right places...
 set splitbelow
@@ -147,4 +158,32 @@ endif
 nnoremap / /\v
 
 " set comma to leader
-let mapleader = ','
+let mapleader = ' '
+
+" leader shortcuts
+
+" save
+nnoremap <Leader>w :w<CR>
+
+" copy to clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
+" tabs
+noremap <Leader>j :tabprevious<CR>
+noremap <Leader>k :tabnext<CR>
+noremap <Leader>f :tabf 
+noremap <Leader>1 1gt
+noremap <Leader>2 2gt
+noremap <Leader>3 3gt
+noremap <Leader>4 4gt
+noremap <Leader>5 5gt
+noremap <Leader>6 6gt
+
+" splits
+noremap <Leader>v :vs 
+noremap <Leader>s :sp 
