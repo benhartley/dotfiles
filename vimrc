@@ -110,6 +110,10 @@ noremap ∆ :wincmd j<CR>
 noremap ˚ :wincmd k<CR>
 noremap ¬ :wincmd l<CR>
 
+" key mapping for switching tabs
+noremap  :tabnext<CR>
+noremap Ô :tabprevious<CR>
+
 " open new panes in the right places...
 set splitbelow
 set splitright
