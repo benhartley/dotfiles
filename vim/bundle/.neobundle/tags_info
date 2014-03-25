@@ -1,8 +1,10 @@
+ctrlp.vim
 delimitMate
 neobundle.vim
 supertab
 syntastic
 vim-coffee-script
+vim-commentary
 vim-gitgutter
 vim-jade
 vim-ledger

@@ -1,6 +1,8 @@
 " check for changes to current file every 4 secs
 :au CursorHold * checktime
  
+" Temporary files {{{
+
 " persistent undo
 set undofile
 set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -10,6 +12,7 @@ set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
 set writebackup
+" }}}
 
 " status line
 set statusline=%t\ %M\ %=\ line:\ %l/%L
@@ -20,13 +23,14 @@ au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 " specific setting on a per file basis
 set modelines=1
 
-" syntastic
+" Syntastic {{{
 let g:syntastic_enable_signs = 0
 let g:syntastic_auto_jump = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_disabled_filetypes = ['html']
 let g:syntastic_stl_format = '[%E{Error 1/%e: line %fe}%B{, }%W{Warning 1/%w: line %fw}]'
 let g:syntastic_check_on_open=1
+" }}}
 
 " generic
 set encoding=utf-8
@@ -45,18 +49,23 @@ set smartcase
 set number
 set ruler
 
+" Syntax highlight {{{
+
+" colors 
+syntax enable
+colorscheme molokai
+
 " syntax stuff
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
 au BufNewFile,BufRead *.md set ft=markdown
 au BufNewFile,BufRead *.ledger set ft=ledger
+au BufNewFile,BufRead *.coffee set ft=coffee
+
+" }}}
 
 " filetype indentation
 filetype plugin indent on
-
-" colors 
-syntax enable
-colorscheme molokai
 
 " FileType autocmds
 autocmd FileType mail set spell
@@ -97,19 +106,27 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 " }}}
 
+" Panes {{{
+
 " key mapping for switching panes
 noremap ˙ :wincmd h<CR>
 noremap ∆ :wincmd j<CR>
 noremap ˚ :wincmd k<CR>
 noremap ¬ :wincmd l<CR>
 
+" open new panes in the right places...
+set splitbelow
+set splitright
+
+" }}}
+
+" Tabs {{{
+
 " key mapping for switching tabs
 noremap  :tabnext<CR>
 noremap Ô :tabprevious<CR>
 
-" open new panes in the right places...
-set splitbelow
-set splitright
+" }}}
 
 " key binding for removing search highlight
 nnoremap <esc> :noh<return><esc>
@@ -182,10 +199,12 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ledger/vim-ledger'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'wavded/vim-stylus'
@@ -193,6 +212,13 @@ NeoBundle 'wavded/vim-stylus'
 " check for uninstalled bundles on startup
 NeoBundleCheck
 
+" }}}
+
+" CtrlP {{{
+
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " }}}
 

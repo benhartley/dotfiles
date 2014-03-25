@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/private/var/www/after/rwanda.bak'
+let g:netrw_dirhist_2='/private/var/www/after/rwanda.bak/src/coffee/views'
+let g:netrw_dirhist_3='/private/var/www/after/rwanda.bak/src/coffee'
+let g:netrw_dirhist_4='/private/var/www/after/rwanda/src/coffee/views'
+let g:netrw_dirhist_5='/private/var/www/after/rwanda/src/jade/includes'
+let g:netrw_dirhist_6='/Users/btfh/Desktop'
+let g:netrw_dirhist_7='/private/var/www/after/rwanda/src/jade/templates'
+let g:netrw_dirhist_8='/private/var/www/after/rwanda/src/coffee/views'
