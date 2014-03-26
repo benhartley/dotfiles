@@ -44,7 +44,7 @@ set -o vi
 KEYTIMEOUT=1
 
 # git stuff
-alias gc='git commit -m'
+alias gc='git commit'
 alias ga='git add .'
 alias gcb='git checkout -b'
 alias gp='git push'
@@ -52,7 +52,6 @@ alias gl='git pull'
 alias gst='git status'
 alias ghub='git push github master'
 alias gpull='git pull github master'
-alias grm='git rm $(git ls-files --deleted)'
 
 # convert timestamp to human readable
 function timestamp() { perl -e "print scalar(localtime(${@})), \"\n\""; }
