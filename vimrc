@@ -52,7 +52,7 @@ set ruler
 " Syntax highlight {{{
 
 " colors 
-syntax enable
+syntax on
 colorscheme molokai
 
 " syntax stuff
@@ -205,6 +205,7 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'wavded/vim-stylus'
