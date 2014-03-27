@@ -1,5 +1,49 @@
 " check for changes to current file every 4 secs
 :au CursorHold * checktime
+
+" NeoBundle {{{
+" https://github.com/Shougo/neobundle.vim
+
+" required steps
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" neobundle manages itself
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" vimproc allows plugins to be installed asynchronously
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
+
+" add bundles here
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'ervandew/supertab'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ledger/vim-ledger'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-git'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'wavded/vim-stylus'
+
+" check for uninstalled bundles on startup
+NeoBundleCheck
+
+" }}}
+
+" filetype indentation
+filetype plugin indent on
  
 " Temporary files {{{
 
@@ -63,9 +107,6 @@ au BufNewFile,BufRead *.ledger set ft=ledger
 au BufNewFile,BufRead *.coffee set ft=coffee
 
 " }}}
-
-" filetype indentation
-filetype plugin indent on
 
 " FileType autocmds
 autocmd FileType mail set spell
@@ -174,46 +215,6 @@ noremap <Leader>s :sp
 
 "}}}
 
-" NeoBundle {{{
-" https://github.com/Shougo/neobundle.vim
-
-" required steps
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-" neobundle manages itself
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" vimproc allows plugins to be installed asynchronously
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-
-" add bundles here
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'ledger/vim-ledger'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'wavded/vim-stylus'
-
-" check for uninstalled bundles on startup
-NeoBundleCheck
-
-" }}}
 
 " CtrlP {{{
 
