@@ -108,8 +108,10 @@ au BufNewFile,BufRead *.coffee set ft=coffee
 
 " }}}
 
-" FileType autocmds
+" FileType autocmds {{{
 autocmd FileType mail set spell
+autocmd FileType gitcommit set spell
+" }}}
 
 " supertab
 " let g:SuperTabDefaultCompletionType = "context"
