@@ -194,6 +194,7 @@ let mapleader = ' '
 
 " save
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>x :x<CR>
 
 " copy to clipboard
 vmap <Leader>y "+y
