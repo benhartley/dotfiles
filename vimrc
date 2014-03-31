@@ -111,6 +111,7 @@ au BufNewFile,BufRead *.coffee set ft=coffee
 " FileType autocmds {{{
 autocmd FileType mail set spell
 autocmd FileType gitcommit set spell
+autocmd FileType markdown set spell
 " }}}
 
 " supertab
