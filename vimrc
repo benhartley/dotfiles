@@ -136,6 +136,9 @@ set cinkeys=0{,0},:,0#,!^F
 " key mapping for build and deploy
 map §§ <ESC>:w<CR>:!cake build; cake deploy<CR>
 
+" jj = Esc
+imap jj <Esc>
+
 " Disable keys {{{
 
 " disable arrows for navigation
