@@ -46,6 +46,7 @@ KEYTIMEOUT=1
 # git stuff
 alias gc='git commit'
 alias ga='git add .'
+alias gac='git add .; git commit'
 alias gcb='git checkout -b'
 alias gp='git push'
 alias gl='git pull'
