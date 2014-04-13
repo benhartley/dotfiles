@@ -23,6 +23,7 @@ NeoBundle 'Shougo/vimproc', {
 
 " add bundles here
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'dag/vim2hs'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -195,6 +196,7 @@ let mapleader = ' '
 
 " save
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
 
 " copy to clipboard
