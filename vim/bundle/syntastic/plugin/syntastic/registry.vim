@@ -60,6 +60,7 @@ let s:defaultCheckers = {
         \ 'pod':         ['podchecker'],
         \ 'puppet':      ['puppet', 'puppetlint'],
         \ 'python':      ['python', 'flake8', 'pylint'],
+        \ 'r':           [],
         \ 'racket':      ['racket'],
         \ 'rst':         ['rst2pseudoxml'],
         \ 'ruby':        ['mri'],
@@ -88,12 +89,14 @@ let s:defaultCheckers = {
         \ 'zpt':         ['zptlint'],
         \ 'zsh':         ['zsh', 'shellcheck']
     \ }
+lockvar! s:defaultCheckers
 
 let s:defaultFiletypeMap = {
         \ 'gentoo-metadata': 'xml',
         \ 'lhaskell': 'haskell',
         \ 'litcoffee': 'coffee'
     \ }
+lockvar! s:defaultFiletypeMap
 
 let g:SyntasticRegistry = {}
 
@@ -169,7 +172,8 @@ function! g:SyntasticRegistry.getKnownFiletypes() " {{{2
 endfunction " }}}2
 
 function! g:SyntasticRegistry.echoInfoFor(ftalias_list) " {{{2
-    echomsg "Syntastic info for filetype: " . join(a:ftalias_list, '.')
+    echomsg "Syntastic version: " . g:syntastic_version
+    echomsg "Info for filetype: " . join(a:ftalias_list, '.')
 
     let ft_list = syntastic#util#unique(map( copy(a:ftalias_list), 's:normaliseFiletype(v:val)' ))
     if len(ft_list) != 1
