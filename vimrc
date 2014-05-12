@@ -25,12 +25,13 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'dag/vim2hs'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'ervandew/supertab'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ledger/vim-ledger'
-NeoBundle 'MarcWeber/vim-addon-local-vimrc'
+NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Raimondi/delimitMate'
@@ -76,8 +77,12 @@ let g:syntastic_enable_signs = 0
 let g:syntastic_auto_jump = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_disabled_filetypes = ['html']
+let g:syntastic_ignore_files = ['*.html']
 let g:syntastic_stl_format = '[%E{Error 1/%e: line %fe}%B{, }%W{Warning 1/%w: line %fw}]'
 let g:syntastic_check_on_open=1
+let g:syntastic_mode_map={ 'mode': 'active',
+                     \ 'active_filetypes': [],
+                     \ 'passive_filetypes': ['html'] }
 " }}}
 
 " generic
