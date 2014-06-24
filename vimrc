@@ -43,6 +43,7 @@ NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-leiningen'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'vim-scripts/paredit.vim'
 NeoBundle 'wavded/vim-stylus'
 
 " check for uninstalled bundles on startup
