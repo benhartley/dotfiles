@@ -30,6 +30,7 @@ NeoBundle 'ervandew/supertab'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'ledger/vim-ledger'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'mileszs/ack.vim'
@@ -117,6 +118,9 @@ au BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
 au BufNewFile,BufRead *.md set ft=markdown
 au BufNewFile,BufRead *.ledger set ft=ledger
 au BufNewFile,BufRead *.coffee set ft=coffee
+
+" Rainbow parens
+au VimEnter * RainbowParenthesesToggle
 
 " }}}
 
