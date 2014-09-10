@@ -100,6 +100,8 @@ export EDITOR='/usr/local/bin/vim'
 # Backward search in the shell history with <C-r>
 bindkey '^r' history-incremental-search-backward
 setopt hist_ignore_all_dups
+bindkey '^k' up-line-or-search
+bindkey '^j' down-line-or-search
 
 # autocd
 setopt autocd
