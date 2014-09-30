@@ -23,6 +23,7 @@ NeoBundle 'Shougo/vimproc', {
 
 " add bundles here
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'chilicuil/vim-sml-coursera'
 NeoBundle 'dag/vim2hs'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'editorconfig/editorconfig-vim'

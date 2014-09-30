@@ -1,0 +1,14 @@
+pane	medical	1	:vim	0	:-	0	:/private/var/www/medical/app	1	vim	:
+pane	medical	2	:git	0	: 	0	:/private/var/www/medical	1	zsh	:
+pane	medical	2	:git	0	: 	1	:/private/var/www/medical	0	tig	:
+pane	medical	3	:zsh	0	: 	0	:/private/var/www/medical	1	zsh	:
+pane	medical	4	:live	1	:*	0	:/private/var/www/medical/app	0	node	:
+pane	medical	4	:live	1	:*	1	:/private/var/www/medical/app	0	zsh	:
+pane	medical	4	:live	1	:*	2	:/Users/btfh	1	vim	:
+pane	medical	5	:~/cloud/medical	0	: 	0	:/private/var/www/medical	1	ssh	:
+window	medical	1	0	:-	b4fd,318x70,0,0,0
+window	medical	2	0	: 	3696,318x70,0,0{159x70,0,0,1,158x70,160,0,2}
+window	medical	3	0	: 	b500,318x70,0,0,3
+window	medical	4	1	:*	fab0,318x70,0,0{159x70,0,0,4,158x70,160,0[158x35,160,0,6,158x34,160,36,7]}
+window	medical	5	0	: 	b502,318x70,0,0,5
+state	medical	
