@@ -67,6 +67,7 @@ export AWS_CREDENTIAL_FILE="/Users/btfh/.aws/cred.key"
 # force local vim
 #alias vim='/opt/local/bin/vim'
 alias vim='/usr/local/bin/vim'
+alias emacs='/usr/local/bin/emacs'
 alias git='/usr/local/bin/git'
 
 alias gulp='gulp --require coffee-script/register'
