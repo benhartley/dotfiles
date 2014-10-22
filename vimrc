@@ -6,7 +6,7 @@
 
 " required steps
 set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " neobundle manages itself
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -35,6 +35,7 @@ NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'ledger/vim-ledger'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'plasticboy/vim-markdown'
@@ -44,12 +45,15 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-leiningen'
+NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'wavded/vim-stylus'
 
 " check for uninstalled bundles on startup
 NeoBundleCheck
+
+call neobundle#end()
 
 " }}}
 
@@ -120,6 +124,7 @@ au BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
 au BufNewFile,BufRead *.md set ft=markdown
 au BufNewFile,BufRead *.ledger set ft=ledger
 au BufNewFile,BufRead *.coffee set ft=coffee
+au BufNewFile,BufRead *.hbs set ft=mustache
 
 " Rainbow parens
 au VimEnter * RainbowParenthesesToggle
@@ -206,6 +211,9 @@ hi SpellBad cterm=underline ctermfg=red
 " make searchs very magic by default
 nnoremap / /\v
 
+" access directory with -
+nnoremap - :Ex<return>
+
 " Leader shortcuts {{{
 
 " set comma to leader
@@ -248,6 +256,10 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
+" }}}
+
+" Mustache {{{
+let g:mustache_abbreviations = 1
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
