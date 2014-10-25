@@ -3,9 +3,9 @@ send-keys -t vim.0 ls Enter
 neww -n git
 splitw -h 
 send-keys -t git.0 gst Enter
-send-keys -t git.1 ghi Enter
-neww
+send-keys -t git.1 tig Enter
+neww -n ack
 neww -n live
-send-keys -t live.0 'grunt live' Enter
+neww -n pass
 selectw -t 2
 select-pane -t 0
