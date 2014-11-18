@@ -23,7 +23,6 @@ NeoBundle 'Shougo/vimproc', {
 
 " add bundles here
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'chilicuil/vim-sml-coursera'
 NeoBundle 'dag/vim2hs'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'editorconfig/editorconfig-vim'
@@ -37,7 +36,8 @@ NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
-NeoBundle 'pangloss/vim-javascript'
+" NeoBundleLazy 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
+" NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/syntastic'
