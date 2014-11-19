@@ -37,7 +37,7 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 " NeoBundleLazy 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
-" NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/syntastic'
