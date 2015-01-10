@@ -233,6 +233,8 @@ vmap <Leader>p "+p
 vmap <Leader>P "+P
 
 " tabs
+noremap <Leader>a :tabe<CR>:Ack 
+noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
 noremap <Leader>f :tabf 
