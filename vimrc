@@ -41,6 +41,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'SirVer/ultisnips'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'tpope/vim-git'
@@ -264,4 +265,10 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:mustache_abbreviations = 1
 " }}}
 
+" UltiSnips {{{
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-l>"
+let g:UltiSnipsEditSplit="vertical"
+" }}}
 " vim:foldmethod=marker:foldlevel=0:ft=vim
