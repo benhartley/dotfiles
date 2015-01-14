@@ -1,7 +1,11 @@
-snippet req
+snippet req "require"
 let $1 = require('${2:$1}');
 endsnippet
 
-snippet f
+snippet f "function"
 ($1) => {$2}$0
+endsnippet
+
+snippet im "import" !b
+import ${1:{$2}} from '$3';
 endsnippet
