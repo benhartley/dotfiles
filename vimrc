@@ -217,7 +217,7 @@ nnoremap - :Ex<return>
 
 " Leader shortcuts {{{
 
-" set comma to leader
+" set space to leader
 let mapleader = ' '
 
 " save
@@ -249,6 +249,10 @@ noremap <Leader>6 6gt
 " splits
 noremap <Leader>v :vs 
 noremap <Leader>s :sp 
+
+" snips
+noremap <Leader>u :UltiSnipsAddFileTypes 
+noremap <Leader>U :UltiSnipsEdit 
 
 "}}}
 
