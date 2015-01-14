@@ -251,7 +251,7 @@ noremap <Leader>v :vs
 noremap <Leader>s :sp 
 
 " snips
-noremap <Leader>u :UltiSnipsAddFileTypes 
+noremap <Leader>u :UltiSnipsAddFiletypes 
 noremap <Leader>U :UltiSnipsEdit 
 
 "}}}
