@@ -23,6 +23,7 @@ NeoBundle 'Shougo/vimproc', {
 
 " add bundles here
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'bling/vim-airline'
 NeoBundle 'dag/vim2hs'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'editorconfig/editorconfig-vim'
@@ -32,6 +33,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'ledger/vim-ledger'
+NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
@@ -42,8 +44,10 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
+NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-leiningen'
 NeoBundle 'tpope/vim-obsession'
@@ -225,6 +229,8 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
 
+nnoremap <Leader>d odebugger;<ESC>:w<CR>
+
 " copy to clipboard
 vmap <Leader>y "+y
 vmap <Leader>d "+d
@@ -249,6 +255,9 @@ noremap <Leader>6 6gt
 " splits
 noremap <Leader>v :vs 
 noremap <Leader>s :sp 
+
+" gits
+noremap <Leader>g :Gst<CR>
 
 " snips
 noremap <Leader>u :UltiSnipsAddFiletypes 
