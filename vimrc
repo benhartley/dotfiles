@@ -267,15 +267,44 @@ noremap <Leader>U :UltiSnipsEdit
 
 
 " CtrlP {{{
-
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
 " }}}
 
 " Mustache {{{
 let g:mustache_abbreviations = 1
+" }}}
+
+" Airline {{{
+let g:airline_powerline_fonts = 1 
+let g:airline#extensions#default#layout = [
+	\ ['a', 'b', 'c'],
+	\ ['warning']
+\ ]
+
+function! AirlineInit()
+	let g:airline_section_b = airline#section#create(['branch'])
+	let g:airline_section_x = ''
+	let g:airline_section_y = ''
+	let g:airline_section_z = ''
+endfunction
+autocmd VimEnter * call AirlineInit()
+
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '⮀'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
 " }}}
 
 " UltiSnips {{{
@@ -284,4 +313,5 @@ let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 let g:UltiSnipsEditSplit="vertical"
 " }}}
+
 " vim:foldmethod=marker:foldlevel=0:ft=vim
