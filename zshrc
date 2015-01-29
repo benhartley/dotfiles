@@ -70,15 +70,11 @@ alias vim='/usr/local/bin/vim'
 alias emacs='/usr/local/bin/emacs'
 alias git='/usr/local/bin/git'
 
-alias gulp='gulp --require coffee-script/register'
-
 # force python 2.7.5 (homebrew)
 alias python='/usr/local/bin/python'
 
 # rumember
 alias rtm='/Library/Ruby/Gems/2.0.0/gems/rumember-1.0.1/bin/ru'
-
-alias gulp='gulp --require coffee-script/register'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
