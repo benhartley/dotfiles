@@ -106,6 +106,11 @@ setopt autocd
 # zmv
 autoload zmv
 
+# edit-command
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 # locale
 LANG="en_GB.UTF-8"
 LC_COLLATE="en_GB.UTF-8"

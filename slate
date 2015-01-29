@@ -27,6 +27,7 @@ bind h:${hotkey} ${lefthalf}
 bind l:${hotkey} ${righthalf}
 bind k:${hotkey} ${tophalf}
 bind j:${hotkey} ${bottomhalf}
+bind ;:${hotkey} ${full}
 
 # App specific
 bind b:${hotkey} focus 'Google Chrome'

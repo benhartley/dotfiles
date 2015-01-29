@@ -1,0 +1,11 @@
+snippet week
+`date +%Y-%m-%d`
+	($1)  $2d @ £$3
+endsnippet
+
+snippet inv
+`date +%Y-%m-%d` ($1) $2
+	receivable  £$3  ${4:;:VAT:}
+	$5
+	($6)  -$7d @ £$8
+endsnippet
