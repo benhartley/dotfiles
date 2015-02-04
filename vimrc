@@ -88,6 +88,7 @@ au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 set modelines=1
 
 " Syntastic {{{
+let g:syntastic_loc_list_height = 5
 let g:syntastic_enable_signs = 0
 let g:syntastic_auto_jump = 1
 let g:syntastic_auto_loc_list = 1
