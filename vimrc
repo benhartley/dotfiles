@@ -24,36 +24,35 @@ NeoBundle 'Shougo/vimproc', {
 " add bundles here
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'dag/vim2hs'
-NeoBundle 'digitaltoad/vim-jade'
+NeoBundleLazy 'dag/vim2hs', {'autoload':{'filetypes':['haskell','hs']}}
+NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'ervandew/supertab'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
-NeoBundle 'kchmck/vim-coffee-script'
+NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffeescript','coffee']}}
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'kien/rainbow_parentheses.vim'
-NeoBundle 'ledger/vim-ledger'
+NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'marijnh/tern_for_vim'
+NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['html']}}
+NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript']}}
 " NeoBundleLazy 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'plasticboy/vim-markdown'
+NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
+NeoBundleLazy 'plasticboy/vim-markdown', {'autoload':{'filetypes':['markdown','md']}}
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-fireplace'
+NeoBundleLazy 'tpope/vim-fireplace', {'autoload':{'filetypes':['clojure','clj']}}
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-leiningen'
+NeoBundleLazy 'tpope/vim-leiningen', {'autoload':{'filetypes':['clojure','clj']}}
 NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'wavded/vim-stylus'
+NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['stylus','styl']}}
 
 " check for uninstalled bundles on startup
 NeoBundleCheck
@@ -131,9 +130,6 @@ au BufNewFile,BufRead *.md set ft=markdown
 au BufNewFile,BufRead *.ledger set ft=ledger
 au BufNewFile,BufRead *.coffee set ft=coffee
 au BufNewFile,BufRead *.hbs set ft=mustache
-
-" Rainbow parens
-au VimEnter * RainbowParenthesesToggle
 
 " }}}
 
