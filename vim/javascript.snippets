@@ -1,0 +1,12 @@
+snippet req "require"
+const $1 = require('${2:$1}');
+endsnippet
+
+snippet f "function"
+($1) => ${2:{$3}}$0
+endsnippet
+
+snippet im "import" !b
+import ${1:{$2}} from '$3';
+endsnippet
+
