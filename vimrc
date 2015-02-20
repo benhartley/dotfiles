@@ -50,6 +50,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-git'
 NeoBundleLazy 'tpope/vim-leiningen', {'autoload':{'filetypes':['clojure','clj']}}
 NeoBundle 'tpope/vim-obsession'
+NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['stylus','styl']}}
