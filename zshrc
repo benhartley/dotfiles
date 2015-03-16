@@ -54,6 +54,7 @@ alias gst='git status'
 alias ghub='git push github master'
 alias gpull='git pull github master'
 alias grm='git rebase master'
+alias hpr='hub pull-request'
 
 # convert timestamp to human readable
 function timestamp() { perl -e "print scalar(localtime(${@})), \"\n\""; }
