@@ -71,12 +71,6 @@ alias vim='/usr/local/bin/vim'
 alias emacs='/usr/local/bin/emacs'
 alias git='/usr/local/bin/git'
 
-# force python 2.7.5 (homebrew)
-alias python='/usr/local/bin/python'
-
-# rumember
-alias rtm='/Library/Ruby/Gems/2.0.0/gems/rumember-1.0.1/bin/ru'
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # autojump
@@ -85,9 +79,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # from .bash_profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-# tmux
-function ta() { tmux attach-session -t ${@}; }
 
 # tmux
 function ta() { tmux attach-session -t ${@}; }
