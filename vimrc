@@ -34,6 +34,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'LFDM/vim-ghi'
 NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
 NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'mattn/gist-vim'
 NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'mileszs/ack.vim'
 NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['html']}}
