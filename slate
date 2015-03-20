@@ -23,7 +23,8 @@ alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 alias tophalf corner top-left resize:screenSizeX;screenSizeY/2
 alias bottomhalf corner bottom-left resize:screenSizeX;screenSizeY/2
 
-bind h:${hotkey} ${lefthalf}
+# bind h:${hotkey} ${lefthalf}
+bind h:${hotkey} push left
 bind l:${hotkey} ${righthalf}
 bind k:${hotkey} ${tophalf}
 bind j:${hotkey} ${bottomhalf}
