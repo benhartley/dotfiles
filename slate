@@ -32,16 +32,13 @@ bind ;:${hotkey} ${full}
 
 # App specific
 bind b:${hotkey} focus 'Google Chrome'
-bind o:${hotkey} focus 'Chromium'
-bind i:${hotkey} focus 'iTerm'
-bind m:${hotkey} focus 'Mail'
+bind i:${hotkey} focus 'iTunes'
 bind s:${hotkey} focus 'Slack'
 bind c:${hotkey} focus 'gCal'
 bind f:${hotkey} focus 'Finder'
 bind r:${hotkey} focus 'RTM'
 bind t:${hotkey} focus 'Trello'
 bind d:${hotkey} focus 'Google Drive'
-bind w:${hotkey} focus 'Workflowy'
 
 # Focus direction
 bind left:${hotkey} focus left
