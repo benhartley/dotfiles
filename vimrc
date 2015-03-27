@@ -155,10 +155,10 @@ set wildmenu
 set lazyredraw
 
 " auto-indent
-" set cindent
-" set smartindent
+set cindent
+set smartindent
 set autoindent
-" set expandtab
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set cinkeys=0{,0},:,0#,!^F
