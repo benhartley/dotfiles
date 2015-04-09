@@ -163,12 +163,6 @@ set tabstop=4
 set shiftwidth=4
 set cinkeys=0{,0},:,0#,!^F
 
-" key mapping for build and deploy
-map §§ <ESC>:w<CR>:!cake build; cake deploy<CR>
-
-" jj = Esc
-imap jj <Esc>
-
 " Disable keys {{{
 
 " disable arrows for navigation
@@ -180,6 +174,7 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+
 " }}}
 
 " Panes {{{
@@ -252,10 +247,6 @@ noremap <Leader>3 3gt
 noremap <Leader>4 4gt
 noremap <Leader>5 5gt
 noremap <Leader>6 6gt
-
-" splits
-noremap <Leader>v :vs 
-noremap <Leader>s :sp 
 
 " gits
 noremap <Leader>g :Gst<CR>
