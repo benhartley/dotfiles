@@ -306,4 +306,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 let g:UltiSnipsEditSplit="vertical"
 " }}}
 
+" EasyMotion {{{
+map jj <Plug>(easymotion-j)
+map kk <Plug>(easymotion-k)
+" }}}
+
 " vim:foldmethod=marker:foldlevel=0:ft=vim
