@@ -307,6 +307,7 @@ let g:UltiSnipsEditSplit="vertical"
 " }}}
 
 " EasyMotion {{{
+let timeoutlen = 200
 map jj <Plug>(easymotion-j)
 map kk <Plug>(easymotion-k)
 " }}}
