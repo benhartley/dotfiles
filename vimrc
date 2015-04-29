@@ -57,6 +57,8 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['stylus','styl']}}
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'xolox/vim-session'
 
 " check for uninstalled bundles on startup
 NeoBundleCheck
@@ -304,6 +306,12 @@ let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 let g:UltiSnipsEditSplit="vertical"
+" }}}
+
+" Sessions {{{
+let g:session_autoload = 'yes'
+let g:session_autosave = 'yes'
+let g:session_autosave_periodic = 1
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
