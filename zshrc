@@ -70,7 +70,8 @@ export AWS_CREDENTIAL_FILE="/Users/btfh/.aws/cred.key"
 alias vim='/usr/local/bin/vim'
 alias emacs='/usr/local/bin/emacs'
 alias git='/usr/local/bin/git'
-alias mutt 'cd ~/Desktop && mutt'
+alias mutt='cd ~/Desktop && mutt'
+alias ccat='pygmentize -g'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 

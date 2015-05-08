@@ -257,7 +257,11 @@ noremap <Leader>g :Gst<CR>
 noremap <Leader>u :UltiSnipsAddFiletypes 
 noremap <Leader>U :UltiSnipsEdit 
 
+" misc
+imap ;; <C-o>A;
+
 "}}}
+
 
 
 " CtrlP {{{
