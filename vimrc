@@ -252,6 +252,7 @@ noremap <Leader>6 6gt
 
 " gits
 noremap <Leader>g :Gst<CR>
+noremap <Leader>b :Gblame<CR>
 
 " snips
 noremap <Leader>u :UltiSnipsAddFiletypes 
