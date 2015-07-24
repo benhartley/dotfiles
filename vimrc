@@ -51,11 +51,11 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundleLazy 'tpope/vim-fireplace', {'autoload':{'filetypes':['clojure','clj']}}
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-git'
-NeoBundleLazy 'tpope/vim-leiningen', {'autoload':{'filetypes':['clojure','clj']}}
 NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
+NeoBundleLazy 'vim-scripts/paredit.vim', {'autoload':{'filetypes':['clojure','clj']}}
 NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['stylus','styl']}}
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-session'
