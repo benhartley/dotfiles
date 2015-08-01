@@ -21,5 +21,4 @@ color   main-ref                81      default
 color   main-head               213     default     bold
 color   graph-commit            226     default
 
-set refresh-mode = auto
-set id-display = yes
+set main-view-id = yes
