@@ -37,7 +37,8 @@ brew install hub
 brew install imagemagick
 brew install irssi
 brew install docker
-brew install boot2docker
+brew install docker-machine
+brew install docker-compose
 brew install leiningen
 
 # Casks
@@ -56,7 +57,7 @@ brew cask install gimp
 brew cask install iterm2
 brew cask install vlc
 brew cask install xee22
-brew cask install virtualbox
+brew cask install virtualbox # requires password
 brew cask install little-snitch # note - need to follow installation instructions
 brew cask install karabiner
 brew cask install asepsis
