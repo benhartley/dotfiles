@@ -27,13 +27,13 @@ NeoBundle 'bling/vim-airline'
 NeoBundleLazy 'dag/vim2hs', {'autoload':{'filetypes':['haskell','hs']}}
 NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundleLazy 'exu/pgsql.vim', {'autoload':{'filetypes':['pgsql']}}
 NeoBundle 'ervandew/supertab'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffeescript','coffee']}}
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'LFDM/vim-ghi'
 NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
-NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['javascript']}}
