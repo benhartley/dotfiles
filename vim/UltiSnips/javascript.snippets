@@ -1,9 +1,9 @@
 snippet req "require"
-var $1 = require('${2:$1}');
+const $1 = require('${2:$1}');
 endsnippet
 
-snippet req "require es6"
-const $1 = require('${2:$1}');
+snippet rew "rewire"
+const $1 = rewire('${2:$1}');
 endsnippet
 
 snippet f "function"
@@ -14,6 +14,42 @@ snippet im "import" !b
 import ${1:{$2}} from '$3';
 endsnippet
 
-snippet mod
+snippet mod "module exports"
 module.exports = $0
+endsnippet
+
+snippet des "describe"
+describe('$1', () => {
+	$0
+});
+endsnippet
+
+snippet it "it"
+it('${1:should $2}', (${3:done}) => {
+	$0
+});
+endsnippet
+
+snippet bef "before"
+before(() => {
+	$0
+});
+endsnippet
+
+snippet befe "beforeEach"
+beforeEach(() => {
+	$0
+});
+endsnippet
+
+snippet aft "after"
+after(() => {
+	$0
+});
+endsnippet
+
+snippet afte "afterEach"
+afterEach(() => {
+	$0
+});
 endsnippet
