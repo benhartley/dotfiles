@@ -27,8 +27,9 @@ NeoBundle 'bling/vim-airline'
 NeoBundleLazy 'dag/vim2hs', {'autoload':{'filetypes':['haskell','hs']}}
 NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
 NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundleLazy 'exu/pgsql.vim', {'autoload':{'filetypes':['pgsql']}}
+NeoBundleLazy 'ekalinin/Dockerfile.vim', {'autoload': {'filetypes':['Dockerfile']}}
 NeoBundle 'ervandew/supertab'
+NeoBundleLazy 'exu/pgsql.vim', {'autoload':{'filetypes':['pgsql']}}
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffeescript','coffee']}}
 NeoBundle 'kien/ctrlp.vim'
