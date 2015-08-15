@@ -40,6 +40,7 @@ brew install docker
 brew install docker-machine
 brew install docker-compose
 brew install leiningen
+brew install cloc
 
 # Casks
 brew cask install google-chrome
