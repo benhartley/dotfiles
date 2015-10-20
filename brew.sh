@@ -42,6 +42,7 @@ brew install docker-compose
 brew install leiningen
 brew install cloc
 brew install v8
+brew install httpie
 
 # Casks
 brew cask install google-chrome
