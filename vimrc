@@ -41,7 +41,6 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'mileszs/ack.vim'
 NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['html']}}
-NeoBundleLazy 'mutewinter/nginx.vim', {'autoload':{'filetypes':['conf']}}
 NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript']}}
 " NeoBundleLazy 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
