@@ -31,3 +31,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.bash ]] && source ~/.autojump/etc/profile.d/autojump.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
