@@ -32,8 +32,9 @@ NeoBundle 'ervandew/supertab'
 NeoBundleLazy 'exu/pgsql.vim', {'autoload':{'filetypes':['pgsql']}}
 NeoBundleLazy 'hdima/python-syntax', {'autoload':{'filetypes':['python']}}
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'junegunn/fzf'
+NeoBundle 'junegunn/fzf.vim'
 NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffeescript','coffee']}}
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'LFDM/vim-ghi'
 NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
 NeoBundle 'mattn/gist-vim'
@@ -266,12 +267,9 @@ imap ;; <C-o>A;
 
 "}}}
 
-
-
-" CtrlP {{{
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" FZF {{{
+nnoremap <c-p> :FZF<cr>
+nnoremap <c-i> :Buffers<cr>
 " }}}
 
 " Mustache {{{
