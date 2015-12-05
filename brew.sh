@@ -43,6 +43,8 @@ brew install leiningen
 brew install cloc
 brew install v8
 brew install httpie
+brew install the_silver_searcher
+brew install fzf
 
 # Casks
 brew cask install google-chrome
