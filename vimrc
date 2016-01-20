@@ -74,6 +74,9 @@ call neobundle#end()
 
 " filetype indentation
 filetype plugin indent on
+
+" disable folding
+set nofoldenable
  
 " Temporary files {{{
 
