@@ -273,7 +273,7 @@ imap ;; <C-o>A;
 
 " FZF {{{
 nnoremap <c-p> :FZF<cr>
-nnoremap <c-i> :Buffers<cr>
+let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 " }}}
 
 " Mustache {{{
