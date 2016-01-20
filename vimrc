@@ -25,6 +25,7 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
 NeoBundleLazy 'dag/vim2hs', {'autoload':{'filetypes':['haskell','hs']}}
+NeoBundleLazy 'derekwyatt/vim-scala', {'autoload':{'filetypes':['scala']}}
 NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundleLazy 'ekalinin/Dockerfile.vim', {'autoload': {'filetypes':['Dockerfile']}}
