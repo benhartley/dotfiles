@@ -235,8 +235,6 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
 
-nnoremap <Leader>d odebugger;<ESC>:w<CR>
-
 " copy to clipboard
 vmap <Leader>y "+y
 vmap <Leader>d "+d
@@ -246,11 +244,11 @@ vmap <Leader>p "+p
 vmap <Leader>P "+P
 
 " tabs
-noremap <Leader>a :tabe<CR>:Ack 
+noremap <Leader>a :tabe<CR>:Ag<CR> 
 noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
-noremap <Leader>f :tabf 
+noremap <Leader>f :Buffers<CR>
 noremap <Leader>1 1gt
 noremap <Leader>2 2gt
 noremap <Leader>3 3gt
@@ -273,7 +271,6 @@ imap ;; <C-o>A;
 
 " FZF {{{
 nnoremap <c-p> :FZF<cr>
-let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 " }}}
 
 " Mustache {{{
@@ -281,7 +278,7 @@ let g:mustache_abbreviations = 1
 " }}}
 
 " Airline {{{
-let g:airline_powerline_fonts = 1 
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#default#layout = [
 	\ ['a', 'b', 'c'],
 	\ ['warning']
@@ -296,7 +293,7 @@ endfunction
 autocmd VimEnter * call AirlineInit()
 
 let g:airline_left_sep = '»'
-let g:airline_left_sep = '⮀'
+" let g:airline_left_sep = '⮀'
 let g:airline_right_sep = '«'
 let g:airline_right_sep = '◀'
 if !exists('g:airline_symbols')
