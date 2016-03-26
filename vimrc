@@ -41,7 +41,6 @@ NeoBundle 'LFDM/vim-ghi'
 NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
-NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'mileszs/ack.vim'
 NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['html']}}
 NeoBundle 'mutewinter/nginx.vim'
