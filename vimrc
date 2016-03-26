@@ -31,6 +31,7 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundleLazy 'ekalinin/Dockerfile.vim', {'autoload': {'filetypes':['Dockerfile']}}
 NeoBundle 'ervandew/supertab'
 NeoBundleLazy 'exu/pgsql.vim', {'autoload':{'filetypes':['pgsql']}}
+NeoBundleLazy 'fatih/vim-go', {'autoload':{'filetypes':['go']}}
 NeoBundleLazy 'hdima/python-syntax', {'autoload':{'filetypes':['python']}}
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'junegunn/fzf'
