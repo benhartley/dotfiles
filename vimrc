@@ -31,6 +31,7 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundleLazy 'ekalinin/Dockerfile.vim', {'autoload': {'filetypes':['Dockerfile']}}
 NeoBundle 'ervandew/supertab'
 NeoBundleLazy 'exu/pgsql.vim', {'autoload':{'filetypes':['pgsql']}}
+NeoBundleLazy 'fatih/vim-go', {'autoload':{'filetypes':['go']}}
 NeoBundleLazy 'hdima/python-syntax', {'autoload':{'filetypes':['python']}}
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'junegunn/fzf'
@@ -40,8 +41,6 @@ NeoBundle 'LFDM/vim-ghi'
 NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
-NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['javascript']}}
-NeoBundle 'mileszs/ack.vim'
 NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['html']}}
 NeoBundle 'mutewinter/nginx.vim'
 NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript']}}
@@ -101,6 +100,7 @@ au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 set modelines=1
 
 " Syntastic {{{
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['jshint']
 let g:syntastic_loc_list_height = 5
 let g:syntastic_enable_signs = 0
 let g:syntastic_auto_jump = 1
@@ -235,8 +235,6 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
 
-nnoremap <Leader>d odebugger;<ESC>:w<CR>
-
 " copy to clipboard
 vmap <Leader>y "+y
 vmap <Leader>d "+d
@@ -246,11 +244,11 @@ vmap <Leader>p "+p
 vmap <Leader>P "+P
 
 " tabs
-noremap <Leader>a :tabe<CR>:Ack 
+noremap <Leader>a :tabe<CR>:Ag<CR> 
 noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
-noremap <Leader>f :tabf 
+noremap <Leader>f :Buffers<CR>
 noremap <Leader>1 1gt
 noremap <Leader>2 2gt
 noremap <Leader>3 3gt
@@ -273,7 +271,6 @@ imap ;; <C-o>A;
 
 " FZF {{{
 nnoremap <c-p> :FZF<cr>
-let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 " }}}
 
 " Mustache {{{
@@ -281,7 +278,7 @@ let g:mustache_abbreviations = 1
 " }}}
 
 " Airline {{{
-let g:airline_powerline_fonts = 1 
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#default#layout = [
 	\ ['a', 'b', 'c'],
 	\ ['warning']
@@ -296,7 +293,7 @@ endfunction
 autocmd VimEnter * call AirlineInit()
 
 let g:airline_left_sep = '»'
-let g:airline_left_sep = '⮀'
+" let g:airline_left_sep = '⮀'
 let g:airline_right_sep = '«'
 let g:airline_right_sep = '◀'
 if !exists('g:airline_symbols')
