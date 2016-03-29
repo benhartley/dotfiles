@@ -58,6 +58,7 @@ NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundleLazy 'vim-scripts/paredit.vim', {'autoload':{'filetypes':['clojure','clj']}}
 NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['stylus','styl']}}
 NeoBundle 'xolox/vim-misc'
