@@ -1,6 +1,7 @@
 ! urxvt
 URxvt.font: xft:Inconsolata:pixelsize=22
 URxvt.lineSpace: 8
+*.background: #000000
 
 URxvt.scrollBar: false
 
