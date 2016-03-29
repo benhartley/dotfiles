@@ -24,6 +24,7 @@ NeoBundle 'Shougo/vimproc', {
 " add bundles here
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'chriskempson/base16-vim'
 NeoBundleLazy 'dag/vim2hs', {'autoload':{'filetypes':['haskell','hs']}}
 NeoBundleLazy 'derekwyatt/vim-scala', {'autoload':{'filetypes':['scala']}}
 NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
@@ -133,7 +134,9 @@ set ruler
 
 " colors 
 syntax enable
-colorscheme molokai
+set background=dark
+let base16colorspace=256
+colorscheme base16-eighties
 
 " syntax stuff
 au BufNewFile,BufRead *.less set filetype=less
