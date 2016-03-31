@@ -51,6 +51,7 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'tomasr/molokai'
+NeoBundleLazy 'ternjs/tern_for_vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'tpope/vim-commentary'
 NeoBundleLazy 'tpope/vim-fireplace', {'autoload':{'filetypes':['clojure','clj']}}
 NeoBundle 'tpope/vim-fugitive'
@@ -269,6 +270,7 @@ noremap <Leader>U :UltiSnipsEdit
 
 " misc
 imap ;; <C-o>A;
+noremap <Leader>d :TernDef<CR>
 
 "}}}
 
