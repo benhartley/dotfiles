@@ -58,6 +58,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-rhubarb'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-airline/vim-airline-themes'
@@ -263,6 +264,7 @@ noremap <Leader>6 6gt
 " gits
 noremap <Leader>g :Gst<CR>
 noremap <Leader>b :Gblame<CR>
+noremap <Leader>h :Gbrowse<CR>
 
 " snips
 noremap <Leader>u :UltiSnipsAddFiletypes 
