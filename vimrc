@@ -48,6 +48,7 @@ NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes'
 NeoBundleLazy 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'plasticboy/vim-markdown', {'autoload':{'filetypes':['markdown','md']}}
 NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'rking/ag.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'tomasr/molokai'
@@ -249,7 +250,8 @@ vmap <Leader>p "+p
 vmap <Leader>P "+P
 
 " tabs
-noremap <Leader>a :Ag<CR>
+
+noremap <Leader>a :tabe<CR>:Ag
 noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
@@ -278,6 +280,7 @@ noremap <Leader>d :TernDef<CR>
 
 " FZF {{{
 nnoremap <c-p> :FZF<cr>
+let g:fzf_command_prefix = 'Fzf'
 " }}}
 
 " Mustache {{{
