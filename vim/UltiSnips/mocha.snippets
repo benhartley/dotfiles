@@ -1,0 +1,57 @@
+snippet req "require"
+var $1 = require('${2:$1}');
+endsnippet
+
+snippet rew "rewire"
+var $1 = rewire('${2:$1}');
+endsnippet
+
+snippet rewget "rewire simple __get__"
+var $1 = $2.__get__('${3:$1}');
+endsnippet
+
+snippet rewset "rewire set"
+restore = $1.__set__({
+	$2
+});
+endsnippet
+
+snippet des "describe"
+describe('$1', function() {
+	$0
+});
+endsnippet
+
+snippet it "it"
+it('${1:should $2}', function(${3:done}) {
+	$0
+});
+endsnippet
+
+snippet bef "before"
+before(function() {
+	$0
+});
+endsnippet
+
+snippet befe "beforeEach"
+beforeEach(function() {
+	$0
+});
+endsnippet
+
+snippet aft "after"
+after(function() {
+	$0
+});
+endsnippet
+
+snippet afte "afterEach"
+afterEach(function() {
+	$0
+});
+endsnippet
+
+snippet exp "expect"
+expect($1).to.$2;
+endsnippet
