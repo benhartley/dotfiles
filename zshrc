@@ -124,5 +124,13 @@ xcape -e 'Caps_Lock=Escape'
 BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    nvm use
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+
 eval "$(rbenv init -)"
 
