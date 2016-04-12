@@ -251,7 +251,7 @@ vmap <Leader>P "+P
 
 " tabs
 
-noremap <Leader>a :tabe<CR>:Ag
+noremap <Leader>a :tabe<CR>:Ag 
 noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
