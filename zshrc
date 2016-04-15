@@ -117,9 +117,6 @@ cfzf() {
   fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs xdg-open
 }
 
-setxkbmap -option 'caps:ctrl_modifier'
-xcape -e 'Caps_Lock=Escape'
-
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
