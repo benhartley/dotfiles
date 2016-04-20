@@ -53,17 +53,6 @@ mode "$mode_launcher" {
     bindsym Return mode "default"
 }
 
-# startup
-exec --no-startup-id is-msg 'workspace 1; exec i3-sensible-terminal; exec tmux'
-exec --no-startup-id is-msg 'workspace 2; i3-sensible-terminal'
-exec --no-startup-id is-msg 'workspace 3; i3-sensible-terminal'
-exec --no-startup-id is-msg 'workspace 4; exec chromium'
-exec --no-startup-id ~/.dotfiles/i3-run/gcal.sh
-exec --no-startup-id ~/.dotfiles/i3-run/rtm.sh
-exec --no-startup-id ~/.dotfiles/i3-run/trello.sh
-exec --no-startup-id ~/.dotfiles/i3-run/slack.sh
-exec --no-startup-id is-msg 'workspace 8; exec urxvt -T mutt; exec mutt'
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
