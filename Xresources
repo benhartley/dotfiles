@@ -23,7 +23,6 @@ rofi.hide-scrollbar: true
 rofi.kb-row-up: Control+k
 rofi.kb-row-down: Control+j
 rofi.modi: combi
-rofi.key-combi: Control+space
 rofi.combi-modi: window,run,ssh,Search:rofi-surfraw
 rofi.threads: 0
 
