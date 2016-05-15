@@ -171,7 +171,7 @@ bindsym $mod+minus scratchpad show
 # finds out, if available)
 bar {
         status_command i3status
-        mode hide
+        mode dock
         position top
         modifier Mod1
         separator_symbol " | "
