@@ -1,5 +1,5 @@
 xrdb -merge ~/.Xresources
-xss-lock -- /usr/bin/slock &
+xss-lock -- i3lock -c 000000 &
 setxkbmap -option 'caps:ctrl_modifier' &
 xcape -e 'Caps_Lock=Escape' &
 exec i3
