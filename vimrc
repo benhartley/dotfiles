@@ -275,7 +275,7 @@ noremap <Leader>U :UltiSnipsEdit
 " misc
 imap ;; <C-o>A;
 noremap <Leader>d :TernDef<CR>
-
+let g:sql_type_default = 'pgsql'
 "}}}
 
 " FZF {{{
