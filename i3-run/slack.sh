@@ -2,5 +2,5 @@
 
 i3-msg 'workspace 7'
 
-[ "$(i3-msg '[title="BBC Three Slack"] focus')" = '[{"success":true}]' ] \
-    || i3-msg "exec --no-startup-id chromium --app=\"https://bbcthree.slack.com\""
+[ "$(i3-msg '[title="The A.C.T Slack"] focus')" = '[{"success":true}]' ] \
+    || i3-msg "exec --no-startup-id chromium --app=\"https://theactslack.slack.com\""
