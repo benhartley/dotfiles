@@ -59,6 +59,9 @@ bindsym $mod+Shift+q kill
 # Rofi
 bindsym Control+space exec "rofi -show combi"
 
+# Toggle VPN
+bindsym $mod+Shift+v exec "sudo ~/.dotfiles/i3-run/toggle-vpn.sh"
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
