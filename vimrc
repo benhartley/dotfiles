@@ -195,12 +195,6 @@ noremap   <Right>  <NOP>
 
 " Panes {{{
 
-" key mapping for switching panes
-noremap ˙ :wincmd h<CR>
-noremap ∆ :wincmd j<CR>
-noremap ˚ :wincmd k<CR>
-noremap ¬ :wincmd l<CR>
-
 " open new panes in the right places...
 set splitbelow
 set splitright
