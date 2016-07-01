@@ -37,6 +37,7 @@ NeoBundleLazy 'gavocanov/vim-js-indent', {'autoload':{'filetypes':['javascript']
 NeoBundleLazy 'hdima/python-syntax', {'autoload':{'filetypes':['python']}}
 NeoBundle 'junegunn/fzf'
 NeoBundle 'junegunn/fzf.vim'
+NeoBundle 'justinmk/vim-sneak'
 NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffeescript','coffee']}}
 NeoBundle 'LFDM/vim-ghi'
 NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
@@ -324,5 +325,13 @@ let g:session_autoload = 'no'
 let g:session_autosave = 'yes'
 let g:session_autosave_periodic = 1
 " }}}
+
+
+nmap gs <Plug>Sneak_s
+nmap gS <Plug>Sneak_S
+xmap gs <Plug>Sneak_s
+xmap gS <Plug>Sneak_S
+omap gs <Plug>Sneak_s
+omap gS <Plug>Sneak_S
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
