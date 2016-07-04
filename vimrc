@@ -271,6 +271,7 @@ noremap <Leader>U :UltiSnipsEdit
 imap ;; <C-o>A;
 noremap <Leader>d :TernDef<CR>
 let g:sql_type_default = 'pgsql'
+nmap <leader>cl yiwoconsole.log('<c-r>"', <c-r>");<esc>^`
 "}}}
 
 " FZF {{{
