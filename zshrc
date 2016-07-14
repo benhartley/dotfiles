@@ -54,8 +54,9 @@ alias ccat='pygmentize -g'
 # tmux
 function ta() { tmux attach-session -t ${@}; }
 
-# set vim as editor
+# vars
 export EDITOR='/usr/bin/vim'
+export ANDROID_HOME=/opt/android-sdk
 
 # Backward search in the shell history with <C-r>
 bindkey '^r' history-incremental-search-backward
