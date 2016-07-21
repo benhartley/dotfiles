@@ -124,7 +124,7 @@ tagstart() {
     source zshrc
 }
 
-alias s=systemctl 
+alias -g s=systemctl 
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
