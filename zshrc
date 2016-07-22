@@ -118,6 +118,13 @@ cfzf() {
   fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs xdg-open
 }
 
+# cdf - cd into the directory of the selected file
+cdf() {
+   local file
+   local dir
+   file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
+}
+
 tagstart() {
     unset HISTFILE
     cd /mnt/samsung850pro/.p
@@ -140,3 +147,6 @@ add-zsh-hook chpwd load-nvmrc
 
 eval "$(rbenv init -)"
 
+
+# zsh-bd
+. $HOME/.zsh/plugins/bd/bd.zsh
