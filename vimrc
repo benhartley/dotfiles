@@ -327,12 +327,15 @@ let g:session_autosave = 'yes'
 let g:session_autosave_periodic = 1
 " }}}
 
-
+" Sneak
 nmap gs <Plug>Sneak_s
 nmap gS <Plug>Sneak_S
 xmap gs <Plug>Sneak_s
 xmap gS <Plug>Sneak_S
 omap gs <Plug>Sneak_s
 omap gS <Plug>Sneak_S
+
+" Don't leak pass
+au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
