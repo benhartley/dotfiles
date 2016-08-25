@@ -34,7 +34,7 @@ NeoBundle 'ervandew/supertab'
 NeoBundleLazy 'exu/pgsql.vim', {'autoload':{'filetypes':['pgsql']}}
 NeoBundleLazy 'fatih/vim-go', {'autoload':{'filetypes':['go']}}
 NeoBundleLazy 'gavocanov/vim-js-indent', {'autoload':{'filetypes':['javascript']}}
-NeoBundleLazy 'hashivim/vim-terraform', {'autoload':{'filetypes':['tf']}}
+NeoBundleLazy 'hashivim/vim-terraform', {'autoload':{'filetypes':['tf', 'tfvars', 'tfstate']}}
 NeoBundleLazy 'hdima/python-syntax', {'autoload':{'filetypes':['python']}}
 NeoBundle 'junegunn/fzf'
 NeoBundle 'junegunn/fzf.vim'
