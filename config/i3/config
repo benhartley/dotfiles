@@ -54,7 +54,20 @@ mode "$mode_launcher" {
     bindsym t exec ~/.dotfiles/i3-run/trello.sh; mode "default"
     bindsym Esc mode "default"
     bindcode 9 mode "default"
-    bindsym Return mode "default"
+
+    # Assign marks to keys 1-5
+    bindsym Shift+1 mark mark1; mode "default"
+    bindsym Shift+2 mark mark2; mode "default"
+    bindsym Shift+3 mark mark3; mode "default"
+    bindsym Shift+4 mark mark4; mode "default"
+    bindsym Shift+5 mark mark5; mode "default"
+
+    # Jump to clients marked 1-5
+    bindsym 1 [con_mark="mark1"] focus; mode "default"
+    bindsym 2 [con_mark="mark2"] focus; mode "default"
+    bindsym 3 [con_mark="mark3"] focus; mode "default"
+    bindsym 4 [con_mark="mark4"] focus; mode "default"
+    bindsym 5 [con_mark="mark5"] focus; mode "default"
 }
 
 # kill focused window
