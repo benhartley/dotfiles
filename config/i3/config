@@ -73,8 +73,10 @@ mode "$mode_launcher" {
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# Rofi
+# Rofi / FZF
 bindsym Control+space exec "rofi -show combi"
+bindsym $mod+space exec "rofi-surfraw"
+bindsym $mod+h exec "i3-sensible-terminal -e chromehistory"
 
 # Toggle VPN
 bindsym $mod+Shift+v exec "sudo ~/.dotfiles/i3-run/toggle-vpn.sh"
