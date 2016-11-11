@@ -93,11 +93,16 @@ bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
+# split mode
+set $mode_split Split
+bindsym $mod+Shift+s mode "$mode_split"
+mode "$mode_split" {
+    bindsym h split h; mode "default"
+    bindsym v split v; mode "default"
+    bindsym Esc mode "default"
+    bindcode 9 mode "default"
+    bindsym Return mode "default"
+}
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
