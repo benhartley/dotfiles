@@ -30,22 +30,22 @@ set -o vi
 KEYTIMEOUT=1
 
 # git stuff
-alias gc='git commit'
+alias gc='git commit --verbose'
 alias ga='git add .'
-alias gac='git add --all; git commit'
+alias gac='git add --all; git commit --verbose'
 alias gcb='git checkout -b'
 alias gp='git push'
 alias gl='git pull --prune'
 alias gst='git status'
-alias ghub='git push github master'
-alias gpull='git pull github master'
 alias grm='git rebase master'
 alias hpr='hub pull-request'
+gsq() {
+    git rebase -i --autosquash "$1"
+}
 
 # convert timestamp to human readable
 function timestamp() { perl -e "print scalar(localtime(${@})), \"\n\""; }
 
-# force local vim
 alias ccat='pygmentize -g'
 
 # autojump
