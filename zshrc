@@ -89,9 +89,31 @@ LC_ALL=
 
 # Setting ag as the default source for fzf - include hidden files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export FZF_DEFAULT_OPTIONS='--exact'
 # # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
+command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd'
+command -v tree > /dev/null && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -$LINES'"
+
+_fzf_complete_pass() {
+    _fzf_complete '+m' "$@" < <(
+      local pwdir=${PASSWORD_STORE_DIR-~/.password-store/}
+      local stringsize="${#pwdir}"
+      find "$pwdir" -name "*.gpg" -print |
+      cut -c "$((stringsize + 1))"-  |
+      sed -e 's/\(.*\)\.gpg/\1/'
+    )
+}
+
+_fzf_complete_ledger() {
+    _fzf_complete '+m' "$@" < <(ledger accounts)
+}
+
+_fzf_complete_ledger_post() {
+    awk '{printf("\"%s\"\n", $0);}'
+}
 
 # Git history in FZF
 gfzf() {
@@ -103,19 +125,6 @@ gfzf() {
                 xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
                 {}
 FZF-EOF"
-}
-
-# Chromium history in FZF
-cfzf() {
-  local cols sep
-  cols=$(( COLUMNS / 3 ))
-  sep='{{::}}'
-  cp -f ~/.config/chromium/Default/History /tmp/h
-  sqlite3 -separator $sep /tmp/h \
-    "select substr(title, 1, $cols), url
-     from urls order by last_visit_time desc" |
-  awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\n", $1, $2}' |
-  fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs xdg-open
 }
 
 # cdf - cd into the directory of the selected file
@@ -146,7 +155,6 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 
 eval "$(rbenv init -)"
-
 
 # zsh-bd
 . $HOME/.zsh/plugins/bd/bd.zsh
