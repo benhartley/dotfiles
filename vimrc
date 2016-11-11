@@ -27,48 +27,43 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundleLazy 'dag/vim2hs', {'autoload':{'filetypes':['haskell','hs']}}
 NeoBundleLazy 'derekwyatt/vim-scala', {'autoload':{'filetypes':['scala']}}
-NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundleLazy 'ekalinin/Dockerfile.vim', {'autoload': {'filetypes':['Dockerfile']}}
 NeoBundle 'ervandew/supertab'
 NeoBundleLazy 'exu/pgsql.vim', {'autoload':{'filetypes':['pgsql']}}
 NeoBundleLazy 'fatih/vim-go', {'autoload':{'filetypes':['go']}}
+NeoBundleLazy 'flowtype/vim-flow', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'gavocanov/vim-js-indent', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'hashivim/vim-terraform', {'autoload':{'filetypes':['tf', 'tfvars', 'tfstate']}}
 NeoBundleLazy 'hdima/python-syntax', {'autoload':{'filetypes':['python']}}
+NeoBundleLazy 'IN3D/vim-raml', {'autoload':{'filetypes':['raml']}}
 NeoBundle 'junegunn/fzf'
 NeoBundle 'junegunn/fzf.vim'
+NeoBundle 'junegunn/gv.vim'
 NeoBundle 'justinmk/vim-sneak'
-NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffeescript','coffee']}}
+NeoBundleLazy 'kern/vim-es7', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'LFDM/vim-ghi'
 NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
-NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['html']}}
 NeoBundle 'mutewinter/nginx.vim'
 NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript']}}
-NeoBundleLazy 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'plasticboy/vim-markdown', {'autoload':{'filetypes':['markdown','md']}}
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
-NeoBundle 'tomasr/molokai'
 NeoBundleLazy 'ternjs/tern_for_vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'tpope/vim-commentary'
 NeoBundleLazy 'tpope/vim-fireplace', {'autoload':{'filetypes':['clojure','clj']}}
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-rhubarb'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundleLazy 'vim-scripts/paredit.vim', {'autoload':{'filetypes':['clojure','clj']}}
-NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['stylus','styl']}}
-NeoBundle 'xolox/vim-misc'
-NeoBundle 'xolox/vim-session'
 
 " check for uninstalled bundles on startup
 NeoBundleCheck
@@ -146,12 +141,8 @@ let base16colorspace=256
 colorscheme base16-eighties
 
 " syntax stuff
-au BufNewFile,BufRead *.less set filetype=less
-au BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
 au BufNewFile,BufRead *.md set ft=markdown
 au BufNewFile,BufRead *.ledger set ft=ledger
-au BufNewFile,BufRead *.coffee set ft=coffee
-au BufNewFile,BufRead *.hbs set ft=mustache
 
 " }}}
 
@@ -251,7 +242,6 @@ noremap <Leader>a :tabe<CR>:Ag
 noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
-noremap <Leader>f :Buffers<CR>
 noremap <Leader>1 1gt
 noremap <Leader>2 2gt
 noremap <Leader>3 3gt
@@ -276,12 +266,20 @@ nmap <leader>cl yiwoconsole.log('<c-r>"', <c-r>");<esc>^`
 "}}}
 
 " FZF {{{
-nnoremap <c-p> :FZF<cr>
 let g:fzf_command_prefix = 'Fzf'
-" }}}
 
-" Mustache {{{
-let g:mustache_abbreviations = 1
+noremap <C-p> :FZF -e<CR>
+noremap <Leader>fw :FzfWindows<CR>
+noremap <Leader>fb :FzfBuffers<CR>
+noremap <Leader>fl :FzfLines<CR>
+noremap <Leader>fgs :FzfGFiles?<CR>
+noremap <Leader>ff :FzfLocate 
+
+imap <c-x><c-f> <plug>(fzf-complete-path)
+
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
 " }}}
 
 " Airline {{{
@@ -322,12 +320,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 let g:UltiSnipsEditSplit="vertical"
 " }}}
 
-" Sessions {{{
-let g:session_autoload = 'no'
-let g:session_autosave = 'yes'
-let g:session_autosave_periodic = 1
-" }}}
-
 " Sneak
 nmap gs <Plug>Sneak_s
 nmap gS <Plug>Sneak_S
@@ -335,6 +327,9 @@ xmap gs <Plug>Sneak_s
 xmap gS <Plug>Sneak_S
 omap gs <Plug>Sneak_s
 omap gS <Plug>Sneak_S
+
+" Flow
+let g:flow#autoclose = 1
 
 " Don't leak pass
 au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
