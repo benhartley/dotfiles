@@ -216,3 +216,7 @@ bar {
             urgent_workspace $base08 $base08 $base07
         }
 }
+
+# Load workspaces
+exec --no-startup-id ~/.dotfiles/i3/workspaces
+
