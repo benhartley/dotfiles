@@ -1,0 +1,29 @@
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "percent": null,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 748,
+               "width": 964,
+               "x": 0,
+               "y": 0
+            },
+            "name": "tmux",
+            "percent": 1,
+            "swallows": [
+               {
+               "class": "^URxvt$",
+               "instance": "^tmux$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
