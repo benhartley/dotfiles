@@ -89,7 +89,7 @@ LC_ALL=
 
 # Setting ag as the default source for fzf - include hidden files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-export FZF_DEFAULT_OPTIONS='--exact'
+export FZF_DEFAULT_OPTS='--exact'
 # # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 source /usr/share/fzf/completion.zsh
