@@ -1,0 +1,20 @@
+export DISPLAY=:0.0
+ 
+function monitor_on {
+    xrandr --output "${CONNECTED}" --auto --output eDP-1 --off
+}
+ 
+function monitor_off {
+    xrandr --output DP-1 --off --output DP-2 --off --output eDP-1 --auto
+}
+
+function get_connected_dp {
+    xrandr | grep -E "^(DP-1|DP-2) connected" | cut -d " " -f 1
+}
+
+function main {
+    CONNECTED=$(get_connected_dp)
+    ($CONNECTED && monitor_on) || monitor_off
+}
+
+main
