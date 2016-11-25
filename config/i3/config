@@ -76,6 +76,7 @@ bindsym $mod+Shift+q kill
 # Rofi / FZF
 bindsym Control+space exec "rofi -show combi"
 bindsym $mod+space exec "rofi-surfraw"
+bindsym $mod+p exec "rofi-pass"
 bindsym Mod1+space exec "clerk"
 bindsym $mod+h exec "i3-sensible-terminal -e chromehistory"
 
