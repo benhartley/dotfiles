@@ -43,6 +43,10 @@ gsq() {
     git rebase -i --autosquash "$1"
 }
 
+# GPG
+GPG_TTY=$(tty)
+export GPG_TTY
+
 # convert timestamp to human readable
 function timestamp() { perl -e "print scalar(localtime(${@})), \"\n\""; }
 
