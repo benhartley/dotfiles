@@ -11,3 +11,8 @@ urxvt -name plan &
 google-chrome-stable --restore-last-session &
 urxvt -name mutt &
 urxvt -name journal -e journalctl -f &
+
+# kill default tmux session after enough time has passed for auto-restore to kick in
+# this should be left until last
+sleep 5
+tmux kill-session -t 0

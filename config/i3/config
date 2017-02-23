@@ -51,6 +51,7 @@ mode "$mode_launcher" {
     bindsym g exec xdg-open https://github.com/notifications; mode "default"
     bindsym r exec ~/.dotfiles/i3-run/rtm.sh; mode "default"
     bindsym s exec ~/.dotfiles/i3-run/slack.sh; mode "default"
+    bindsym s mode "default"
     bindsym t exec ~/.dotfiles/i3-run/trello.sh; mode "default"
     bindsym Esc mode "default"
     bindcode 9 mode "default"
@@ -78,7 +79,10 @@ bindsym Control+space exec "rofi -show combi"
 bindsym $mod+space exec "rofi-surfraw"
 bindsym $mod+p exec "rofi-pass"
 bindsym Mod1+space exec "clerk"
+
 bindsym $mod+h exec "i3-sensible-terminal -e chromehistory"
+for_window [title="chromehistory"] floating enable 
+
 
 # Toggle VPN
 bindsym $mod+Shift+v exec "sudo ~/.dotfiles/i3-run/toggle-vpn.sh"
