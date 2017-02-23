@@ -27,7 +27,7 @@ Plug 'Quramy/tsuquyomi', {'for':['typescript','typescript.tsx']}
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'Shougo/vimproc.vim', {'for':'typescript'}
-Plug 'ternjs/tern_for_vim', {'for':'javascript'}
+Plug 'ternjs/tern_for_vim', {'for':'javascript', 'do':'npm i'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
