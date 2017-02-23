@@ -42,14 +42,17 @@ NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'junegunn/gv.vim'
 NeoBundle 'justinmk/vim-sneak'
 NeoBundleLazy 'kern/vim-es7', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'leafgarland/typescript-vim' 
 NeoBundle 'LFDM/vim-ghi'
 NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mutewinter/nginx.vim'
+NeoBundleLazy 'mxw/vim-jsx', {'autoload':{'filetypes':['jsx','tsx','typescript','javascript']}}
 NeoBundle 'neomake/neomake'
 NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'plasticboy/vim-markdown', {'autoload':{'filetypes':['markdown','md']}}
+NeoBundle 'Quramy/tsuquyomi'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'SirVer/ultisnips'
