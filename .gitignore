@@ -1,6 +1,9 @@
-vim/.netrwhist
 offlineimap
-vim/bundle
+
 tmux/resurrect
 tmux/plugins/tmux-yank
+
+vim/.netrwhist
+vim/autoload
+vim/plugged
 vim/sessions
