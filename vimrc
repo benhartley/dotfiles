@@ -47,6 +47,7 @@ NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mutewinter/nginx.vim'
+NeoBundle 'neomake/neomake'
 NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'plasticboy/vim-markdown', {'autoload':{'filetypes':['markdown','md']}}
 NeoBundle 'Raimondi/delimitMate'
@@ -316,5 +317,9 @@ let g:flow#autoclose = 1
 
 " Don't leak pass
 au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
+
+" Neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_open_list = 2
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
