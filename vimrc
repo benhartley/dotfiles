@@ -51,7 +51,6 @@ NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes'
 NeoBundleLazy 'plasticboy/vim-markdown', {'autoload':{'filetypes':['markdown','md']}}
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'rking/ag.vim'
-NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
 NeoBundleLazy 'ternjs/tern_for_vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'tpope/vim-commentary'
@@ -93,27 +92,11 @@ set writebackup
 
 " status line
 set statusline=%t\ %M\ %=\ line:\ %l/%L
-set statusline+=%{SyntasticStatuslineFlag()} " syntastic errors
 au InsertEnter * hi StatusLine term=reverse ctermbg=15 gui=undercurl guisp=White
 au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 
 " specific setting on a per file basis
 set modelines=1
-
-" Syntastic {{{
-autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['jshint']
-let g:syntastic_loc_list_height = 5
-let g:syntastic_enable_signs = 0
-let g:syntastic_auto_jump = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_disabled_filetypes = ['html']
-let g:syntastic_ignore_files = ['*.html']
-let g:syntastic_stl_format = '[%E{Error 1/%e: line %fe}%B{, }%W{Warning 1/%w: line %fw}]'
-let g:syntastic_check_on_open=1
-let g:syntastic_mode_map={ 'mode': 'active',
-                     \ 'active_filetypes': [],
-                     \ 'passive_filetypes': ['html'] }
-" }}}
 
 " generic
 set encoding=utf-8
