@@ -1,7 +1,4 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
@@ -42,6 +39,13 @@ alias hpr='hub pull-request'
 gsq() {
     git rebase -i --autosquash "$1"
 }
+
+# yarn
+alias yr='yarn run'
+alias ya='yarn add'
+alias yrm='yarn remove'
+alias yt='yarn run test'
+alias ytw='yarn run test -- --watch'
 
 # GPG
 GPG_TTY=$(tty)
