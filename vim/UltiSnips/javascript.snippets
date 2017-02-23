@@ -1,15 +1,38 @@
-snippet req "require"
+snippet req "require" b
 const $1 = require('${2:$1}');
 endsnippet
 
-snippet f "function"
-($1) => ${2:{$3}}$0
+snippet fna "arrow function" i
+(${1:args})${2:: ${3:sig}} => ${4:{$5}}$0
 endsnippet
 
-snippet im "import" !b
-import ${1:{$2}} from '$3';
+snippet fn "function" i
+function${1: name}(${2:args})${3:: ${4:sig}} {
+	$0
+}
 endsnippet
 
-snippet mod "module exports"
+snippet im "import" b
+import ${1:${2:{$3}} from }'${4:$2}';
+endsnippet
+
+snippet modexp "module exports" b
 module.exports = $0
+endsnippet
+
+snippet test "ava test" b
+test(\`${1:description}\`, (t) => {
+	${2:t.plan($3);}
+	$0
+});
+endsnippet
+
+snippet befe "ava beforeEach" b
+test.beforeEach((t) => {
+	$0
+});
+endsnippet
+
+snippet cl "console.log" b
+console.log($0);
 endsnippet
