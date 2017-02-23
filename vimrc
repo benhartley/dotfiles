@@ -1,79 +1,42 @@
 " check for changes to current file every 4 secs
 :au CursorHold * checktime
 
-" NeoBundle {{{
-" https://github.com/Shougo/neobundle.vim
-
-" required steps
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" neobundle manages itself
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" vimproc allows plugins to be installed asynchronously
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-
-" add bundles here
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'chriskempson/base16-vim'
-NeoBundleLazy 'dag/vim2hs', {'autoload':{'filetypes':['haskell','hs']}}
-NeoBundleLazy 'derekwyatt/vim-scala', {'autoload':{'filetypes':['scala']}}
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundleLazy 'ekalinin/Dockerfile.vim', {'autoload': {'filetypes':['Dockerfile']}}
-NeoBundle 'ervandew/supertab'
-NeoBundleLazy 'exu/pgsql.vim', {'autoload':{'filetypes':['pgsql']}}
-NeoBundleLazy 'fatih/vim-go', {'autoload':{'filetypes':['go']}}
-NeoBundleLazy 'flowtype/vim-flow', {'autoload':{'filetypes':['javascript']}}
-NeoBundleLazy 'gavocanov/vim-js-indent', {'autoload':{'filetypes':['javascript']}}
-NeoBundleLazy 'hashivim/vim-terraform', {'autoload':{'filetypes':['tf', 'tfvars', 'tfstate']}}
-NeoBundleLazy 'hdima/python-syntax', {'autoload':{'filetypes':['python']}}
-NeoBundleLazy 'IN3D/vim-raml', {'autoload':{'filetypes':['raml']}}
-NeoBundle 'junegunn/fzf'
-NeoBundle 'junegunn/fzf.vim'
-NeoBundle 'junegunn/gv.vim'
-NeoBundle 'justinmk/vim-sneak'
-NeoBundleLazy 'kern/vim-es7', {'autoload':{'filetypes':['javascript']}}
-NeoBundle 'leafgarland/typescript-vim' 
-NeoBundle 'LFDM/vim-ghi'
-NeoBundleLazy 'ledger/vim-ledger', {'autoload':{'filetypes':['ledger']}}
-NeoBundle 'mattn/gist-vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mutewinter/nginx.vim'
-NeoBundleLazy 'mxw/vim-jsx', {'autoload':{'filetypes':['jsx','tsx','typescript','javascript']}}
-NeoBundle 'neomake/neomake'
-NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript']}}
-NeoBundleLazy 'plasticboy/vim-markdown', {'autoload':{'filetypes':['markdown','md']}}
-NeoBundle 'Quramy/tsuquyomi'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'SirVer/ultisnips'
-NeoBundleLazy 'ternjs/tern_for_vim', {'autoload':{'filetypes':['javascript']}}
-NeoBundle 'tpope/vim-commentary'
-NeoBundleLazy 'tpope/vim-fireplace', {'autoload':{'filetypes':['clojure','clj']}}
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-rhubarb'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundleLazy 'vim-scripts/paredit.vim', {'autoload':{'filetypes':['clojure','clj']}}
-
-" check for uninstalled bundles on startup
-NeoBundleCheck
-
-call neobundle#end()
-
-" }}}
+" Plug
+" - https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'chriskempson/base16-vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'ekalinin/Dockerfile.vim', {'for':'Dockerfile'}
+Plug 'ervandew/supertab'
+Plug 'flowtype/vim-flow', {'for':'javascript'}
+Plug 'hashivim/vim-terraform', {'for':['tf', 'tfvars', 'tfstate']}
+Plug 'junegunn/fzf.vim' | Plug '/usr/bin/fzf'
+Plug 'justinmk/vim-sneak'
+Plug 'keith/gist.vim', {'on':'Gist'}
+Plug 'leafgarland/typescript-vim', {'for':['typescript','typescript.tsx']}
+Plug 'ledger/vim-ledger', {'for':'ledger'}
+Plug 'mileszs/ack.vim', {'on':'Ack'}
+Plug 'mutewinter/nginx.vim', {'for':'nginx'}
+Plug 'mxw/vim-jsx', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
+Plug 'neomake/neomake'
+Plug 'othree/yajs.vim', {'for':'javascript'}
+Plug 'plasticboy/vim-markdown', {'for':['markdown','md']}
+Plug 'Quramy/tsuquyomi', {'for':['typescript','typescript.tsx']}
+Plug 'Raimondi/delimitMate'
+Plug 'SirVer/ultisnips'
+Plug 'Shougo/vimproc.vim', {'for':'typescript'}
+Plug 'ternjs/tern_for_vim', {'for':'javascript'}
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
 
 " filetype indentation
 filetype plugin indent on
@@ -225,7 +188,7 @@ vmap <Leader>P "+P
 
 " tabs
 
-noremap <Leader>a :tabe<CR>:Ag 
+noremap <Leader>a :tabe<CR>:Ack 
 noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
@@ -315,6 +278,9 @@ xmap gS <Plug>Sneak_S
 omap gs <Plug>Sneak_s
 omap gS <Plug>Sneak_S
 
+" Ack.vim
+let g:ackprg = 'ag --vimgrep'
+
 " Flow
 let g:flow#autoclose = 1
 
@@ -322,7 +288,7 @@ let g:flow#autoclose = 1
 au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
 
 " Neomake
-autocmd! BufWritePost * Neomake
+autocmd! BufEnter,BufWritePost * Neomake
 let g:neomake_open_list = 2
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
