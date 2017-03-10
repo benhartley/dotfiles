@@ -36,3 +36,9 @@ endsnippet
 snippet cl "console.log" b
 console.log($0);
 endsnippet
+
+snippet insp "util.inspect" b
+const util = require('util');
+console.log('$1', util.inspect(${2:$1}, false, null));
+endsnippet
+
