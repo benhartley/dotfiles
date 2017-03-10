@@ -42,3 +42,19 @@ const util = require('util');
 console.log('$1', util.inspect(${2:$1}, false, null));
 endsnippet
 
+# start phdv
+
+snippet ltest "lab.test" b
+lab.test('${1:should $2}', ${3:done} => {
+	$0
+});
+endsnippet
+
+snippet lexp "lab.experiment" b
+lab.experiment('$1', () => {
+	$0
+});
+endsnippet
+
+# end phdv
+
