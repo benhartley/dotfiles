@@ -297,6 +297,11 @@ augroup END
 
 " Neomake
 autocmd! BufEnter,BufWritePost * Neomake
-let g:neomake_open_list = 2
+" let g:neomake_open_list = 2
+augroup always-open-signcolumn
+  autocmd!
+  autocmd BufEnter * sign define dummy
+  autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+augroup END
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
