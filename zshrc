@@ -30,6 +30,7 @@ KEYTIMEOUT=1
 alias gc='git commit --verbose'
 alias ga='git add .'
 alias gac='git add --all; git commit --verbose'
+alias gac@='gac --fixup=@'
 alias gcb='git checkout -b'
 alias gp='git push'
 alias gl='git pull --prune'
