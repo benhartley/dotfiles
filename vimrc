@@ -36,6 +36,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " filetype indentation
@@ -286,6 +287,13 @@ let g:flow#autoclose = 1
 
 " Don't leak pass
 au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
+
+" Vim Wiki
+nmap <Leader>wc <Plug>VimwikiToggleListItem
+augroup vimwiki
+    au! BufRead /home/btfh/vimwiki/* :silent exec '!git pull &' | redraw!
+    au! BufWritePost /home/btfh/vimwiki/* :silent exec '!git add <afile>;git commit -m "Auto commit";git push &' | redraw!
+augroup END
 
 " Neomake
 autocmd! BufEnter,BufWritePost * Neomake
