@@ -15,6 +15,7 @@ Plug 'hashivim/vim-terraform', {'for':['tf', 'tfvars', 'tfstate']}
 Plug 'junegunn/fzf.vim' | Plug '/usr/bin/fzf'
 Plug 'justinmk/vim-sneak'
 Plug 'keith/gist.vim', {'on':'Gist'}
+Plug 'jaawerth/nrun.vim', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
 Plug 'leafgarland/typescript-vim', {'for':['typescript','typescript.tsx']}
 Plug 'ledger/vim-ledger', {'for':'ledger'}
 Plug 'mileszs/ack.vim', {'on':'Ack'}
@@ -297,7 +298,8 @@ augroup END
 
 " Neomake
 autocmd! BufEnter,BufWritePost * Neomake
-" let g:neomake_open_list = 2
+let g:neomake_javascript_enabled_makers = ['eslint']
+au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 augroup always-open-signcolumn
   autocmd!
   autocmd BufEnter * sign define dummy
