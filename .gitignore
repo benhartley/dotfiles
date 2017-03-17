@@ -1,9 +1,7 @@
-offlineimap
+tmux/.tmux/resurrect
+tmux/.tmux/plugins/tmux-yank
 
-tmux/resurrect
-tmux/plugins/tmux-yank
-
-vim/.netrwhist
-vim/autoload
-vim/plugged
-vim/sessions
+vim/.vim/.netrwhist
+vim/.vim/autoload
+vim/.vim/plugged
+vim/.vim/sessions
