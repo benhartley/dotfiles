@@ -47,12 +47,12 @@ bindsym $mod+z workspace back_and_forth
 set $mode_launcher Launch
 bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
-    bindsym c exec ~/.dotfiles/i3-run/gcal.sh; mode "default"
+    bindsym c exec ~/.i3/run/gcal.sh; mode "default"
     bindsym g exec xdg-open https://github.com/notifications; mode "default"
-    bindsym r exec ~/.dotfiles/i3-run/rtm.sh; mode "default"
-    bindsym s exec ~/.dotfiles/i3-run/slack.sh; mode "default"
+    bindsym r exec ~/.i3/run/rtm.sh; mode "default"
+    bindsym s exec ~/.i3/run/slack.sh; mode "default"
     bindsym s mode "default"
-    bindsym t exec ~/.dotfiles/i3-run/trello.sh; mode "default"
+    bindsym t exec ~/.i3/run/trello.sh; mode "default"
     bindsym Esc mode "default"
     bindcode 9 mode "default"
 
@@ -85,7 +85,7 @@ for_window [title="chromehistory"] floating enable
 
 
 # Toggle VPN
-bindsym $mod+Shift+v exec "sudo ~/.dotfiles/i3-run/toggle-vpn.sh"
+bindsym $mod+Shift+v exec "sudo ~/.i3/run/toggle-vpn.sh"
 
 # change focus
 bindsym $mod+j focus left
@@ -224,5 +224,5 @@ bar {
 }
 
 # Load workspaces
-exec --no-startup-id ~/.dotfiles/i3/workspaces
+exec --no-startup-id ~/.i3/workspaces
 
