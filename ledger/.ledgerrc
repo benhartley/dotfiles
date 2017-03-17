@@ -1,0 +1,3 @@
+--file ~/.ledger/ledger/ledger.ledger
+--price-db ~/.ledger/commodities/prices.db
+--wide
