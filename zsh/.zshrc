@@ -18,7 +18,7 @@ plugins=(git autojump pass history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/opt/local/bin:/opt/local/bin:/usr/local/mysql/bin:~/.aws/api/bin/:~/.src/depot_tools/:~/bin:~/.cabal/bin:~/.bin
+export PATH=~/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 # use vim keybindings
 set -o vi
@@ -37,6 +37,7 @@ alias gl='git pull --prune'
 alias gst='git status'
 alias grm='git rebase master'
 alias hpr='hub pull-request'
+alias gsqm='git rebase -i --autosquash master'
 gsq() {
     git rebase -i --autosquash "$1"
 }
@@ -52,9 +53,6 @@ alias ytw='yarn run test -- --watch'
 GPG_TTY=$(tty)
 export GPG_TTY
 
-# convert timestamp to human readable
-function timestamp() { perl -e "print scalar(localtime(${@})), \"\n\""; }
-
 alias ccat='pygmentize -g'
 
 # autojump
@@ -65,7 +63,6 @@ function ta() { tmux attach-session -t ${@}; }
 
 # vars
 export EDITOR='/usr/bin/vim'
-export ANDROID_HOME=/opt/android-sdk
 
 # Backward search in the shell history with <C-r>
 bindkey '^r' history-incremental-search-backward
