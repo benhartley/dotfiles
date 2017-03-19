@@ -18,7 +18,7 @@ Plug 'keith/gist.vim', {'on':'Gist'}
 Plug 'jaawerth/nrun.vim', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
 Plug 'leafgarland/typescript-vim', {'for':['typescript','typescript.tsx']}
 Plug 'ledger/vim-ledger', {'for':'ledger'}
-Plug 'mileszs/ack.vim', {'on':'Ack'}
+Plug 'mhinz/vim-grepper', {'on':'Grepper'}
 Plug 'mutewinter/nginx.vim', {'for':'nginx'}
 Plug 'mxw/vim-jsx', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
 Plug 'neomake/neomake'
@@ -190,7 +190,7 @@ vmap <Leader>P "+P
 
 " tabs
 
-noremap <Leader>a :tabe<CR>:Ack 
+noremap <Leader>a :tabe<CR>:Grepper<CR>
 noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
@@ -280,7 +280,6 @@ xmap gS <Plug>Sneak_S
 omap gs <Plug>Sneak_s
 omap gS <Plug>Sneak_S
 
-" Ack.vim
 let g:ackprg = 'ag --vimgrep'
 
 " Flow
