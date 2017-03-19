@@ -17,8 +17,12 @@ plugins=(git autojump pass history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
+# Go
+export GOPATH=~/work/go
+
 # Customize to your needs...
 export PATH=~/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH="$PATH:$GOPATH/bin"
 
 # use vim keybindings
 set -o vi
