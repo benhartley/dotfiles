@@ -190,7 +190,7 @@ vmap <Leader>P "+P
 
 " tabs
 
-noremap <Leader>a :tabe<CR>:Grepper<CR>
+noremap <Leader>a :tabe<CR>:Grepper -query 
 noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
