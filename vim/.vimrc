@@ -190,7 +190,6 @@ vmap <Leader>P "+P
 
 " tabs
 
-noremap <Leader>a :tabe<CR>:Grepper -query 
 noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
@@ -280,7 +279,9 @@ xmap gS <Plug>Sneak_S
 omap gs <Plug>Sneak_s
 omap gS <Plug>Sneak_S
 
+" Ag
 let g:ackprg = 'ag --vimgrep'
+noremap <Leader>a :Grepper -query 
 
 " Flow
 let g:flow#autoclose = 1
