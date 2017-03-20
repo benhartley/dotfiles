@@ -292,8 +292,8 @@ au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
 " Vim Wiki
 nmap <Leader>wc <Plug>VimwikiToggleListItem
 augroup vimwiki
-    au! BufRead /home/btfh/vimwiki/* :silent exec '!git pull &' | redraw!
-    au! BufWritePost /home/btfh/vimwiki/* :silent exec '!git add --all;git commit -m "Auto commit";git push &' | redraw!
+    au! BufRead /home/btfh/vimwiki/* :exe 'silent! !git pull' | redraw!
+    au! BufWritePost /home/btfh/vimwiki/* :exe 'silent! !git add --all;git commit -m "Auto commit";git push' | redraw!
 augroup END
 
 " Neomake
