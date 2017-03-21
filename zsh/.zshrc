@@ -146,7 +146,7 @@ cdf() {
 
 tagstart() {
     unset HISTFILE
-    cd /mnt/samsung850pro/.p
+    cd /mnt/samsung850pro
     source zshrc
 }
 
