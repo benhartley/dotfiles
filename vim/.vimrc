@@ -278,6 +278,12 @@ xmap gs <Plug>Sneak_s
 xmap gS <Plug>Sneak_S
 omap gs <Plug>Sneak_s
 omap gS <Plug>Sneak_S
+nmap <Leader>s <Plug>Sneak_s
+nmap <Leader>S <Plug>Sneak_S
+xmap <Leader>s <Plug>Sneak_s
+xmap <Leader>S <Plug>Sneak_S
+omap <Leader>s <Plug>Sneak_s
+omap <Leader>S <Plug>Sneak_S
 
 " Ag
 let g:ackprg = 'ag --vimgrep'
