@@ -311,5 +311,7 @@ augroup always-open-signcolumn
   autocmd BufEnter * sign define dummy
   autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
 augroup END
+nmap <Leader>l ]l
+nmap <Leader>L [l
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
