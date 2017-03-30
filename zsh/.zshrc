@@ -40,6 +40,7 @@ alias gp='git push'
 alias gl='git pull --prune'
 alias gst='git status'
 alias grm='git rebase master'
+alias gdms='git diff master --stat'
 alias hpr='hub pull-request'
 alias gsqm='git rebase -i --autosquash master'
 gsq() {
