@@ -1,14 +1,12 @@
 #!/bin/bash
 
-i3-msg "workspace 1; append_layout /home/btfh/.dotfiles/i3/workspace-1.json"
-i3-msg "workspace 2; append_layout /home/btfh/.dotfiles/i3/workspace-2.json"
-i3-msg "workspace 3; append_layout /home/btfh/.dotfiles/i3/workspace-3.json"
-i3-msg "workspace 4; append_layout /home/btfh/.dotfiles/i3/workspace-4.json"
-i3-msg "workspace 8; append_layout /home/btfh/.dotfiles/i3/workspace-8.json"
+i3-msg "workspace 1; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-1.json"
+i3-msg "workspace 3; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-3.json"
+i3-msg "workspace 4; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-4.json"
+i3-msg "workspace 8; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-8.json"
 
 urxvt -name tmux -e tmux &
 urxvt -name plan &
-google-chrome-stable --restore-last-session &
 urxvt -name mutt &
 urxvt -name journal -e journalctl -f &
 
