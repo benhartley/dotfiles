@@ -10,6 +10,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim', {'for':'Dockerfile'}
 Plug 'ervandew/supertab'
+Plug 'fatih/vim-go', {'for':'go'}
 Plug 'flowtype/vim-flow', {'for':'javascript'}
 Plug 'hashivim/vim-terraform', {'for':['tf', 'tfvars', 'tfstate']}
 Plug 'junegunn/fzf.vim' | Plug '/usr/bin/fzf'
