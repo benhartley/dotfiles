@@ -155,9 +155,6 @@ noremap Ô :tabprevious<CR>
 
 " }}}
 
-" key binding for removing search highlight
-nnoremap <esc> :noh<return><esc>
-
 " reselect pasted text
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
