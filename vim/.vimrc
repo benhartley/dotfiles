@@ -47,8 +47,6 @@ filetype plugin indent on
 " disable folding
 set nofoldenable
  
-" Temporary files {{{
-
 " persistent undo
 set undofile
 set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -58,7 +56,6 @@ set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
 set writebackup
-" }}}
 
 " status line
 set statusline=%t\ %M\ %=\ line:\ %l/%L
@@ -85,8 +82,6 @@ set smartcase
 set number
 set ruler
 
-" Syntax highlight {{{
-
 " colors 
 syntax enable
 set background=dark
@@ -97,16 +92,12 @@ colorscheme base16-eighties
 au BufNewFile,BufRead *.md set ft=markdown
 au BufNewFile,BufRead *.ledger set ft=ledger
 
-" }}}
-
-" FileType autocmds {{{
+" FileType autocmds 
 autocmd FileType mail set spell
 autocmd FileType gitcommit set spell
 autocmd FileType markdown set spell
-" }}}
 
 " supertab
-" let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabDefaultCompletionType = "<c-x><c-p>"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-p>"
 
@@ -125,35 +116,9 @@ set tabstop=4
 set shiftwidth=4
 set cinkeys=0{,0},:,0#,!^F
 
-" Disable keys {{{
-
-" disable arrows for navigation
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
-
-" }}}
-
-" Panes {{{
-
 " open new panes in the right places...
 set splitbelow
 set splitright
-
-" }}}
-
-" Tabs {{{
-
-" key mapping for switching tabs
-noremap  :tabnext<CR>
-noremap Ô :tabprevious<CR>
-
-" }}}
 
 " reselect pasted text
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
@@ -168,8 +133,6 @@ nnoremap / /\v
 " access directory with -
 nnoremap - :Ex<return>
 
-" Leader shortcuts {{{
-
 " set space to leader
 let mapleader = ' '
 
@@ -178,7 +141,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
 
-" copy to clipboard
+" clipboard
 vmap <Leader>y "+y
 vmap <Leader>d "+d
 nmap <Leader>p "+p
@@ -187,34 +150,32 @@ vmap <Leader>p "+p
 vmap <Leader>P "+P
 
 " tabs
-
 noremap <Leader>t :tabe<CR>
 noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
-noremap <Leader>1 1gt
-noremap <Leader>2 2gt
-noremap <Leader>3 3gt
-noremap <Leader>4 4gt
-noremap <Leader>5 5gt
-noremap <Leader>6 6gt
 
 " gits
 noremap <Leader>g :Gst<CR>
 noremap <Leader>b :Gblame<CR>
 noremap <Leader>h :Gbrowse<CR>
 
-" snips
+" UltiSnips
 noremap <Leader>u :UltiSnipsAddFiletypes 
 noremap <Leader>U :UltiSnipsEdit 
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-l>"
+let g:UltiSnipsEditSplit="vertical"
 
-" misc
-imap ;; <C-o>A;
-noremap <Leader>d :TernDef<CR>
-let g:sql_type_default = 'pgsql'
-nmap <leader>cl yiwoconsole.log('<c-r>"', <c-r>");<esc>^`
-"}}}
+" JavaScript 
+au FileType javascript imap ;; <C-o>A;
+au FileType javascript noremap <Leader>d :TernDef<CR>
+au FileType javascript nmap <leader>cl yiwoconsole.log('<c-r>"', <c-r>");<esc>^`
 
-" FZF {{{
+" Go 
+au FileType go noremap <Leader>d :GoDef<CR>
+
+" FZF 
 let g:fzf_command_prefix = 'Fzf'
 
 noremap <C-p> :FZF -e<CR>
@@ -229,9 +190,8 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
-" }}}
 
-" Airline {{{
+" Airline 
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#default#layout = [
 	\ ['a', 'b', 'c'],
@@ -260,22 +220,8 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-" }}}
-
-" UltiSnips {{{
-let g:UltiSnipsExpandTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<c-k>"
-let g:UltiSnipsJumpBackwardTrigger="<c-l>"
-let g:UltiSnipsEditSplit="vertical"
-" }}}
 
 " Sneak
-nmap gs <Plug>Sneak_s
-nmap gS <Plug>Sneak_S
-xmap gs <Plug>Sneak_s
-xmap gS <Plug>Sneak_S
-omap gs <Plug>Sneak_s
-omap gS <Plug>Sneak_S
 nmap <Leader>s <Plug>Sneak_s
 nmap <Leader>S <Plug>Sneak_S
 xmap <Leader>s <Plug>Sneak_s
