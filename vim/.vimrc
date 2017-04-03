@@ -19,6 +19,7 @@ Plug 'keith/gist.vim', {'on':'Gist'}
 Plug 'jaawerth/nrun.vim', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
 Plug 'leafgarland/typescript-vim', {'for':['typescript','typescript.tsx']}
 Plug 'ledger/vim-ledger', {'for':'ledger'}
+Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-grepper', {'on':'Grepper'}
 Plug 'mutewinter/nginx.vim', {'for':'nginx'}
 Plug 'mxw/vim-jsx', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
