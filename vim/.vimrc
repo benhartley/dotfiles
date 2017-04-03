@@ -175,6 +175,13 @@ au FileType javascript nmap <leader>cl yiwoconsole.log('<c-r>"', <c-r>");<esc>^`
 
 " Go 
 au FileType go noremap <Leader>d :GoDef<CR>
+au FileType go noremap <Leader>r :GoRun<CR>
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 " FZF 
 let g:fzf_command_prefix = 'Fzf'
