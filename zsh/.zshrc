@@ -46,6 +46,12 @@ alias gsqm='git rebase -i --autosquash master'
 gsq() {
     git rebase -i --autosquash "$1"
 }
+gpmd() {
+    CURRENT_BRANCH=$(git branch)
+    git checkout master
+    git pull
+    git branch -d ${CURRENT_BRANCH:2}
+}
 
 # yarn
 alias yr='yarn run'
@@ -124,6 +130,17 @@ _fzf_complete_ledger() {
 
 _fzf_complete_ledger_post() {
     awk '{printf("\"%s\"\n", $0);}'
+}
+
+_fzf_complete_tmsu() {
+  ARGS="$@"
+  if [[ $ARGS == 'tmsu tag'* ]]; then
+      _fzf_complete "" "$@" < <(
+      tmsu tags
+      )
+  else
+      eval "zle ${fzf_default_completion:-expand-or-complete}"
+  fi
 }
 
 # Git history in FZF
