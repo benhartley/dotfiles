@@ -13,10 +13,10 @@ Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', {'for':'go'}
 Plug 'flowtype/vim-flow', {'for':'javascript'}
 Plug 'hashivim/vim-terraform', {'for':['tf', 'tfvars', 'tfstate']}
+Plug 'jaawerth/nrun.vim', {'for':['javascript','javascript.jsx']}
 Plug 'junegunn/fzf.vim' | Plug '/usr/bin/fzf'
 Plug 'justinmk/vim-sneak'
 Plug 'keith/gist.vim', {'on':'Gist'}
-Plug 'jaawerth/nrun.vim', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
 Plug 'leafgarland/typescript-vim', {'for':['typescript','typescript.tsx']}
 Plug 'ledger/vim-ledger', {'for':'ledger'}
 Plug 'majutsushi/tagbar'
@@ -92,6 +92,8 @@ colorscheme base16-eighties
 " syntax stuff
 au BufNewFile,BufRead *.md set ft=markdown
 au BufNewFile,BufRead *.ledger set ft=ledger
+au BufNewFile,BufRead *.stockcharts set ft=stockcharts
+autocmd FileType stockcharts setlocal commentstring=//\ %s
 
 " FileType autocmds 
 autocmd FileType mail set spell
@@ -169,9 +171,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 let g:UltiSnipsEditSplit="vertical"
 
 " JavaScript 
-au FileType javascript imap ;; <C-o>A;
-au FileType javascript noremap <Leader>d :TernDef<CR>
-au FileType javascript nmap <leader>cl yiwoconsole.log('<c-r>"', <c-r>");<esc>^`
+au FileType javascript,javascript.jsx imap ;; <C-o>A;
+au FileType javascript,javascript.jsx noremap <Leader>d :TernDef<CR>
+au FileType javascript,javascript.jsx nmap <leader>cl yiwoconsole.log('<c-r>"', <c-r>");<esc>^`
 
 " Go 
 au FileType go noremap <Leader>d :GoDef<CR>
@@ -257,7 +259,7 @@ augroup END
 " Neomake
 autocmd! BufEnter,BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
-au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
+au BufEnter *.js,*.jsx let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 augroup always-open-signcolumn
   autocmd!
   autocmd BufEnter * sign define dummy
