@@ -2,4 +2,4 @@ text/html; w3m -I %{charset} -T text/html; copiousoutput;
 image/*; feh -d %s;
 application/pdf; zathura %s;
 application/msword; libreoffice %s
-application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s
+application/vnd.openxmlformats-officedocument.*; libreoffice
