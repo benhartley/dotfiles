@@ -48,10 +48,13 @@ set $mode_launcher Launch
 bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
     bindsym c exec ~/.i3/run/gcal.sh; mode "default"
+    bindsym f exec ~/.i3/run/ft.sh; mode "default"
     bindsym g exec xdg-open https://github.com/notifications; mode "default"
+    bindsym i exec ~/.i3/run/ig.sh; mode "default"
+    bindsym k exec ~/.i3/run/kraken.sh; mode "default"
     bindsym r exec ~/.i3/run/rtm.sh; mode "default"
     bindsym s exec ~/.i3/run/slack.sh; mode "default"
-    bindsym s mode "default"
+    # bindsym s mode "default"
     bindsym t exec ~/.i3/run/trello.sh; mode "default"
     bindsym Esc mode "default"
     bindcode 9 mode "default"
@@ -78,6 +81,7 @@ bindsym $mod+Shift+q kill
 bindsym Control+space exec "rofi -show combi"
 bindsym $mod+space exec "rofi-surfraw"
 bindsym $mod+p exec "rofi-pass"
+bindsym $mod+b exec "buku_run"
 bindsym Mod1+space exec "clerk"
 
 bindsym $mod+h exec "i3-sensible-terminal -e chromehistory"
