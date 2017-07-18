@@ -104,6 +104,9 @@ LC_ALL=
 
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
 
+source <(kops completion zsh)
+source /usr/bin/aws_zsh_completer.sh
+
 # Setting ag as the default source for fzf - include hidden files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_DEFAULT_OPTS='--exact'
