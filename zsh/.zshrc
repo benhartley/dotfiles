@@ -52,6 +52,9 @@ gpmd() {
     git pull
     git branch -d ${CURRENT_BRANCH:2}
 }
+lst() {
+    ls -t "$1" | head -n 10
+}
 
 # yarn
 alias yr='yarn run'
@@ -105,6 +108,7 @@ LC_ALL=
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
 
 source <(kops completion zsh)
+source <(kubectl completion zsh)
 source /usr/bin/aws_zsh_completer.sh
 
 # Setting ag as the default source for fzf - include hidden files
@@ -186,6 +190,8 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 
 eval "$(rbenv init -)"
+
+source /usr/share/autoenv/activate.sh
 
 # zsh-bd
 . $HOME/.zsh/plugins/bd/bd.zsh
