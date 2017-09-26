@@ -27,7 +27,7 @@ client.unfocused $base01 $base01 $base03 $base01
 client.urgent $base02 $base08 $base07 $base08
 client.background $base00
 
-font pango:Inconsolata 12
+font pango:Inconsolata 6
 new_window pixel 1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
