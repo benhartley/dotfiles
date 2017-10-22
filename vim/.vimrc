@@ -19,6 +19,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'keith/gist.vim', {'on':'Gist'}
 Plug 'leafgarland/typescript-vim', {'for':['typescript','typescript.tsx']}
 Plug 'ledger/vim-ledger', {'for':'ledger'}
+Plug 'lifepillar/pgsql.vim', {'for':'sql'}
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-grepper', {'on':'Grepper'}
 Plug 'mutewinter/nginx.vim', {'for':'nginx'}
@@ -256,6 +257,9 @@ augroup vimwiki
     au! BufRead /home/btfh/vimwiki/* :exe 'silent! !git pull' | redraw!
     au! BufWritePost /home/btfh/vimwiki/* :exe 'silent! !git add --all;git commit -m "Auto commit";git push' | redraw!
 augroup END
+
+" Postgres
+let g:sql_type_default = 'pgsql'
 
 " Neomake
 autocmd! BufEnter,BufWritePost * Neomake
