@@ -63,6 +63,12 @@ alias yrm='yarn remove'
 alias yt='yarn run test'
 alias ytw='yarn run test -- --watch'
 
+alias f='feh --hide-pointer --info "echo "%F"; tmsu tags %F | cut -d: -f2" --action1 ";t %F <(read -e -p \"Enter tag string:\")" --draw-tinted' 
+ft() {
+    tmsu files -f $(read) > /tmp/fehlist
+    f -f /tmp/fehlist
+}
+
 # GPG
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -139,15 +145,8 @@ _fzf_complete_ledger_post() {
     awk '{printf("\"%s\"\n", $0);}'
 }
 
-_fzf_complete_tmsu() {
-  ARGS="$@"
-  if [[ $ARGS == 'tmsu tag'* ]]; then
-      _fzf_complete "" "$@" < <(
-      tmsu tags
-      )
-  else
-      eval "zle ${fzf_default_completion:-expand-or-complete}"
-  fi
+_fzf_complete_t() {
+    _fzf_complete "" "$@" < <(tmsu tags)
 }
 
 # Git history in FZF
