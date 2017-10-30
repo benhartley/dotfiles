@@ -46,12 +46,6 @@ alias gsqm='git rebase -i --autosquash master'
 gsq() {
     git rebase -i --autosquash "$1"
 }
-gpmd() {
-    CURRENT_BRANCH=$(git branch)
-    git checkout master
-    git pull
-    git branch -d ${CURRENT_BRANCH:2}
-}
 lst() {
     ls -t "$1" | head -n 10
 }
@@ -72,8 +66,6 @@ ft() {
 # GPG
 GPG_TTY=$(tty)
 export GPG_TTY
-
-alias ccat='pygmentize -g'
 
 # autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
@@ -111,8 +103,6 @@ LC_NUMERIC="en_GB.UTF-8"
 LC_TIME="en_GB.UTF-8"
 LC_ALL=
 
-[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
-
 source <(kops completion zsh)
 source <(kubectl completion zsh)
 source /usr/bin/aws_zsh_completer.sh
@@ -149,25 +139,6 @@ _fzf_complete_t() {
     _fzf_complete "" "$@" < <(tmsu tags)
 }
 
-# Git history in FZF
-gfzf() {
-  git log --graph --color=always \
-      --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
-  fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
-      --bind "ctrl-m:execute:
-                (grep -o '[a-f0-9]\{7\}' | head -1 |
-                xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
-                {}
-FZF-EOF"
-}
-
-# cdf - cd into the directory of the selected file
-cdf() {
-   local file
-   local dir
-   file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
-}
-
 tagstart() {
     unset HISTFILE
     cd /mnt/samsung850pro
@@ -180,17 +151,3 @@ alias -g s=systemctl
 BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-autoload -U add-zsh-hook
-load-nvmrc() {
-  if [[ -f .nvmrc && -r .nvmrc ]]; then
-    nvm use
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-
-eval "$(rbenv init -)"
-
-source /usr/share/autoenv/activate.sh
-
-# zsh-bd
-. $HOME/.zsh/plugins/bd/bd.zsh
