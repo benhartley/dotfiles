@@ -9,11 +9,11 @@ Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim', {'for':'Dockerfile'}
-Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', {'for':'go'}
 Plug 'flowtype/vim-flow', {'for':'javascript'}
-Plug 'hashivim/vim-terraform', {'for':['tf', 'tfvars', 'tfstate']}
+Plug 'hashivim/vim-terraform'
 Plug 'jaawerth/nrun.vim', {'for':['javascript','javascript.jsx']}
+Plug 'juliosueiras/vim-terraform-completion'
 Plug 'junegunn/fzf.vim' | Plug '/usr/bin/fzf'
 Plug 'justinmk/vim-sneak'
 Plug 'keith/gist.vim', {'on':'Gist'}
@@ -21,6 +21,7 @@ Plug 'leafgarland/typescript-vim', {'for':['typescript','typescript.tsx']}
 Plug 'ledger/vim-ledger', {'for':'ledger'}
 Plug 'lifepillar/pgsql.vim', {'for':'sql'}
 Plug 'majutsushi/tagbar'
+Plug 'maralla/completor.vim'
 Plug 'mhinz/vim-grepper', {'on':'Grepper'}
 Plug 'mutewinter/nginx.vim', {'for':'nginx'}
 Plug 'mxw/vim-jsx', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
@@ -100,10 +101,6 @@ autocmd FileType stockcharts setlocal commentstring=//\ %s
 autocmd FileType mail set spell
 autocmd FileType gitcommit set spell
 autocmd FileType markdown set spell
-
-" supertab
-let g:SuperTabDefaultCompletionType = "<c-x><c-p>"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-p>"
 
 " wildmenu - tab to get autocomplete menu in Ex mode
 set wildmenu
@@ -272,5 +269,9 @@ augroup always-open-signcolumn
 augroup END
 nmap <Leader>l ]l
 nmap <Leader>L [l
+
+let g:completor_gocode_binary = '/home/btfh/work/go/bin/gocode'
+let g:completor_auto_trigger = 0
+inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
