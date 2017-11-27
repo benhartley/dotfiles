@@ -53,7 +53,7 @@ mode "$mode_launcher" {
     bindsym i exec ~/.i3/run/ig.sh; mode "default"
     bindsym k exec ~/.i3/run/kraken.sh; mode "default"
     bindsym r exec ~/.i3/run/rtm.sh; mode "default"
-    bindsym s exec ~/.i3/run/slack.sh; mode "default"
+    # bindsym s exec ~/.i3/run/slack.sh; mode "default"
     # bindsym s mode "default"
     bindsym t exec ~/.i3/run/trello.sh; mode "default"
     bindsym Esc mode "default"
@@ -79,17 +79,11 @@ bindsym $mod+Shift+q kill
 
 # Rofi / FZF
 bindsym Control+space exec "rofi -show combi"
-bindsym $mod+space exec "rofi-surfraw"
 bindsym $mod+p exec "rofi-pass"
-bindsym $mod+b exec "buku_run"
-bindsym Mod1+space exec "clerk"
 
 bindsym $mod+h exec "i3-sensible-terminal -e chromehistory"
 for_window [title="chromehistory"] floating enable 
 
-
-# Toggle VPN
-bindsym $mod+Shift+v exec "sudo ~/.i3/run/toggle-vpn.sh"
 
 # change focus
 bindsym $mod+j focus left
@@ -193,6 +187,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bindsym $mod+m exec xdotool click 1
+
 bindsym XF86MonBrightnessDown exec --no-startup-id "light -U 2"
 bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 2"
 
@@ -200,13 +196,7 @@ bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute 1 toggle"
 bindsym XF86AudioLowerVolume exec --no-startup-id "pactl -- set-sink-volume 1 -5%"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl -- set-sink-mute 1 false; pactl -- set-sink-volume 1 +5%"
 
-bindsym XF86AudioPlay exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-bindsym XF86AudioPrev exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-bindsym XF86AudioNext exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-
-# Scratchpad
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+bindsym XF86AudioNext exec --no-startup-id "skipify"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
