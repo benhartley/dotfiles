@@ -6,7 +6,7 @@ URxvt.lineSpace: 8
 URxvt.scrollBar: false
 
 URxvt.perl-ext-common:      default,url-select
-URxvt.url-select.launcher:  chromium
+URxvt.url-select.launcher:  firefox
 URxvt.url-select.underline: true
 URxvt.keysym.M-u:           perl:url-select:select_next
 
@@ -20,10 +20,12 @@ Xft.dpi: 220
 ! rofi
 rofi.font: Inconsolata 22
 rofi.hide-scrollbar: true
+rofi.kb-remove-to-eol: Control+l
+rofi.kb-accept-entry: Return
 rofi.kb-row-up: Control+k
 rofi.kb-row-down: Control+j
 rofi.modi: combi
-rofi.combi-modi: window,run,ssh,Search:rofi-surfraw
+rofi.combi-modi: window,run,ssh
 rofi.threads: 0
 
 rofi.color-enabled: true
