@@ -9,6 +9,7 @@ Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim', {'for':'Dockerfile'}
+Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', {'for':'go'}
 Plug 'flowtype/vim-flow', {'for':'javascript'}
 Plug 'hashivim/vim-terraform'
@@ -255,6 +256,10 @@ augroup vimwiki
     au! BufWritePost /home/btfh/vimwiki/* :exe 'silent! !git add --all;git commit -m "Auto commit";git push' | redraw!
 augroup END
 
+" supertab
+let g:SuperTabDefaultCompletionType = "<c-x><c-p>"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-p>"
+
 " Postgres
 let g:sql_type_default = 'pgsql'
 
@@ -272,6 +277,7 @@ nmap <Leader>L [l
 
 let g:completor_gocode_binary = '/home/btfh/work/go/bin/gocode'
 let g:completor_auto_trigger = 0
-inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
+let g:completor_blacklist = ['tagbar', 'qf', 'netrw', 'unite', 'vimwiki', 'mail']
+let g:completor_set_options = 0
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
