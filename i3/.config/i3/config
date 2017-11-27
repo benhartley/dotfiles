@@ -54,7 +54,7 @@ mode "$mode_launcher" {
     bindsym k exec ~/.i3/run/kraken.sh; mode "default"
     bindsym r exec ~/.i3/run/rtm.sh; mode "default"
     # bindsym s exec ~/.i3/run/slack.sh; mode "default"
-    # bindsym s mode "default"
+    bindsym s mode "default"
     bindsym t exec ~/.i3/run/trello.sh; mode "default"
     bindsym Esc mode "default"
     bindcode 9 mode "default"
