@@ -57,11 +57,13 @@ alias yrm='yarn remove'
 alias yt='yarn run test'
 alias ytw='yarn run test -- --watch'
 
-alias f='feh --hide-pointer --info "echo "%F"; tmsu tags %F | cut -d: -f2" --action1 ";t %F <(read -e -p \"Enter tag string:\")" --draw-tinted' 
-ft() {
-    tmsu files -f $(read) > /tmp/fehlist
-    f -f /tmp/fehlist
-}
+alias f='feh \
+    --draw-tinted \
+    --hide-pointer \
+    --info "echo "%F"; tmsu tags %F | cut -d: -f2" \
+    --action1 ";HISTFILE=/dev/null FILE_CURRENT=\"%F\" urxvt -geometry 80x3 -title floating -e sh -c \"/bin/zsh -i -t\"" \
+    --action2 ";feh -t -E 150 -y 150 \"$(dirname %f)\""'
+
 
 # GPG
 GPG_TTY=$(tty)
@@ -138,6 +140,8 @@ _fzf_complete_ledger_post() {
 _fzf_complete_t() {
     _fzf_complete "" "$@" < <(tmsu tags)
 }
+
+alias t="tmsu tag ${FILE_CURRENT}"
 
 tagstart() {
     unset HISTFILE
