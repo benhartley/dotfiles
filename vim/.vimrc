@@ -250,7 +250,9 @@ let g:flow#autoclose = 1
 au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
 
 " Vim Wiki
-nmap <Leader>wc <Plug>VimwikiToggleListItem
+au FileType vimwiki nmap <Leader>wc <Plug>VimwikiToggleListItem
+au FileType vimwiki nmap <Leader>v <Plug>VimwikiVSplitLink
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'auto_tags': 1}]
 augroup vimwiki
     au! BufRead /home/btfh/vimwiki/* :exe 'silent! !git pull' | redraw!
     au! BufWritePost /home/btfh/vimwiki/* :exe 'silent! !git add --all;git commit -m "Auto commit";git push' | redraw!
