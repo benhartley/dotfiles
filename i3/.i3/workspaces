@@ -1,16 +1,21 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-i3-msg "workspace 1; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-1.json"
-i3-msg "workspace 3; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-3.json"
-i3-msg "workspace 4; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-4.json"
-i3-msg "workspace 8; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-8.json"
+set -euo pipefail
 
-urxvt -name tmux -e tmux &
-urxvt -name plan &
-urxvt -name mutt &
-urxvt -name journal -e journalctl -f &
+function main {
+    i3-msg "workspace 1; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-1.json"
+    i3-msg "workspace 4; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-4.json"
+    i3-msg "workspace 8; append_layout /home/btfh/.dotfiles/i3/.i3/workspace-8.json"
 
-# kill default tmux session after enough time has passed for auto-restore to kick in
-# this should be left until last
-sleep 5
-tmux kill-session -t 0
+    urxvt -title tmux -e zsh -ic tmux &
+    urxvt -title mutt -e zsh -ic mutt &
+    urxvt -title weechat -e zsh -ic weechat &
+    urxvt -title journal_offlineimap -e zsh -ic "journalctl -ft offlineimap" &
+
+    # kill default tmux session after enough time has passed for auto-restore to kick in
+    # this should be left until last
+    sleep 5
+    tmux kill-session -t 0
+}
+
+main

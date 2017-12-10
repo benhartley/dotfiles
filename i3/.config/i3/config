@@ -84,6 +84,7 @@ bindsym $mod+p exec "rofi-pass"
 bindsym $mod+h exec "i3-sensible-terminal -e chromehistory"
 for_window [title="chromehistory"] floating enable 
 
+for_window [title="floating"] floating enable 
 
 # change focus
 bindsym $mod+j focus left

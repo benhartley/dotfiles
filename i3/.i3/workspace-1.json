@@ -20,7 +20,7 @@
             "swallows": [
                {
                "class": "^URxvt$",
-               "instance": "^tmux$"
+               "title": "^tmux$"
                }
             ],
             "type": "con"
