@@ -26,7 +26,6 @@ Plug 'maralla/completor.vim'
 Plug 'mhinz/vim-grepper', {'on':'Grepper'}
 Plug 'mutewinter/nginx.vim', {'for':'nginx'}
 Plug 'mxw/vim-jsx', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
-Plug 'neomake/neomake'
 Plug 'othree/yajs.vim', {'for':'javascript'}
 Plug 'plasticboy/vim-markdown', {'for':['markdown','md']}
 Plug 'Quramy/tsuquyomi', {'for':['typescript','typescript.tsx']}
@@ -42,6 +41,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-syntastic/syntastic'
 Plug 'vimwiki/vimwiki'
 call plug#end()
 
@@ -262,20 +262,15 @@ augroup END
 let g:SuperTabDefaultCompletionType = "<c-x><c-p>"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-p>"
 
+" Syntastic
+let g:syntastic_auto_jump = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_enable_signs = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
 " Postgres
 let g:sql_type_default = 'pgsql'
-
-" Neomake
-autocmd! BufEnter,BufWritePost * Neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
-au BufEnter *.js,*.jsx let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
-augroup always-open-signcolumn
-  autocmd!
-  autocmd BufEnter * sign define dummy
-  autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
-augroup END
-nmap <Leader>l ]l
-nmap <Leader>L [l
 
 let g:completor_gocode_binary = '/home/btfh/work/go/bin/gocode'
 let g:completor_auto_trigger = 0
