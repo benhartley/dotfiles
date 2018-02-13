@@ -269,6 +269,12 @@ let g:syntastic_enable_signs = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
+" vim-go
+autocmd BufWritePost *.go call go#cmd#Build(1)
+
+" Ledger
+au FileType ledger nnoremap <Leader>gt :read !openssl rand -hex 3<CR>
+
 " Postgres
 let g:sql_type_default = 'pgsql'
 
