@@ -1,9 +1,11 @@
+# https://github.com/carnager/rofi-pass/blob/master/config.example
+
 # permanently set alternative root dir
 # root=/path/to/root
 
 # rofi command. Make sure to have "$@" as last argument
 _rofi () {
-    rofi -i -width 700 -no-levenshtein-sort "$@"
+    rofi -i -width 700 -no-auto-select "$@"
 }
 
 # keyboard layout (set this to your actual layout. E.g. keyboard="de us"
@@ -22,7 +24,7 @@ delay=2
 EDITOR='vim'
 
 # Browser
-BROWSER='firefox'
+BROWSER='xdg-open'
 
 ## Misc settings
 
