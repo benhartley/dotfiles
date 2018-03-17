@@ -22,7 +22,6 @@ Plug 'leafgarland/typescript-vim', {'for':['typescript','typescript.tsx']}
 Plug 'ledger/vim-ledger', {'for':'ledger'}
 Plug 'lifepillar/pgsql.vim', {'for':'sql'}
 Plug 'majutsushi/tagbar'
-Plug 'maralla/completor.vim'
 Plug 'mhinz/vim-grepper', {'on':'Grepper'}
 Plug 'mutewinter/nginx.vim', {'for':'nginx'}
 Plug 'mxw/vim-jsx', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
@@ -202,7 +201,7 @@ xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
 " Airline 
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#default#layout = [
 	\ ['a', 'b', 'c'],
 	\ ['warning']
@@ -216,20 +215,9 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 
-let g:airline_left_sep = '»'
-" let g:airline_left_sep = '⮀'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
 
 " Sneak
 nmap <Leader>s <Plug>Sneak_s
@@ -277,10 +265,5 @@ au FileType ledger nnoremap <Leader>gt :read !openssl rand -hex 3<CR>
 
 " Postgres
 let g:sql_type_default = 'pgsql'
-
-let g:completor_gocode_binary = '/home/btfh/work/go/bin/gocode'
-let g:completor_auto_trigger = 0
-let g:completor_blacklist = ['tagbar', 'qf', 'netrw', 'unite', 'vimwiki', 'mail']
-let g:completor_set_options = 0
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim

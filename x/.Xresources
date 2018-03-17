@@ -1,5 +1,5 @@
 ! urxvt
-URxvt.font: xft:Inconsolata:pixelsize=18
+URxvt.font: xft:Inconsolata for Powerline:pixelsize=21
 URxvt.lineSpace: 8
 *.background: #2d2d2d
 
