@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
-
 export DISPLAY=:0.0
  
 function monitor_on {
@@ -25,7 +23,7 @@ function get_connected_dp {
 
 function main {
     CONNECTED="$(get_connected_dp)"
-    ([[ -n "$CONNECTED" ]] && monitor_on) || monitor_off
+    ([[ -n "${CONNECTED}" ]] && monitor_on) || monitor_off
 }
 
 main
