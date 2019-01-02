@@ -2,4 +2,4 @@
 
 Use `stow` to install these.
 
-`udev` directory should be installed from `/` rather than `~`.
+`udev` directory should be installed from `/` rather than `~`. (i.e. `stow -t / udev`)
