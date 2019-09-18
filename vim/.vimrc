@@ -8,40 +8,29 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'ekalinin/Dockerfile.vim', {'for':'Dockerfile'}
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', {'for':'go'}
-Plug 'flowtype/vim-flow', {'for':'javascript'}
-Plug 'hashivim/vim-terraform'
-Plug 'jaawerth/nrun.vim', {'for':['javascript','javascript.jsx']}
-Plug 'juliosueiras/vim-terraform-completion'
+Plug 'flowtype/vim-flow', {'do': 'yarn global add flow-bin', 'for':'javascript'}
+Plug 'google/vim-jsonnet', {'for': 'jsonnet'}
 Plug 'junegunn/fzf.vim' | Plug '/usr/bin/fzf'
 Plug 'justinmk/vim-sneak'
 Plug 'keith/gist.vim', {'on':'Gist'}
-Plug 'leafgarland/typescript-vim', {'for':['typescript','typescript.tsx']}
 Plug 'ledger/vim-ledger', {'for':'ledger'}
-Plug 'lifepillar/pgsql.vim', {'for':'sql'}
-Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-grepper', {'on':'Grepper'}
-Plug 'mutewinter/nginx.vim', {'for':'nginx'}
-Plug 'mxw/vim-jsx', {'for':['javascript','javascript.jsx','typescript','typescript.tsx']}
-Plug 'othree/yajs.vim', {'for':'javascript'}
 Plug 'plasticboy/vim-markdown', {'for':['markdown','md']}
-Plug 'Quramy/tsuquyomi', {'for':['typescript','typescript.tsx']}
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
-Plug 'Shougo/vimproc.vim', {'for':'typescript'}
-Plug 'ternjs/tern_for_vim', {'for':'javascript', 'do':'npm i'}
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-git'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
-Plug 'vimwiki/vimwiki'
+Plug 'vito-c/jq.vim', {'for':'jq'}
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " filetype indentation
@@ -94,8 +83,6 @@ colorscheme base16-eighties
 " syntax stuff
 au BufNewFile,BufRead *.md set ft=markdown
 au BufNewFile,BufRead *.ledger set ft=ledger
-au BufNewFile,BufRead *.stockcharts set ft=stockcharts
-autocmd FileType stockcharts setlocal commentstring=//\ %s
 
 " FileType autocmds 
 autocmd FileType mail set spell
@@ -113,8 +100,8 @@ set cindent
 set smartindent
 set autoindent
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2 
 set cinkeys=0{,0},:,0#,!^F
 
 " open new panes in the right places...
@@ -128,7 +115,7 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red
 
-" make searchs very magic by default
+" make search very magic by default
 nnoremap / /\v
 
 " access directory with -
@@ -156,7 +143,7 @@ noremap <Leader>j :tabprevious<CR>
 noremap <Leader>k :tabnext<CR>
 
 " gits
-noremap <Leader>g :Gst<CR>
+noremap <Leader>g :G<CR>
 noremap <Leader>b :Gblame<CR>
 noremap <Leader>h :Gbrowse<CR>
 
@@ -167,11 +154,6 @@ let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 let g:UltiSnipsEditSplit="vertical"
-
-" JavaScript 
-au FileType javascript,javascript.jsx imap ;; <C-o>A;
-au FileType javascript,javascript.jsx noremap <Leader>d :TernDef<CR>
-au FileType javascript,javascript.jsx nmap <leader>cl yiwoconsole.log('<c-r>"', <c-r>");<esc>^`
 
 " Go 
 au FileType go noremap <Leader>d :GoDef<CR>
@@ -231,20 +213,8 @@ omap <Leader>S <Plug>Sneak_S
 let g:ackprg = 'ag --vimgrep'
 noremap <Leader>a :Grepper -query 
 
-" Flow
-let g:flow#autoclose = 1
-
 " Don't leak pass
 au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
-
-" Vim Wiki
-au FileType vimwiki nmap <Leader>wc <Plug>VimwikiToggleListItem
-au FileType vimwiki nmap <Leader>v <Plug>VimwikiVSplitLink
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'auto_tags': 1}]
-augroup vimwiki
-    au! BufRead /home/btfh/vimwiki/* :exe 'silent! !git pull' | redraw!
-    au! BufWritePost /home/btfh/vimwiki/* :exe 'silent! !git add --all;git commit -m "Auto commit";git push' | redraw!
-augroup END
 
 " supertab
 let g:SuperTabDefaultCompletionType = "<c-x><c-p>"
@@ -256,6 +226,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
+let g:syntastic_yaml_checkers = ["yamllint"]
 
 " vim-go
 autocmd BufWritePost *.go call go#cmd#Build(1)
@@ -263,7 +234,10 @@ autocmd BufWritePost *.go call go#cmd#Build(1)
 " Ledger
 au FileType ledger nnoremap <Leader>gt :read !openssl rand -hex 3<CR>
 
-" Postgres
-let g:sql_type_default = 'pgsql'
+" Terraform
+let g:terraform_fmt_on_save = 1
+
+" Markdown
+let g:vim_markdown_conceal = 0
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
