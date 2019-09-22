@@ -115,8 +115,9 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red
 
-" make search very magic by default
-nnoremap / /\v
+" default to command-line window (and very magic search)
+nnoremap / q/i\v
+nnoremap : q:
 
 " access directory with -
 nnoremap - :Ex<return>
@@ -226,6 +227,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
+let g:syntastic_dockerfile_checkers = ["hadolint"]
 let g:syntastic_yaml_checkers = ["yamllint"]
 
 " vim-go
