@@ -117,7 +117,7 @@ hi SpellBad cterm=underline ctermfg=red
 
 " default to command-line window (and very magic search)
 nnoremap / q/i\v
-nnoremap : q:
+nnoremap : q:i
 
 " access directory with -
 nnoremap - :Ex<return>
