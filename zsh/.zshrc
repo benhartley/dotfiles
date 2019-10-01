@@ -21,7 +21,7 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH=~/work/go
 
 # Customize to your needs...
-export PATH=~/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=~/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/.yarn/bin:~/.local/bin
 export PATH="$PATH:$GOPATH/bin"
 
 # use vim keybindings
@@ -32,7 +32,7 @@ KEYTIMEOUT=1
 
 # git stuff
 alias gc='git commit --verbose'
-alias ga='git add .'
+alias ga='git add'
 alias gac='git add --all; git commit --verbose'
 alias gac@='gac --fixup=@'
 alias gcb='git checkout -b'
@@ -50,20 +50,14 @@ lst() {
     ls -t "$1" | head -n 10
 }
 
+alias kc='kubectl'
+
 # yarn
 alias yr='yarn run'
 alias ya='yarn add'
 alias yrm='yarn remove'
 alias yt='yarn run test'
 alias ytw='yarn run test -- --watch'
-
-alias f='feh \
-    --draw-tinted \
-    --hide-pointer \
-    --info "echo "%F"; tmsu tags %F | cut -d: -f2" \
-    --action1 ";HISTFILE=/dev/null FILE_CURRENT=\"%F\" urxvt -geometry 80x3 -title floating -e sh -c \"/bin/zsh -i -t\"" \
-    --action2 ";feh -t -E 150 -y 150 \"$(dirname %f)\""'
-
 
 # GPG
 GPG_TTY=$(tty)
@@ -141,10 +135,16 @@ _fzf_complete_t() {
     _fzf_complete "" "$@" < <(tmsu tags)
 }
 
+_fzf_complete_ga() {
+    local to_add=$(git ls-files -m -o --exclude-standard)
+    _fzf_complete "+m" "$@" < <(echo $to_add)
+}
+
 alias t="tmsu tag ${FILE_CURRENT}"
 
 tagstart() {
     unset HISTFILE
+    XDG_CACHE_HOME=/mnt/samsung850pro/thumbs
     cd /mnt/samsung850pro
     source zshrc
 }
