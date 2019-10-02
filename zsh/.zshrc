@@ -127,6 +127,13 @@ _fzf_complete_ledger() {
     _fzf_complete '+m' "$@" < <(ledger accounts)
 }
 
+# Assumes port-forwarding to Prometheus / Thanos in cluster
+_fzf_complete_promtool() {
+    _fzf_complete "" "$@" < <(
+      curl -s http://127.0.0.1:9090/api/v1/label/__name__/values | jq -r '.data | .[]'
+  )
+}
+
 _fzf_complete_ledger_post() {
     awk '{printf("\"%s\"\n", $0);}'
 }
