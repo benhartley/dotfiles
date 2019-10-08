@@ -1,0 +1,23 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+SSID=$(iwgetid -r)
+QUALITY=$(grep "wlp3s0" /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
+
+if [[ "$(cat /sys/class/net/wlp3s0/operstate)" = 'down' ]]; then
+  echo "WiFi"
+  echo "WiFi"
+  echo "#f2777a"
+  exit
+fi
+
+printf "%s %s\n" "$SSID" "$QUALITY%"
+printf "WiFi: %s\n" "$QUALITY%"
+
+if [[ $QUALITY -gt 50 ]]; then
+  echo "#99cc99"
+else
+  echo "#ffcc66"
+fi
+

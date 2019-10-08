@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+LOAD=$(cut -d " " -f 1 < /proc/loadavg)
+
+echo "$LOAD"
+echo "$LOAD"
+
+if (( $(echo "$LOAD > 1.0" | bc -l) )); then
+  echo "#f2777a"
+fi

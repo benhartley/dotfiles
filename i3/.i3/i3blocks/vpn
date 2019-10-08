@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+echo VPN
+echo VPN
+if [[ -e /proc/sys/net/ipv4/conf/tun0 ]]; then
+  echo "#99cc99"
+else
+  echo "#f2777a"
+fi

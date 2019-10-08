@@ -1,0 +1,21 @@
+#! /usr/bin/env bash
+
+ENDFILE=/tmp/timer-end
+
+if [[ ! -e "$ENDFILE" ]]; then
+  exit
+fi
+END=$(cat $ENDFILE)
+NOW=$(date +%s)
+MINS=$(( (END - NOW) / 60 ))
+if [[ "$MINS" -le 1 ]]; then
+  echo "0"
+  echo "0"
+else
+  echo "$MINS"
+  echo "$MINS"
+fi
+if [[ "$MINS" -le 5 ]]; then
+  echo "#2d2d2d"
+  echo "#f2777a"
+fi

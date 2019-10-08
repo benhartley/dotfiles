@@ -1,0 +1,16 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+BATTERY=$(acpi -b)
+
+STATUS=$(awk -F , '{print $1}' <<< "${BATTERY#*: *}")
+PERCENTAGE=$(awk -F ", " '{print $2}' <<< "${BATTERY#*: *}")
+
+printf " %s\n" "$PERCENTAGE"
+echo "$PERCENTAGE"
+
+if [[ "${PERCENTAGE%\%}" -le 30 ]]; then
+  echo "#d3d0c8"
+  echo "#f2777a"
+fi

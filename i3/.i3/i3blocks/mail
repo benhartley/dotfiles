@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+UNREAD=$(find /home/btfh/.mail/gmail/INBOX/new -type f | wc -l)
+
+echo Mail
+echo Mail
+if [[ "${UNREAD}" = "0" ]]; then
+  echo "#f2777a"
+else
+  echo "#99cc99"
+fi
