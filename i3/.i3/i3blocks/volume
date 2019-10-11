@@ -11,7 +11,7 @@ printf "♪ %s\n" "$PERCENTAGE"
 printf "♪ %s\n" "$PERCENTAGE"
 
 if [[ $MUTED = 1 ]]; then
-  echo "#ffcc66"
+  echo "#515151"
 else
   echo "#2d2d2d"
   echo "#ffcc66"

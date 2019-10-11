@@ -5,8 +5,10 @@ set -euo pipefail
 URL="https://api.github.com/notifications?access_token=${GH_NOTIFICATION_TOKEN}"
 NUM=$(curl -s "${URL}" | jq ". | length")
 
-echo "GitHub"
+echo ""
 echo GH
 if [ "${NUM}" -gt 0 ]; then
   echo "#99cc99"
+else
+  echo "#515151"
 fi

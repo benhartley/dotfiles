@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+FREE=$(df -Th / | awk 'END{print $5}')
+
+echo "$FREE"
+echo "$FREE"
+
+if [[ "${FREE%G}" -le 10 ]]; then
+  echo "#f2777a"
+else
+  echo "#515151"
+fi

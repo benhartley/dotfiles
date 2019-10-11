@@ -2,10 +2,6 @@
 command=~/.i3/i3blocks/timer
 interval=5
 
-[disk]
-command=df -Th / | awk 'END{print $5}'
-interval=10
-
 [vpn]
 command=~/.i3/i3blocks/vpn
 interval=5
@@ -33,6 +29,10 @@ interval=1
 [load]
 command=~/.i3/i3blocks/load
 interval=5
+
+[disk]
+command=~/.i3/i3blocks/disk
+interval=10
 
 [time]
 command=date '+%a %d %b %H:%M'

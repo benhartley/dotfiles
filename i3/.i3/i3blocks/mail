@@ -4,10 +4,10 @@ set -euo pipefail
 
 UNREAD=$(find /home/btfh/.mail/gmail/INBOX/new -type f | wc -l)
 
-echo Mail
-echo Mail
+echo 
+echo 
 if [[ "${UNREAD}" = "0" ]]; then
-  echo "#f2777a"
+  echo "#515151"
 else
   echo "#99cc99"
 fi

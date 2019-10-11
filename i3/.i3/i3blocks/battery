@@ -13,4 +13,6 @@ echo "$PERCENTAGE"
 if [[ "${PERCENTAGE%\%}" -le 30 ]]; then
   echo "#d3d0c8"
   echo "#f2777a"
+elif [[ "${PERCENTAGE%\%}" -ge 80 ]]; then
+  echo "#515151"
 fi
