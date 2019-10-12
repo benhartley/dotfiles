@@ -9,6 +9,8 @@ echo "$FREE"
 
 if [[ "${FREE%G}" -le 10 ]]; then
   echo "#f2777a"
+elif [[ "${FREE%G}" -le 10 ]]; then
+  echo "#ffcc66"
 else
   echo "#515151"
 fi

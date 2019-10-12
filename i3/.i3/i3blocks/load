@@ -7,9 +7,9 @@ LOAD=$(cut -d " " -f 1 < /proc/loadavg)
 echo "$LOAD"
 echo "$LOAD"
 
-if (( $(echo "$LOAD > 3.0" | bc -l) )); then
+if (( $(echo "$LOAD > 7.0" | bc -l) )); then
   echo "#f2777a"
-elif (( $(echo "$LOAD > 1.0" | bc -l) )); then
+elif (( $(echo "$LOAD > 3.0" | bc -l) )); then
   echo "#ffcc66"
 else
   echo "#515151"
