@@ -1,0 +1,1 @@
+../../wee-slack/wee_slack.2.3.0.py

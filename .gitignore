@@ -7,3 +7,4 @@ vim/.vim/plugged
 vim/.vim/sessions
 
 weechat/.weechat/logs
+weechat/.weechat/weechat.log
