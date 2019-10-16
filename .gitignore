@@ -8,3 +8,4 @@ vim/.vim/sessions
 
 weechat/.weechat/logs
 weechat/.weechat/weechat.log
+weechat/.weechat/plugins.conf
