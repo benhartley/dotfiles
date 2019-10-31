@@ -147,6 +147,7 @@ noremap <Leader>k :tabnext<CR>
 noremap <Leader>g :G<CR>
 noremap <Leader>b :Gblame<CR>
 noremap <Leader>h :Gbrowse<CR>
+let b:rhubarb_homepage = "http://github.com/eeveebank/platform-engineering"
 
 " UltiSnips
 noremap <Leader>u :UltiSnipsAddFiletypes 
@@ -229,6 +230,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_dockerfile_checkers = ["hadolint"]
 let g:syntastic_yaml_checkers = ["yamllint"]
+let g:syntastic_yaml_yamllint_args = ["-d relaxed"]
 
 " vim-go
 autocmd BufWritePost *.go call go#cmd#Build(1)
