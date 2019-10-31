@@ -1,0 +1,55 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+function get_open_prs {
+  hub api graphql -f q="author:benhartley is:pr is:open" -f query='
+    query($q: String!, $n: Int = 10, $after: String) {
+      search(query:$q, type: ISSUE, first: $n, after: $after) {
+        edges {
+          node {
+            ...on PullRequest {
+              title
+              createdAt
+              url
+              repository {
+                name
+              }
+              reviews(last: 3) {
+                nodes {
+                  state
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  '
+}
+
+function main {
+  echo -e "\n"
+  while read -r pr
+  do
+    title=$(jq -r .title <<< "$pr")
+    createdAt=$(jq -r .createdAt <<< "$pr")
+    url=$(jq -r .url <<< "$pr")
+    repo=$(jq -r .repository.name <<< "$pr")
+    isApproved=$(jq -r '.reviews.nodes[] | select(.state == "APPROVED") | has("state")' <<< "$pr" | head -n 1)
+
+    if [[ "$isApproved" == "true" ]]; then
+      colour="30;42m"
+    else
+      colour="36m"
+    fi
+
+    echo -e "\e[36m$repo\e[0m"
+    echo -e "\e[$colour$title\e[0m"
+    echo -e "\e[90m$createdAt\e[0m"
+    echo "$url"
+    echo -e "\n"
+  done <<< "$(get_open_prs | jq -c '.data.search.edges[].node')"
+}
+
+main
