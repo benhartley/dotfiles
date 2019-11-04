@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+TYPE=$(kubectl api-resources | fzf | awk '{print $1}')
+
+kubectl get "$TYPE" --all-namespaces | \
+  fzf \
+    --bind "ctrl-t:execute(kubectl logs -fn {1} {2})" \
+    --bind "ctrl-y:accept+execute(kubectl get $TYPE -n {1} {2} -o yaml)" \
+    --preview "kubectl describe $TYPE -n {1} {2}"
