@@ -241,7 +241,8 @@ au FileType ledger nnoremap <Leader>gt :read !openssl rand -hex 3<CR>
 " Terraform
 let g:terraform_fmt_on_save = 1
 
-" Markdown
+" Conceal nonsense
 let g:vim_markdown_conceal = 0
+au FileType * setl cole=0
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
