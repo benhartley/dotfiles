@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+TYPE="$1"
+NS=$(kubectl get ns | fzf | awk '{print $1}')
+RESOURCE=$(kubectl get -n "$NS" "$TYPE" | fzf | awk '{print $1}')
+
+kubectl describe -n "$NS" "$TYPE" "$RESOURCE"

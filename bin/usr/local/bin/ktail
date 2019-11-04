@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+POD=$(kubectl get pods --all-namespaces | fzf)
+NS=$(awk '{print $1}' <<< "$POD")
+POD_ID=$(awk '{print $2}' <<< "$POD")
+
+kubectl logs -fn "$NS" "$POD_ID"

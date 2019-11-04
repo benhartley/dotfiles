@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+
+TYPE="$1"
+NS=$(kubectl get ns | fzf | awk '{print $1}')
+
+kubectl get -n "$NS" "$TYPE"

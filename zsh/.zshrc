@@ -51,6 +51,7 @@ lst() {
 }
 
 alias kc='kubectl'
+alias kpaw='kubectl get pods --all-namespaces -w'
 
 # yarn
 alias yr='yarn run'
