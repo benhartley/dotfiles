@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+hub issue -f "%I  %t  %L %as  %U%n" \
+  | fzf \
+    --no-sort \
+    --preview 'hub issue show {1}' \
+    --bind 'ctrl-o:execute(xdg-open {-1})+accept' 
