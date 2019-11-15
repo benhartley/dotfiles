@@ -68,7 +68,9 @@ export GPG_TTY
 [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
 
 # tmux
-function ta() { tmux attach-session -t ${@}; }
+function ta() {
+  tmux attach-session -t $(tmux ls | cut -d : -f 1 | fzf)
+}
 
 # vars
 export EDITOR='/usr/bin/vim'
