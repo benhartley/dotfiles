@@ -223,7 +223,7 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-p>"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-p>"
 
 " Syntastic
-let g:syntastic_auto_jump = 1
+let g:syntastic_auto_jump = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 0
 let g:syntastic_check_on_open = 1
