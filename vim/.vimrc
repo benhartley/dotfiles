@@ -172,11 +172,12 @@ let g:go_fmt_command = "goimports"
 let g:fzf_command_prefix = 'Fzf'
 
 noremap <C-p> :FZF -e<CR>
-noremap <Leader>fw :FzfWindows<CR>
+noremap <Leader>fa :FzfAg 
 noremap <Leader>fb :FzfBuffers<CR>
-noremap <Leader>fl :FzfLines<CR>
-noremap <Leader>fgs :FzfGFiles?<CR>
 noremap <Leader>ff :FzfLocate 
+noremap <Leader>fgs :FzfGFiles?<CR>
+noremap <Leader>fl :FzfLines<CR>
+noremap <Leader>fw :FzfWindows<CR>
 
 imap <c-x><c-f> <plug>(fzf-complete-path)
 
