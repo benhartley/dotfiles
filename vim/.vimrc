@@ -16,7 +16,7 @@ Plug 'junegunn/fzf.vim' | Plug '/usr/bin/fzf'
 Plug 'justinmk/vim-sneak'
 Plug 'keith/gist.vim', {'on':'Gist'}
 Plug 'ledger/vim-ledger', {'for':'ledger'}
-Plug 'mhinz/vim-grepper', {'on':'Grepper'}
+Plug 'mhinz/vim-grepper'
 Plug 'plasticboy/vim-markdown', {'for':['markdown','md']}
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
@@ -213,7 +213,7 @@ omap <Leader>S <Plug>Sneak_S
 
 " Ag
 let g:ackprg = 'ag --vimgrep'
-noremap <Leader>a :Grepper -query 
+noremap <Leader>a :GrepperAg 
 
 " Don't leak pass
 au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
