@@ -3,15 +3,19 @@
 set -euo pipefail
 
 function get_open_prs {
-  hub api graphql -f q="author:benhartley is:pr is:open" -f query='
-    query($q: String!, $n: Int = 10, $after: String) {
+  # shellcheck disable=SC2016
+  hub api graphql -f q="org:eeveebank is:pr is:open" -f query='
+    query($q: String!, $n: Int = 50, $after: String) {
       search(query:$q, type: ISSUE, first: $n, after: $after) {
         edges {
           node {
             ...on PullRequest {
               title
-              createdAt
-              url
+              author {
+                login
+              }
+              updatedAt
+              number
               repository {
                 name
               }
@@ -29,27 +33,17 @@ function get_open_prs {
 }
 
 function main {
-  echo -e "\n"
-  while read -r pr
-  do
-    title=$(jq -r .title <<< "$pr")
-    createdAt=$(jq -r .createdAt <<< "$pr")
-    url=$(jq -r .url <<< "$pr")
-    repo=$(jq -r .repository.name <<< "$pr")
-    isApproved=$(jq -r '.reviews.nodes[] | select(.state == "APPROVED") | has("state")' <<< "$pr" | head -n 1)
-
-    if [[ "$isApproved" == "true" ]]; then
-      colour="30;42m"
-    else
-      colour="36m"
-    fi
-
-    echo -e "\e[36m$repo\e[0m"
-    echo -e "\e[$colour$title\e[0m"
-    echo -e "\e[90m$createdAt\e[0m"
-    echo "$url"
-    echo -e "\n"
-  done <<< "$(get_open_prs | jq -c '.data.search.edges[].node')"
+  local id pr repo
+  pr=$(get_open_prs \
+    | jq -r '.data.search.edges[].node | [.repository.name, .number, .title, .author.login, .updatedAt, .reviews.nodes[0].state] | @tsv' \
+    | sort -t $'\t' -k 5 \
+    | column -ts $'\t' -T 3 -H 5 \
+    | fzf)
+  if [[ -n "$pr" ]]; then
+    repo=$(awk '{print $1}' <<< "$pr")
+    id=$(awk '{print $2}' <<< "$pr")
+    xdg-open "$(printf "https://github.com/eeveebank/%s/pull/%s" "$repo" "$id")"
+  fi
 }
 
 main
