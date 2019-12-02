@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-TYPE=$(kubectl api-resources | fzf | awk '{print $1}')
+TYPE=${1:-$(kubectl api-resources | fzf | awk '{print $1}')}
 
 kubectl get "$TYPE" --all-namespaces | \
   fzf \
