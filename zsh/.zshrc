@@ -80,6 +80,8 @@ bindkey '^r' history-incremental-search-backward
 setopt hist_ignore_all_dups
 bindkey '^k' up-line-or-search
 bindkey '^j' down-line-or-search
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
 
 # autocd
 setopt autocd
