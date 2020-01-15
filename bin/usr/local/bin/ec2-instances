@@ -7,4 +7,4 @@ NAME=${1:-*}
 aws ec2 describe-instances \
   --filters "Name=tag:Name,Values=$NAME" "Name=instance-state-name,Values=[running,pending,shutting-down,stopping]" \
   --output table \
-  --query "Reservations[].Instances[0].{AZ:Placement.AvailabilityZone,ID:InstanceId,Type:Tags[?Key=='Name']|[0].Value,IP:PrivateIpAddress,InstanceType:InstanceType,Launched:LaunchTime,State:State.Name} | sort_by(@, &Type)"
+  --query "Reservations[].Instances[].{AZ:Placement.AvailabilityZone,ID:InstanceId,Type:Tags[?Key=='Name']|[0].Value,IP:PrivateIpAddress,InstanceType:InstanceType,Launched:LaunchTime,State:State.Name} | sort_by(@, &Type)"
