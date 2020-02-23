@@ -2,8 +2,7 @@
 
 set -euo pipefail
 
-URL="https://api.github.com/notifications?access_token=${GH_NOTIFICATION_TOKEN}"
-NUM=$(curl -s "${URL}" | jq ". | length")
+NUM=$(curl -u "benhartley:${GH_NOTIFICATION_TOKEN}" "https://api.github.com/notifications" | jq ". | length")
 
 echo ""
 echo GH
