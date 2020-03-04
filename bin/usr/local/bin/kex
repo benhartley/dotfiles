@@ -1,0 +1,25 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+function ensure_spec_cache {
+  SPEC_FILE=/tmp/openapi-$(basename "$KUBECONFIG")
+  if [[ ! -f $SPEC_FILE ]]; then
+    kubectl get --raw /openapi/v2 > "$SPEC_FILE"
+    echo "rm $SPEC_FILE" | at 'now + 10 minutes' &> /dev/null
+  fi
+}
+
+function browse {
+  jq -r '.definitions | to_entries | .[] | .key' $SPEC_FILE \
+    | fzf \
+    --preview "jq -r '.definitions[\"{}\"] | \"DESCRIPTION\n\n\t\(.description)\n\n\n\nPROPERTIES\n\", (.properties | to_entries | .[] | \"\t\(.key)\", \"\t\t\(.value.description)\", \"\t\tRef: \(.value.ref)\n\n\")' $SPEC_FILE" \
+      --preview-window=up:80%
+}
+
+function main {
+  ensure_spec_cache
+  browse
+}
+
+main
