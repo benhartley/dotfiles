@@ -5,7 +5,7 @@ set -euo pipefail
 function ensure_spec_cache {
   SPEC_FILE=/tmp/openapi-$(basename "$KUBECONFIG")
   if [[ ! -f $SPEC_FILE ]]; then
-    kubectl get --raw /openapi/v2 > "$SPEC_FILE"
+    kubectl get --raw /openapi/v2 | sed 's/\$ref/ref/g' > "$SPEC_FILE"
     echo "rm $SPEC_FILE" | at 'now + 10 minutes' &> /dev/null
   fi
 }
