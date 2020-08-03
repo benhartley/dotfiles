@@ -7,10 +7,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
+Plug 'christoomey/vim-conflicted'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', {'for':'go'}
-Plug 'flowtype/vim-flow', {'do': 'yarn global add flow-bin', 'for':'javascript'}
 Plug 'google/vim-jsonnet', {'for': 'jsonnet'}
 Plug 'junegunn/fzf.vim' | Plug '/usr/bin/fzf'
 Plug 'justinmk/vim-sneak'
@@ -19,6 +19,7 @@ Plug 'ledger/vim-ledger', {'for':'ledger'}
 Plug 'mhinz/vim-grepper'
 Plug 'plasticboy/vim-markdown', {'for':['markdown','md']}
 Plug 'Raimondi/delimitMate'
+Plug 'romainl/vim-qf'
 Plug 'SirVer/ultisnips'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -160,6 +161,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Go 
 au FileType go noremap <Leader>d :GoDef<CR>
+au FileType go noremap <Leader>c :GoDoc<CR>
 au FileType go noremap <Leader>r :GoRun<CR>
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -172,7 +174,13 @@ let g:go_fmt_command = "goimports"
 " FZF 
 let g:fzf_command_prefix = 'Fzf'
 
-noremap <C-p> :FZF -e<CR>
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! ProjectFiles execute 'FzfFiles' s:find_git_root()
+
+noremap <C-p> :ProjectFiles<CR>
 noremap <Leader>fa :FzfAg 
 noremap <Leader>fb :FzfBuffers<CR>
 noremap <Leader>ff :FzfLocate 
@@ -236,6 +244,7 @@ let g:syntastic_yaml_yamllint_args = ["-d relaxed"]
 
 " vim-go
 autocmd BufWritePost *.go call go#cmd#Build(1)
+let g:go_fmt_command = "goimports"
 
 " Ledger
 au FileType ledger nnoremap <Leader>gt :read !openssl rand -hex 3<CR>
@@ -243,8 +252,13 @@ au FileType ledger nnoremap <Leader>gt :read !openssl rand -hex 3<CR>
 " Terraform
 let g:terraform_fmt_on_save = 1
 
+" vim-qf
+nmap <Leader>l <Plug>(qf_qf_switch)
+
 " Conceal nonsense
+set conceallevel=2
 let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
 au FileType * setl cole=0
 
 " vim:foldmethod=marker:foldlevel=0:ft=vim
