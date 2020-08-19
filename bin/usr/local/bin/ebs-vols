@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+set -eu
+
+aws ec2 describe-volumes \
+  --output table \
+  --query "Volumes[].{AZ:AvailabilityZone,ID:VolumeId,Name:Tags[?Key=='Name']|[0].Value,AttachID:Attachments[0].InstanceId,Size:Size,Iops:Iops,Created:CreateTime,State:State} | sort_by(@, &ID)"

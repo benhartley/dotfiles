@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+MODULE_PREFIX=$1
+
+function main {
+  ag -0Sl "\bsource.*github.*$MODULE_PREFIX" \
+    | xargs -0 -I {} sed -Ei "s#(source.*github.*ref=)[^/]+(/.*modules/$MODULE_PREFIX.*$)#\1$(git rev-parse --short HEAD | tr -d '\n')\2#g" {}
+}
+
+main

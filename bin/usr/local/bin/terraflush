@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+fd -HIpt d --changed-before 1day '\.terraform/modules/.+' -x rm -rf "{}"
