@@ -1,1 +1,0 @@
-../colorizer.rb
