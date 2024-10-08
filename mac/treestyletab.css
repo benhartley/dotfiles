@@ -1,0 +1,27 @@
+/* Show title of unread tabs with red and italic font */
+/*
+:root.sidebar tab-item.unread .label-content {
+  color: red !important;
+  font-style: italic !important;
+}
+*/
+
+/* Add private browsing indicator per tab */
+/*
+:root.sidebar tab-item.private-browsing tab-label:before {
+  content: "🕶";
+}
+*/
+
+tab-item {
+  font-size: 140%;
+}
+
+tab-item tab-closebox {
+  display: none;
+}
+
+tab-item  tab-item-substance {
+  --tab-size: 45px !important;
+  height: var(--tab-size);
+}
