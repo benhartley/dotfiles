@@ -1,0 +1,195 @@
+pane	k-api-find	1	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/api-findings	1	nvim	:nvim cmd/api-findings/main.go
+pane	k-api-find	2	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/api-findings	1	git	:/Library/Developer/CommandLineTools/usr/bin/git commit --verbose -s
+pane	k-api-find	2	1	:*	1	pro.local	:/Users/btfh/work/ksoc/private/api-findings	0	tig	:tig
+pane	k-api-find	3	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/api-findings	1	zsh	:
+pane	k-api-find	4	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/api-findings/pkg/data	1	zsh	:
+pane	k-api-kobj	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/api-kubeobject	1	zsh	:
+pane	k-api-kobj	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/api-kubeobject	1	zsh	:
+pane	k-api-kobj	2	0	:-	1	pro.local	:/Users/btfh/work/ksoc/private/api-kubeobject	0	zsh	:
+pane	k-api-viol	1	1	:*	0	pro.lan	:/Users/btfh/work/ksoc/private/api-violations	1	zsh	:
+pane	k-api-viol	2	0	:-	0	pro.lan	:/Users/btfh/work/ksoc/private/api-violations	1	zsh	:
+pane	k-api-viol	2	0	:-	1	pro.lan	:/Users/btfh/work/ksoc/private/api-violations	0	zsh	:
+pane	k-api-viol	3	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/api-violations	1	zsh	:
+pane	k-db-find	1	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/db-schema-findings	1	zsh	:
+pane	k-db-find	2	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/db-schema-findings	1	zsh	:
+pane	k-db-find	2	1	:*	1	pro.local	:/Users/btfh/work/ksoc/private/db-schema-findings	0	zsh	:
+pane	k-db-find	3	0	:	0	pro.local	:/Users/btfh/work/ksoc/private	1	zsh	:
+pane	k-find-mis-proc	1	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/findings-misconf-processor	1	nvim	:nvim cmd/findings-misconfig-processor/main.go
+pane	k-find-mis-proc	2	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/findings-misconf-processor	0	zsh	:
+pane	k-find-mis-proc	2	1	:*	1	pro.local	:/Users/btfh/work/ksoc/private/findings-misconf-processor	1	tig	:tig
+pane	k-find-mis-proc	3	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/findings-misconf-processor	1	zsh	:
+pane	k-find-track	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/findings-tracker	1	zsh	:
+pane	k-find-track	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/findings-tracker	1	zsh	:
+pane	k-guard	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/plugin-ksoc-guard	1	zsh	:tmux attach-session -t k-find-mis-proc
+pane	k-guard	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/plugin-ksoc-guard	1	zsh	:
+pane	k-guard	2	0	:-	1	pro.local	:/Users/btfh/work/ksoc/private/plugin-ksoc-guard	0	zsh	:
+pane	k-guard	3	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/plugin-ksoc-guard	1	zsh	:
+pane	k-guard	4	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/plugin-ksoc-guard	1	zsh	:
+pane	k-helm	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/k8s-helm-charts	1	zsh	:
+pane	k-helm	2	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/k8s-helm-charts	0	zsh	:
+pane	k-helm	2	0	:	1	pro.local	:/Users/btfh/work/ksoc/private/k8s-helm-charts	0	zsh	:
+pane	k-helm	2	0	:	2	pro.local	:/Users/btfh/work/ksoc/private/k8s-helm-charts	0	zsh	:
+pane	k-helm	2	0	:	3	pro.local	:/Users/btfh/work/ksoc/private/k8s-helm-charts	0	zsh	:
+pane	k-helm	2	0	:	4	pro.local	:/Users/btfh/work/ksoc/private/k8s-helm-charts	0	zsh	:
+pane	k-helm	2	0	:	5	pro.local	:/Users/btfh/work/ksoc/private/k8s-helm-charts	1	zsh	:
+pane	k-helm	3	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/k8s-helm-charts	0	zsh	:
+pane	k-helm	3	0	:-	1	pro.local	:/Users/btfh/work/ksoc/private/k8s-helm-charts	0	zsh	:
+pane	k-helm	3	0	:-	2	pro.local	:/Users/btfh/work/ksoc/private/k8s-helm-charts	1	zsh	:
+pane	k-issues	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/engineering-issues	1	zsh	:
+pane	k-k8s-rel	1	0	:	0	pro.lan	:/Users/btfh/work/ksoc/private/k8s-releases-ksoc-v2	1	nvim	:nvim kustomize/_base/backend/helmreleases/policyexec-queue-processor.yaml
+pane	k-k8s-rel	2	0	:	0	pro.lan	:/Users/btfh/work/ksoc/private/k8s-releases-ksoc-v2	1	zsh	:
+pane	k-k8s-rel	2	0	:	1	pro.lan	:/Users/btfh/work/ksoc/private/k8s-releases-ksoc-v2	0	tig	:tig
+pane	k-k8s-rel	3	0	:-Z	0	pro.lan	:/Users/btfh/work/ksoc/private/k8s-releases-ksoc-v2	0	zsh	:
+pane	k-k8s-rel	3	0	:-Z	1	pro.lan	:	1	zsh	:lnav
+pane	k-k8s-rel	4	1	:*	0	pro.local	:	1	zsh	:lnav
+pane	k-kobj-storer	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/kubeobject-storer	1	zsh	:
+pane	k-kobj-storer	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/kubeobject-storer	1	zsh	:
+pane	k-kobj-storer	2	0	:-	1	pro.local	:/Users/btfh/work/ksoc/private/kubeobject-storer	0	zsh	:
+pane	k-kobj-storer	3	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/kubeobject-storer	1	zsh	:
+pane	k-mod-fake	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data/pkg/kube	0	zsh	:
+pane	k-mod-fake	1	1	:*	1	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data/pkg/kube	0	zsh	:
+pane	k-mod-fake	1	1	:*	2	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data/pkg/kube	1	zsh	:
+pane	k-mod-fake	2	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data	0	zsh	:
+pane	k-mod-fake	2	0	:	1	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data	0	zsh	:
+pane	k-mod-fake	2	0	:	2	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data	0	zsh	:
+pane	k-mod-fake	2	0	:	3	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data	0	zsh	:
+pane	k-mod-fake	2	0	:	4	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data	0	zsh	:
+pane	k-mod-fake	2	0	:	5	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data	1	zsh	:
+pane	k-mod-fake	3	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data	0	zsh	:
+pane	k-mod-fake	3	0	:-	1	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data	0	zsh	:
+pane	k-mod-fake	3	0	:-	2	pro.local	:/Users/btfh/work/ksoc/private/mod-fake-data	1	zsh	:
+pane	k-pod-hash	1	0	:	0	pro.local	:/Users/btfh/work/ksoc/pod-template-hash	1	zsh	:
+pane	k-pod-hash	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/pod-template-hash	1	zsh	:
+pane	k-pod-hash	3	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/spike-pod-template-hash	1	zsh	:
+pane	k-polexec-exec	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/policyexec-executor-processor	1	zsh	:
+pane	k-polexec-exec	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/policyexec-executor-processor	1	zsh	:
+pane	k-polexec-exec	2	0	:-	1	pro.local	:/Users/btfh/work/ksoc/private/policyexec-executor-processor	0	zsh	:
+pane	k-polexec-queue	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/policyexec-queue-processor	1	zsh	:
+pane	k-polexec-queue	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/policyexec-queue-processor	1	zsh	:
+pane	k-polexec-queue	2	0	:-	1	pro.lan	:/Users/btfh/work/ksoc/private/policyexec-queue-processor	0	zsh	:
+pane	k-polexec-queue	3	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/policyexec-queue-processor	1	zsh	:
+pane	k-policies	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/ksocguard-policies-default	1	zsh	:
+pane	k-policies	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/ksocguard-policies-default	1	zsh	:
+pane	k-protos	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/ksoc-protos	0	zsh	:
+pane	k-protos	1	1	:*	1	pro.local	:/Users/btfh/work/ksoc/private/ksoc-protos	0	zsh	:
+pane	k-protos	1	1	:*	2	pro.local	:/Users/btfh/work/ksoc/private/ksoc-protos	1	zsh	:
+pane	k-protos	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/ksoc-protos	0	zsh	:
+pane	k-protos	2	0	:-	1	pro.local	:/Users/btfh/work/ksoc/private/ksoc-protos	0	zsh	:
+pane	k-protos	2	0	:-	2	pro.local	:/Users/btfh/work/ksoc/private/ksoc-protos	0	zsh	:
+pane	k-protos	2	0	:-	3	pro.local	:/Users/btfh/work/ksoc/private/ksoc-protos	0	zsh	:
+pane	k-protos	2	0	:-	4	pro.local	:/Users/btfh/work/ksoc/private/ksoc-protos	0	zsh	:
+pane	k-protos	2	0	:-	5	pro.local	:/Users/btfh/work/ksoc/private/ksoc-protos	1	zsh	:
+pane	k-tf-eks	1	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	1	zsh	:
+pane	k-tf-eks	2	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	1	zsh	:
+pane	k-tf-eks	2	1	:*	1	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	0	zsh	:
+pane	k-tf-env-k8s	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	0	zsh	:
+pane	k-tf-env-k8s	1	1	:*	1	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	0	zsh	:
+pane	k-tf-env-k8s	1	1	:*	2	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	1	zsh	:
+pane	k-tf-env-k8s	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	0	zsh	:
+pane	k-tf-env-k8s	2	0	:-	1	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	0	zsh	:
+pane	k-tf-env-k8s	2	0	:-	2	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	0	zsh	:
+pane	k-tf-env-k8s	2	0	:-	3	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	0	zsh	:
+pane	k-tf-env-k8s	2	0	:-	4	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	0	zsh	:
+pane	k-tf-env-k8s	2	0	:-	5	pro.local	:/Users/btfh/work/ksoc/private/tf-env-k8s	1	zsh	:
+pane	k-tf-github	1	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/tf-github	1	zsh	:
+pane	k-tf-github	2	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/tf-github	1	zsh	:
+pane	k-tf-github	2	1	:*	1	pro.local	:/Users/btfh/work/ksoc/private/tf-github	0	zsh	:
+pane	k-tf-mod	1	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/tf-modules	1	zsh	:
+pane	k-tf-mod	2	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/tf-modules	1	zsh	:
+pane	k-tf-mod	2	1	:*	1	pro.local	:/Users/btfh/work/ksoc/private/tf-modules	0	zsh	:
+pane	k-threat	1	1	:*	0	pro.lan	:/Users/btfh/work/ksoc/prototype-threatvector	1	nvim	:nvim pkg/scenario/scenario.go
+pane	k-threat	2	0	:-	0	pro.lan	:/Users/btfh/work/ksoc/prototype-threatvector	1	zsh	:
+pane	k-threat	2	0	:-	1	pro.lan	:/Users/btfh/work/ksoc/prototype-threatvector	0	zsh	:
+pane	k-viol-proc	1	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/violations-storer-processor	1	zsh	:
+pane	k-viol-proc	2	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/violations-storer-processor	1	zsh	:
+pane	k-viol-proc	2	1	:*	1	pro.local	:/Users/btfh/work/ksoc/private/violations-storer-processor	0	zsh	:
+pane	k-watch	1	1	:*	0	pro.lan	:/Users/btfh/work/ksoc/private/plugin-ksoc-watch	1	zsh	:
+pane	k-watch	2	0	:-	0	pro.lan	:/Users/btfh/work/ksoc/private/plugin-ksoc-watch	1	zsh	:
+pane	k-watch	2	0	:-	1	pro.lan	:/Users/btfh/work/ksoc/private/plugin-ksoc-watch	0	zsh	:
+pane	k-wiki	1	1	:*	0	pro.local	:/Users/btfh/work/ksoc/private/engineering-wiki	1	zsh	:
+pane	k-wiki	2	0	:-	0	pro.local	:/Users/btfh/work/ksoc/private/engineering-wiki	1	zsh	:
+pane	k-wiki	2	0	:-	1	pro.local	:/Users/btfh/work/ksoc/private/engineering-wiki	0	zsh	:
+pane	k-wiki	3	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/engineering-wiki	1	zsh	:
+pane	k-wiki	4	0	:	0	pro.local	:/Users/btfh/work/ksoc/private/engineering-wiki	1	zsh	:
+pane	talk-web	1	0	:	0	pro.local	:/Users/btfh/work/talkmind/static	1	zsh	:
+pane	talk-web	2	1	:*	0	pro.local	:/Users/btfh/work/talkmind/static	1	zsh	:
+pane	talk-web	2	1	:*	1	pro.local	:/Users/btfh/work/talkmind/static	0	zsh	:
+pane	talk-web	3	0	:-	0	pro.local	:/Users/btfh/work/talkmind/static	1	zsh	:
+pane	talkmind-inv	1	1	:*	0	pro.local	:/Users/btfh/work/talkmind/invoices	1	zsh	:
+pane	talkmind-inv	2	0	:-	0	pro.local	:/Users/btfh/work/talkmind/invoices	1	zsh	:
+pane	talkmind-inv	2	0	:-	1	pro.local	:/Users/btfh/work/talkmind/invoices	0	zsh	:
+pane	talkmind-inv	3	0	:	0	pro.local	:/Users/btfh/work/talkmind/invoices	1	zsh	:
+pane	talkmind-inv	4	0	:	0	pro.local	:/Users/btfh/work/talkmind/invoices	1	zsh	:
+window	k-api-find	1	:nvim	0	:	b15e,211x51,0,0,1	:
+window	k-api-find	2	:zsh	1	:*	56ff,211x51,0,0{105x51,0,0,2,105x51,106,0,3}	:
+window	k-api-find	3	:zsh	0	:-	b161,211x51,0,0,4	:
+window	k-api-find	4	:zsh	0	:	cf82,353x77,0,0,5	:
+window	k-api-kobj	1	:nvim	1	:*	cf83,353x77,0,0,6	:
+window	k-api-kobj	2	:zsh	0	:-	e112,353x77,0,0{176x77,0,0,7,176x77,177,0,8}	:
+window	k-api-viol	1	:nvim	1	:*	cf86,353x77,0,0,9	:
+window	k-api-viol	2	:zsh	0	:-	8511,353x77,0,0{177x77,0,0,10,175x77,178,0,11}	:
+window	k-api-viol	3	:zsh	0	:	67f1,353x77,0,0,12	:
+window	k-db-find	1	:nvim	0	:-	67f2,353x77,0,0,13	:
+window	k-db-find	2	:zsh	1	:*	78cd,353x77,0,0{174x77,0,0,14,178x77,175,0,15}	:
+window	k-db-find	3	:zsh	0	:	67f5,353x77,0,0,16	:
+window	k-find-mis-proc	1	:nvim	0	:-	58e6,211x51,0,0,17	:
+window	k-find-mis-proc	2	:zsh	1	:*	7074,211x51,0,0{104x51,0,0,18,106x51,105,0,19}	:
+window	k-find-mis-proc	3	:zsh	0	:	e7ef,353x77,0,0,20	:
+window	k-find-track	1	:nvim	1	:*	e7f0,353x77,0,0,21	:
+window	k-find-track	2	:zsh	0	:-	e7f1,353x77,0,0,22	:
+window	k-guard	1	:nvim	1	:*	e7f2,353x77,0,0,23	:
+window	k-guard	2	:zsh	0	:-	0516,353x77,0,0{177x77,0,0,24,175x77,178,0,25}	:
+window	k-guard	3	:zsh	0	:	e7f5,353x77,0,0,26	:
+window	k-guard	4	:zsh	0	:	e7f6,353x77,0,0,27	:
+window	k-helm	1	:nvim	1	:*	e7f7,353x77,0,0,28	:
+window	k-helm	2	:zsh	0	:	e300,353x77,0,0[353x6,0,0,29,353x6,0,7,30,353x5,0,14,31,353x5,0,20,32,353x5,0,26,33,353x45,0,32,34]	:
+window	k-helm	3	:zsh	0	:-	18c0,353x77,0,0[353x10,0,0,35,353x10,0,11,36,353x55,0,22,37]	:
+window	k-issues	1	:zsh	1	:*	67f8,353x77,0,0,38	:
+window	k-k8s-rel	1	:zsh	0	:	aca4,211x51,0,0,124	:
+window	k-k8s-rel	2	:zsh	0	:	2cc9,211x51,0,0{105x51,0,0,125,105x51,106,0,126}	:
+window	k-k8s-rel	3	:zsh	0	:-Z	acca,211x51,0,0{105x51,0,0,127,105x51,106,0,128}	:
+window	k-k8s-rel	4	:zsh	1	:*	aca9,211x51,0,0,129	:
+window	k-kobj-storer	1	:nvim	1	:*	e7f3,353x77,0,0,43	:
+window	k-kobj-storer	2	:zsh	0	:-	fce6,353x77,0,0{175x77,0,0,44,177x77,176,0,45}	:
+window	k-kobj-storer	3	:zsh	0	:	e7f6,353x77,0,0,46	:
+window	k-mod-fake	1	:zsh	1	:*	d8c8,353x77,0,0[353x10,0,0,47,353x10,0,11,48,353x55,0,22,49]	:
+window	k-mod-fake	2	:zsh	0	:	d4ab,353x77,0,0[353x6,0,0,50,353x6,0,7,51,353x5,0,14,52,353x5,0,20,53,353x5,0,26,54,353x45,0,32,55]	:
+window	k-mod-fake	3	:zsh	0	:-	18c7,353x77,0,0[353x10,0,0,56,353x10,0,11,57,353x55,0,22,58]	:
+window	k-pod-hash	1	:zsh	0	:	67fa,353x77,0,0,59	:
+window	k-pod-hash	2	:zsh	0	:-	e7f1,353x77,0,0,60	:
+window	k-pod-hash	3	:zsh	1	:*	e7f2,353x77,0,0,61	:
+window	k-polexec-exec	1	:nvim	1	:*	e7f3,353x77,0,0,62	:
+window	k-polexec-exec	2	:zsh	0	:-	00ff,353x77,0,0{176x77,0,0,63,176x77,177,0,64}	:
+window	k-polexec-queue	1	:nvim	1	:*	e7f6,353x77,0,0,65	:
+window	k-polexec-queue	2	:zsh	0	:-	0102,353x77,0,0{176x77,0,0,66,176x77,177,0,67}	:
+window	k-polexec-queue	3	:zsh	0	:	e7f9,353x77,0,0,68	:
+window	k-policies	1	:nvim	1	:*	e7fa,353x77,0,0,69	:
+window	k-policies	2	:zsh	0	:-	67f2,353x77,0,0,70	:
+window	k-protos	1	:zsh	1	:*	18b9,353x77,0,0[353x10,0,0,71,353x10,0,11,72,353x55,0,22,73]	:
+window	k-protos	2	:zsh	0	:-	6057,353x77,0,0[353x6,0,0,74,353x6,0,7,75,353x5,0,14,76,353x5,0,20,77,353x5,0,26,78,353x45,0,32,79]	:
+window	k-tf-eks	1	:nvim	0	:-	e7f2,353x77,0,0,80	:
+window	k-tf-eks	2	:zsh	1	:*	f4b5,353x77,0,0{173x77,0,0,81,179x77,174,0,82}	:
+window	k-tf-env-k8s	1	:zsh	1	:*	d8c1,353x77,0,0[353x10,0,0,83,353x10,0,11,84,353x55,0,22,85]	:
+window	k-tf-env-k8s	2	:zsh	0	:-	e61e,353x77,0,0[353x6,0,0,86,353x6,0,7,87,353x5,0,14,88,353x5,0,20,89,353x5,0,26,90,353x45,0,32,91]	:
+window	k-tf-github	1	:nvim	0	:-	67f5,353x77,0,0,92	:
+window	k-tf-github	2	:zsh	1	:*	8100,353x77,0,0{176x77,0,0,93,176x77,177,0,94}	:
+window	k-tf-mod	1	:nvim	0	:-	67f8,353x77,0,0,95	:
+window	k-tf-mod	2	:zsh	1	:*	74bb,353x77,0,0{173x77,0,0,96,179x77,174,0,97}	:
+window	k-threat	1	:zsh	1	:*	aca1,211x51,0,0,121	:
+window	k-threat	2	:zsh	0	:-	34dd,353x77,0,0{176x77,0,0,122,176x77,177,0,123}	:
+window	k-viol-proc	1	:nvim	0	:-	67fb,353x77,0,0,98	:
+window	k-viol-proc	2	:zsh	1	:*	40d6,353x77,0,0{176x77,0,0,99,176x77,177,0,100}	:
+window	k-watch	1	:nvim	1	:*	b428,353x77,0,0,101	:
+window	k-watch	2	:zsh	0	:-	74dc,353x77,0,0{176x77,0,0,102,176x77,177,0,103}	:
+window	k-wiki	1	:nvim	1	:*	b42b,353x77,0,0,104	:
+window	k-wiki	2	:zsh	0	:-	b2da,353x77,0,0{175x77,0,0,105,177x77,176,0,106}	:
+window	k-wiki	3	:nvim	0	:	b42e,353x77,0,0,107	:
+window	k-wiki	4	:zsh	0	:	b42f,353x77,0,0,108	:
+window	talk-web	1	:nvim	0	:	b430,353x77,0,0,109	:
+window	talk-web	2	:zsh	1	:*	54db,353x77,0,0{176x77,0,0,110,176x77,177,0,111}	:
+window	talk-web	3	:hugo	0	:-	342a,353x77,0,0,112	:
+window	talkmind-inv	1	:nvim	1	:*	342b,353x77,0,0,113	:
+window	talkmind-inv	2	:zsh	0	:-	54de,353x77,0,0{176x77,0,0,114,176x77,177,0,115}	:
+window	talkmind-inv	3	:nvim	0	:	342e,353x77,0,0,116	:
+window	talkmind-inv	4	:zsh	0	:	342f,353x77,0,0,117	:
+state	k-api-find	

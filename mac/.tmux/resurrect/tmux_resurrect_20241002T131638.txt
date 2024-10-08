@@ -1,0 +1,136 @@
+pane	risr-db-prov	1	1	:*	0	pro.local	:/Users/btfh/work/risr/database-provisioner	1	nvim	:nvim main.go
+pane	risr-db-prov	2	0	:-	0	pro.local	:/Users/btfh/work/risr/database-provisioner	1	zsh	:
+pane	risr-db-prov	2	0	:-	1	pro.local	:/Users/btfh/work/risr/database-provisioner	0	tig	:tig
+pane	risr-db-prov	3	0	:	0	pro.local	:/Users/btfh/work/risr/database-provisioner	1	zsh	:
+pane	risr-docs	1	0	:-	0	pro.lan	:/Users/btfh/work/risr/k8sdocs	1	nvim	:nvim terraform-roots.md
+pane	risr-docs	2	1	:*	0	pro.lan	:/Users/btfh/work/risr/k8sdocs	1	zsh	:
+pane	risr-docs	2	1	:*	1	pro.lan	:/Users/btfh/work/risr/k8sdocs	0	tig	:tig
+pane	risr-docs	3	0	:	0	pro.local	:/Users/btfh/work/risr/k8sdocs	1	nvim	:nvim -c normal! 27go -- /tmp/zshnr9b8R.zsh
+pane	risr-example-go	1	0	:-	0	pro.local	:/Users/btfh/work/risr/example-go	1	nvim	:nvim cmd/example
+pane	risr-example-go	2	0	:	0	pro.local	:/Users/btfh/work/risr/example-go	1	zsh	:
+pane	risr-example-go	2	0	:	1	pro.local	:/Users/btfh/work/risr/example-go	0	tig	:tig
+pane	risr-example-go	3	1	:*	0	pro.local	:/Users/btfh/work/risr/example-go	1	zsh	:
+pane	risr-helm	1	1	:*	0	pro.local	:/Users/btfh/work/risr/helm-charts	1	nvim	:nvim charts/basic/templates/deployment.yaml
+pane	risr-helm	2	0	:-	0	pro.local	:/Users/btfh/work/risr/helm-charts	1	zsh	:
+pane	risr-helm	2	0	:-	1	pro.local	:/Users/btfh/work/risr/helm-charts	0	tig	:tig
+pane	risr-helm	3	0	:	0	pro.local	:/Users/btfh/work/risr/helm-charts/charts/basic	1	zsh	:
+pane	risr-k8s	1	0	:-	0	pro.local	:/Users/btfh/work/risr/k8skustomize	1	nvim	:nvim kustomizations/dev/example-secret.yaml
+pane	risr-k8s	2	0	:	0	pro.local	:/Users/btfh/work/risr/k8skustomize	1	zsh	:
+pane	risr-k8s	2	0	:	1	pro.local	:/Users/btfh/work/risr/k8skustomize	0	tig	:tig
+pane	risr-k8s	3	1	:*	0	pro.local	:/Users/btfh/db-prov	1	zsh	:nvim create-postgres-admin-user.sql
+pane	risr-k8s	3	1	:*	1	pro.local	:/Users/btfh/work/risr/k8skustomize	0	zsh	:
+pane	risr-k8s	4	0	:	0	pro.local	:	1	zsh	:bat -l yaml
+pane	risr-k8s	5	0	:	0	pro.local	:/Users/btfh/work/risr/k8skustomize	1	zsh	:
+pane	risr-k8s	6	0	:	0	pro.local	:/Users/btfh/work/risr/k8skustomize	1	zsh	:
+pane	risr-tf-base	1	1	:*	0	pro.local	:/Users/btfh/work/risr/tf-root-base	1	nvim	:nvim ben/main.tf
+pane	risr-tf-base	2	0	:-	0	pro.local	:/Users/btfh/work/risr/tf-root-base	1	zsh	:
+pane	risr-tf-base	2	0	:-	1	pro.local	:/Users/btfh/work/risr/tf-root-base	0	tig	:tig
+pane	risr-tf-base	3	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-base/ben	0	zsh	:
+pane	risr-tf-base	3	0	:	1	pro.local	:/Users/btfh/work/risr/tf-root-base/prd	1	zsh	:
+pane	risr-tf-base	4	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-base	1	zsh	:
+pane	risr-tf-data-app	1	0	:-	0	pro.local	:/Users/btfh/work/risr/tf-root-data-application	1	nvim	:nvim ben/main.tf
+pane	risr-tf-data-app	2	1	:*	0	pro.local	:/Users/btfh/work/risr/tf-root-data-application	1	zsh	:
+pane	risr-tf-data-app	2	1	:*	1	pro.local	:/Users/btfh/work/risr/tf-root-data-application	0	tig	:tig
+pane	risr-tf-data-app	3	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-data-application/ben	0	zsh	:
+pane	risr-tf-data-app	3	0	:	1	pro.local	:/Users/btfh/work/risr/tf-root-data-application/prd	1	zsh	:
+pane	risr-tf-data-app	4	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-data-application	1	zsh	:
+pane	risr-tf-data-plat	1	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-data-platform	1	nvim	:nvim ben/main.tf
+pane	risr-tf-data-plat	2	1	:*	0	pro.local	:/Users/btfh/work/risr/tf-root-data-platform	1	zsh	:
+pane	risr-tf-data-plat	2	1	:*	1	pro.local	:/Users/btfh/work/risr/tf-root-data-platform	0	tig	:tig
+pane	risr-tf-data-plat	3	0	:-	0	pro.local	:/Users/btfh/work/risr/tf-root-data-platform/ben	0	zsh	:
+pane	risr-tf-data-plat	3	0	:-	1	pro.local	:/Users/btfh/work/risr/tf-root-data-platform/prd	1	zsh	:
+pane	risr-tf-dns	1	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-dns	1	nvim	:nvim ben/main.tf
+pane	risr-tf-dns	2	1	:*	0	pro.local	:/Users/btfh/work/risr/tf-root-dns	1	zsh	:
+pane	risr-tf-dns	2	1	:*	1	pro.local	:/Users/btfh/work/risr/tf-root-dns	0	tig	:tig
+pane	risr-tf-dns	3	0	:-	0	pro.local	:/Users/btfh/work/risr/tf-root-dns/ben	0	zsh	:
+pane	risr-tf-dns	3	0	:-	1	pro.local	:/Users/btfh/work/risr/tf-root-dns/prd	1	zsh	:
+pane	risr-tf-ecr	1	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-ecr	1	nvim	:nvim singleton
+pane	risr-tf-ecr	2	1	:*	0	pro.local	:/Users/btfh/work/risr/tf-root-ecr	1	zsh	:
+pane	risr-tf-ecr	2	1	:*	1	pro.local	:/Users/btfh/work/risr/tf-root-ecr	0	tig	:tig
+pane	risr-tf-ecr	3	0	:-	0	pro.local	:/Users/btfh/work/risr/tf-root-ecr/ben	0	zsh	:
+pane	risr-tf-ecr	3	0	:-	1	pro.local	:/Users/btfh/work/risr/tf-root-ecr/singleton	1	zsh	:
+pane	risr-tf-k8s	1	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-k8s	1	nvim	:nvim dev/main.tf
+pane	risr-tf-k8s	2	1	:*	0	pro.local	:/Users/btfh/work/risr/tf-root-k8s	1	zsh	:
+pane	risr-tf-k8s	2	1	:*	1	pro.local	:/Users/btfh/work/risr/tf-root-k8s	0	tig	:tig
+pane	risr-tf-k8s	3	0	:-	0	pro.local	:/Users/btfh/work/risr/tf-root-k8s/ben	0	zsh	:
+pane	risr-tf-k8s	3	0	:-	1	pro.local	:/Users/btfh/work/risr/tf-root-k8s/prd	1	zsh	:
+pane	risr-tf-k8s	4	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-k8s/ben	1	zsh	:
+pane	risr-tf-k8s	5	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-k8s	1	zsh	:
+pane	risr-tf-k8s	6	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-k8s	1	zsh	:
+pane	risr-tf-k8s	7	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-k8s	1	zsh	:
+pane	risr-tf-keys	1	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-keys	1	nvim	:nvim ben/main.tf
+pane	risr-tf-keys	2	1	:*	0	pro.local	:/Users/btfh/work/risr/tf-root-keys	1	zsh	:
+pane	risr-tf-keys	2	1	:*	1	pro.local	:/Users/btfh/work/risr/tf-root-keys	0	tig	:tig
+pane	risr-tf-keys	3	0	:-	0	pro.local	:/Users/btfh/work/risr/tf-root-keys/ben	0	zsh	:
+pane	risr-tf-keys	3	0	:-	1	pro.local	:/Users/btfh/work/risr/tf-root-keys/prd	1	zsh	:
+pane	risr-tf-keys	4	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-keys	1	zsh	:
+pane	risr-tf-mod	1	0	:-	0	pro.local	:/Users/btfh/work/risr/tf-modules	1	nvim	:nvim modules/data_application/couchdb.tf
+pane	risr-tf-mod	2	1	:*	0	pro.local	:/Users/btfh/work/risr/tf-modules	1	zsh	:
+pane	risr-tf-mod	2	1	:*	1	pro.local	:/Users/btfh/work/risr/tf-modules	0	tig	:tig
+pane	risr-tf-mod	3	0	:	0	pro.local	:/Users/btfh/work/risr/tf-modules	1	zsh	:
+pane	risr-tf-root-tf	1	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-terraform	1	nvim	:nvim ben/main.tf
+pane	risr-tf-root-tf	2	0	:-	0	pro.local	:/Users/btfh/work/risr/tf-root-terraform	1	zsh	:
+pane	risr-tf-root-tf	2	0	:-	1	pro.local	:/Users/btfh/work/risr/tf-root-terraform	0	tig	:tig
+pane	risr-tf-root-tf	3	1	:*	0	pro.local	:/Users/btfh/work/risr/tf-root-terraform/singleton	0	zsh	:
+pane	risr-tf-root-tf	3	1	:*	1	pro.local	:/Users/btfh/work/risr/tf-root-terraform/prd	1	zsh	:
+pane	risr-tf-sg	1	1	:*	0	pro.local	:/Users/btfh/work/risr/tf-root-sg	1	nvim	:nvim ben/main.tf
+pane	risr-tf-sg	2	0	:-	0	pro.local	:/Users/btfh/work/risr/tf-root-sg	1	zsh	:
+pane	risr-tf-sg	2	0	:-	1	pro.local	:/Users/btfh/work/risr/tf-root-sg	0	tig	:tig
+pane	risr-tf-sg	3	0	:	0	pro.local	:/Users/btfh/work/risr/tf-root-sg/ben	0	zsh	:
+pane	risr-tf-sg	3	0	:	1	pro.local	:/Users/btfh/work/risr/tf-root-sg/prd	1	zsh	:
+window	risr-db-prov	1	:zsh	1	:*	aca5,211x51,0,0,144	:
+window	risr-db-prov	2	:zsh	0	:-	255e,300x68,0,0{150x68,0,0,145,149x68,151,0,146}	:
+window	risr-db-prov	3	:zsh	0	:	b400,300x68,0,0,147	:
+window	risr-docs	1	:nvim	0	:-	6799,300x68,0,0,39	:
+window	risr-docs	2	:zsh	1	:*	e0d2,300x68,0,0{141x68,0,0,40,158x68,142,0,41}	:
+window	risr-docs	3	:zsh	0	:	e792,300x68,0,0,42	:
+window	risr-example-go	1	:nvim	0	:-	e793,300x68,0,0,43	:
+window	risr-example-go	2	:zsh	0	:	db96,300x68,0,0{149x68,0,0,44,150x68,150,0,45}	:
+window	risr-example-go	3	:zsh	1	:*	e796,300x68,0,0,46	:
+window	risr-helm	1	:nvim	1	:*	e797,300x68,0,0,47	:
+window	risr-helm	2	:zsh	0	:-	ef2e,300x68,0,0{154x68,0,0,48,145x68,155,0,49}	:
+window	risr-helm	3	:zsh	0	:	58e1,211x51,0,0,50	:
+window	risr-k8s	1	:nvim	0	:-	6792,300x68,0,0,51	:
+window	risr-k8s	2	:zsh	0	:	6b11,300x68,0,0{153x68,0,0,52,146x68,154,0,53}	:
+window	risr-k8s	3	:zsh	1	:*	ba9c,211x51,0,0{105x51,0,0,56,105x51,106,0,152}	:
+window	risr-k8s	4	:zsh	0	:	58e8,211x51,0,0,57	:
+window	risr-k8s	5	:zsh	0	:	6799,300x68,0,0,58	:
+window	risr-k8s	6	:zsh	0	:	58ea,211x51,0,0,59	:
+window	risr-tf-base	1	:zsh	1	:*	d8e1,211x51,0,0,60	:
+window	risr-tf-base	2	:zsh	0	:-	f134,300x68,0,0{145x68,0,0,61,154x68,146,0,62}	:
+window	risr-tf-base	3	:zsh	0	:	8fbd,300x68,0,0{150x68,0,0,63,149x68,151,0,135}	:
+window	risr-tf-base	4	:zsh	0	:	d8e5,211x51,0,0,64	:
+window	risr-tf-data-app	1	:zsh	0	:-	aca7,211x51,0,0,127	:
+window	risr-tf-data-app	2	:zsh	1	:*	6ac7,211x51,0,0{104x51,0,0,128,106x51,105,0,129}	:
+window	risr-tf-data-app	3	:zsh	0	:	0eca,211x51,0,0{106x51,0,0,130,104x51,107,0,141}	:
+window	risr-tf-data-app	4	:zsh	0	:	33fa,300x68,0,0,131	:
+window	risr-tf-data-plat	1	:zsh	0	:	d8e6,211x51,0,0,65	:
+window	risr-tf-data-plat	2	:zsh	1	:*	db99,300x68,0,0{149x68,0,0,66,150x68,150,0,67}	:
+window	risr-tf-data-plat	3	:zsh	0	:-	5a9f,211x51,0,0{105x51,0,0,68,105x51,106,0,137}	:
+window	risr-tf-dns	1	:zsh	0	:	d8ea,211x51,0,0,69	:
+window	risr-tf-dns	2	:zsh	1	:*	6c57,211x51,0,0{103x51,0,0,70,107x51,104,0,71}	:
+window	risr-tf-dns	3	:zsh	0	:-	7a9d,211x51,0,0{105x51,0,0,72,105x51,106,0,136}	:
+window	risr-tf-ecr	1	:zsh	0	:	6795,300x68,0,0,73	:
+window	risr-tf-ecr	2	:zsh	1	:*	7d80,300x68,0,0{148x68,0,0,74,151x68,149,0,75}	:
+window	risr-tf-ecr	3	:zsh	0	:-	5ece,300x68,0,0{150x68,0,0,76,149x68,151,0,77}	:
+window	risr-tf-k8s	1	:zsh	0	:	58ea,211x51,0,0,78	:
+window	risr-tf-k8s	2	:zsh	1	:*	bcbb,211x51,0,0{107x51,0,0,79,103x51,108,0,80}	:
+window	risr-tf-k8s	3	:zsh	0	:-	9a9a,211x51,0,0{105x51,0,0,81,105x51,106,0,140}	:
+window	risr-tf-k8s	4	:zsh	0	:	d8e4,211x51,0,0,82	:
+window	risr-tf-k8s	5	:zsh	0	:	d8e5,211x51,0,0,83	:
+window	risr-tf-k8s	6	:zsh	0	:	d8e6,211x51,0,0,84	:
+window	risr-tf-k8s	7	:zsh	0	:	d8e7,211x51,0,0,85	:
+window	risr-tf-keys	1	:zsh	0	:	d8e8,211x51,0,0,86	:
+window	risr-tf-keys	2	:zsh	1	:*	ec5e,211x51,0,0{103x51,0,0,87,107x51,104,0,88}	:
+window	risr-tf-keys	3	:zsh	0	:-	5aa0,211x51,0,0{105x51,0,0,89,105x51,106,0,138}	:
+window	risr-tf-keys	4	:zsh	0	:	58e3,211x51,0,0,90	:
+window	risr-tf-mod	1	:zsh	0	:-	58e4,211x51,0,0,91	:
+window	risr-tf-mod	2	:zsh	1	:*	7072,211x51,0,0{104x51,0,0,92,106x51,105,0,93}	:
+window	risr-tf-mod	3	:zsh	0	:	6797,300x68,0,0,94	:
+window	risr-tf-root-tf	1	:zsh	0	:	58e8,211x51,0,0,95	:
+window	risr-tf-root-tf	2	:zsh	0	:-	7076,211x51,0,0{104x51,0,0,96,106x51,105,0,97}	:
+window	risr-tf-root-tf	3	:zsh	1	:*	3a9e,211x51,0,0{105x51,0,0,98,105x51,106,0,134}	:
+window	risr-tf-sg	1	:zsh	1	:*	58ec,211x51,0,0,99	:
+window	risr-tf-sg	2	:zsh	0	:-	e558,300x68,0,0{150x68,0,0,100,149x68,151,0,101}	:
+window	risr-tf-sg	3	:zsh	0	:	255e,300x68,0,0{150x68,0,0,102,149x68,151,0,139}	:
+state	risr-k8s	

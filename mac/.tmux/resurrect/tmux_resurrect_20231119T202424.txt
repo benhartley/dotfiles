@@ -1,0 +1,58 @@
+pane	cyclone	1	1	:*	0	pro.local	:/Users/btfh/work/cyclone	1	zsh	:
+pane	graph	1	1	:*	0	pro.local	:/Users/btfh/.p/graph	1	zsh	:
+pane	graph	2	0	:-	0	pro.local	:/Users/btfh/.p/graph	1	zsh	:
+pane	kids-gpt-robot	1	1	:*	0	pro.local	:/Users/btfh/work/kids/gpt-robot	1	zsh	:
+pane	kids-gpt-robot	2	0	:	0	pro.local	:/Users/btfh/work/kids/gpt-robot	1	zsh	:
+pane	kids-gpt-robot	3	0	:-	0	pro.local	:/Users/btfh/work/kids/gpt-robot	1	zsh	:
+pane	llm-bakl	1	0	:	0	pro.local	:/Users/btfh/work/llm/third-party/realtime-bakllava	1	nvim	:nvim src/picture_drop.py
+pane	llm-bakl	2	0	:-	0	pro.local	:/Users/btfh/work/llm/third-party/realtime-bakllava	1	zsh	:
+pane	llm-bakl	3	1	:*	0	pro.local	:/Users/btfh/work/llm/third-party/llama.cpp	1	zsh	:
+pane	llm-fastapi	1	1	:*	0	pro.local	:/Users/btfh/work/llm/personal/fastapi-play	1	nvim	:nvim Makefile
+pane	llm-fastapi	2	0	:	0	pro.local	:/Users/btfh/work/llm/personal/fastapi-play	1	zsh	:
+pane	llm-fastapi	2	0	:	1	pro.local	:/Users/btfh/work/llm/personal/fastapi-play	0	tig	:tig
+pane	llm-fastapi	3	0	:	0	pro.local	:/Users/btfh/work/llm/personal/fastapi-play	0	Python	:/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/btfh/work/llm/personal/fastapi-play/venv/bin/uvicorn main:app
+pane	llm-fastapi	3	0	:	1	pro.local	:/Users/btfh/work/llm/personal/fastapi-play	1	zsh	:
+pane	llm-fastapi	4	0	:-	0	pro.local	:/Users/btfh/work/llm/personal/fastapi-play	1	sqlite3	:sqlite3 database/database.db
+pane	llm-local-vec	2	0	:	0	pro.local	:/Users/btfh/work/llm/personal/local-vector	1	zsh	:
+pane	llm-local-vec	2	0	:	1	pro.local	:/Users/btfh/work/llm/personal/local-vector	0	zsh	:
+pane	llm-local-vec	3	1	:*	0	pro.local	:/Users/btfh/work/llm/personal/local-vector	1	zsh	:
+pane	llm-local-vec	4	0	:-	0	pro.local	:/Users/btfh/oobabooga/oobabooga_macos/text-generation-webui/models/mistralai_Mistral-7B-Instruct-v0.1	1	zsh	:
+pane	llm-textgen	1	0	:-	0	pro.local	:/Users/btfh/work/llm/personal/langchain-textgen	1	nvim	:nvim openai.py
+pane	llm-textgen	2	1	:*	0	pro.local	:/Users/btfh/work/llm/personal/langchain-textgen	1	zsh	:
+pane	talk-web	1	0	:-	0	pro.local	:/Users/btfh/work/talkmind/static	1	zsh	:
+pane	talk-web	2	1	:*	0	pro.local	:/Users/btfh/work/talkmind/static	0	zsh	:
+pane	talk-web	2	1	:*	1	pro.local	:/Users/btfh/work/talkmind/static	1	zsh	:
+pane	talk-web	3	0	:	0	pro.local	:/Users/btfh/work/talkmind/static	1	zsh	:
+pane	talk-web	4	0	:	0	pro.local	:/Users/btfh/work/talkmind/static	1	zsh	:
+pane	talkmind-inv	1	1	:*	0	pro.local	:/Users/btfh/work/talkmind/invoices	1	zsh	:
+pane	talkmind-inv	2	0	:-	0	pro.local	:/Users/btfh/work/talkmind/invoices	1	zsh	:
+pane	talkmind-inv	2	0	:-	1	pro.local	:/Users/btfh/work/talkmind/invoices	0	zsh	:
+pane	talkmind-inv	3	0	:	0	pro.local	:/Users/btfh/work/talkmind/invoices	1	zsh	:
+pane	talkmind-inv	4	0	:	0	pro.local	:/Users/btfh/work/talkmind/invoices	1	zsh	:
+window	cyclone	1	:zsh	1	:*	b15e,211x51,0,0,1	:
+window	graph	1	:zsh	1	:*	b15f,211x51,0,0,2	:
+window	graph	2	:zsh	0	:-	b160,211x51,0,0,3	:
+window	kids-gpt-robot	1	:zsh	1	:*	aca3,211x51,0,0,142	:
+window	kids-gpt-robot	2	:zsh	0	:	aca4,211x51,0,0,143	:
+window	kids-gpt-robot	3	:Python	0	:-	aca5,211x51,0,0,144	:
+window	llm-bakl	1	:zsh	0	:	2ca3,211x51,0,0,170	:
+window	llm-bakl	2	:zsh	0	:-	2ca4,211x51,0,0,171	:
+window	llm-bakl	3	:zsh	1	:*	2ca5,211x51,0,0,172	:
+window	llm-fastapi	1	:zsh	1	:*	2ca8,211x51,0,0,175	:
+window	llm-fastapi	2	:zsh	0	:	4cc9,211x51,0,0{105x51,0,0,179,105x51,106,0,180}	:
+window	llm-fastapi	3	:zsh	0	:	8ccc,211x51,0,0{105x51,0,0,177,105x51,106,0,178}	:
+window	llm-fastapi	4	:zsh	0	:-	aca4,211x51,0,0,181	:
+window	llm-local-vec	2	:zsh	0	:	acca,211x51,0,0{105x51,0,0,146,105x51,106,0,147}	:
+window	llm-local-vec	3	:zsh	1	:*	b401,300x68,0,0,148	:
+window	llm-local-vec	4	:zsh	0	:-	acaa,211x51,0,0,149	:
+window	llm-textgen	1	:zsh	0	:-	acaa,211x51,0,0,168	:
+window	llm-textgen	2	:zsh	1	:*	acab,211x51,0,0,169	:
+window	talk-web	1	:nvim	0	:-	2ca2,211x51,0,0,150	:
+window	talk-web	2	:zsh	1	:*	4cc7,211x51,0,0{105x51,0,0,151,105x51,106,0,152}	:
+window	talk-web	3	:hugo	0	:	2ca5,211x51,0,0,153	:
+window	talk-web	4	:zsh	0	:	2ca6,211x51,0,0,154	:
+window	talkmind-inv	1	:zsh	1	:*	2ca7,211x51,0,0,155	:
+window	talkmind-inv	2	:zsh	0	:-	0ccb,211x51,0,0{105x51,0,0,156,105x51,106,0,157}	:
+window	talkmind-inv	3	:zsh	0	:	2caa,211x51,0,0,158	:
+window	talkmind-inv	4	:zsh	0	:	2cab,211x51,0,0,159	:
+state	llm-fastapi	
