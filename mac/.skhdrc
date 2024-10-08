@@ -1,0 +1,9 @@
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+
+:: default
+:: open
+
+cmd - o ; open
+open < escape ; default
+open < m : open -a /System/Applications/Messages.app ; skhd --key "escape"
+open < o : open -a /Applications/Obsidian.app ; skhd --key "escape"
